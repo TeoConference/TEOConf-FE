@@ -1,5 +1,7 @@
 import JumpitLogo from '@/public/images/JumpitLogo.svg'
 import Image from 'next/image'
+import {eventDetails} from '@/data/third/EventDetails'
+import {sponsor} from '@/data/third/Sponsor'
 
 const Sponsor = () => (
   <section
@@ -13,25 +15,25 @@ const Sponsor = () => (
             후원사
           </p>
           <p className="font-Pretendard font-medium text-[1.125rem] text-center tablet:hidden">
-            테오의 컨퍼런스 2기는 <br /> 사람인의{' '}
+            {eventDetails.name_ko}는 {' '}<br />
             <a
               className="hover:underline"
               target="_blank"
-              href="https://www.jumpit.co.kr/"
+              href={sponsor.link}
             >
-              &apos;점핏&apos;
+              &apos;{sponsor.name}&apos;
             </a>
             에서 후원합니다.
             <br />
           </p>
           <p className="hidden tablet:block font-Pretendard font-bold text-[1.625rem] mt-8">
-            테오의 컨퍼런스 2기는 사람인의{' '}
+            {eventDetails.name_ko}는 {' '}
             <a
               className="hover:underline"
               target="_blank"
-              href="https://www.jumpit.co.kr/"
+              href={sponsor.link}
             >
-              &apos;점핏&apos;
+              &apos;{sponsor.name}&apos;
             </a>
             에서 후원합니다.
             <br />
@@ -39,7 +41,7 @@ const Sponsor = () => (
         </div>
       </div>
       <div className="flex-center h-fit mt-4">
-        <a target="_blank" href="https://www.jumpit.co.kr/">
+        <a target="_blank" href={sponsor.link}>
           <Image
             alt="JumpitLogo"
             src={JumpitLogo}

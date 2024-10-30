@@ -17,6 +17,7 @@ const NameCard = () => (
             </p>
           </div>
         </div>
+        {/* TODO: 명함 시안 이미지 교체 */}
         <div className="bg-name-card-2 max-w-[1300px] bg-cover bg-center rounded-lg h-[250px] tablet:h-[276px] desktop:h-[490px] w-full" />
       </div>
     </div>

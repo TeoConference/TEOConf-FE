@@ -1,6 +1,6 @@
 import Image from 'next/image'
 
-import { links } from '@/data/third/links'
+import { links } from '@/data/third/Links'
 import Instagram from '@/public/images/Instagram.svg'
 import LinkedIn from '@/public/images/LinkedIn.svg'
 import Twitter from '@/public/images/Twitter.svg'

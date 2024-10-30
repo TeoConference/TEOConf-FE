@@ -87,9 +87,6 @@ const Introduce = () => {
               모두에게 <br className="block tablet:hidden" />
               열려있는 컨퍼런스
             </p>
-            <p className="tablet:text-h3 text-mobile-h2 text-center text-gray-900">
-              테오의 스프린트가 컨퍼런스로 돌아왔어요!
-            </p>
           </div>
           <p className="tablet:text-body1 text-mobile-body2 text-center mt-6 text-gray-900">
             테오의 컨퍼런스는{' '}

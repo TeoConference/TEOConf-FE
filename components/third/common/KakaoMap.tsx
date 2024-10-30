@@ -41,12 +41,12 @@ const KakaoMap = ({ latitude, longitude }: KakaoMapProps) => {
         className="w-full h-60 tablet:h-[338px] desktop:h-[450px] rounded-lg"
       />
       <a
-        href="https://map.kakao.com/?map_type=TYPE_MAP&target=car&rt=,,477625,1107130&rt1=&rt2=%EC%82%AC%EB%9E%8C%EC%9D%B8&rtIds=,14521432"
+        href="https://kko.kakao.com/HLIeFYnP0Z"
         target="_blank"
         className="flex items-center gap-1 text-white bg-gray-800 rounded-lg absolute text-mobile-sub-h2 bottom-4 right-4 z-10 p-2 pr-3"
       >
         <LocationOnIcon />
-        사람인 본사 14층
+        아이콘역삼빌딩 12층 팀 스파르타
       </a>
     </div>
   )

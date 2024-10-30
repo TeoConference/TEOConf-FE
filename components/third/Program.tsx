@@ -1,7 +1,7 @@
 import clsx from 'clsx'
 import Image from 'next/image'
 
-import { Speakers } from '@/data/third/Speakers'
+import { programs } from '@/data/third/Programs'
 import SpeakerPurple from '@/public/images/SpeakerPurple.svg'
 import SpeakerWhite from '@/public/images/SpeakerWhite.svg'
 
@@ -21,51 +21,62 @@ const Program = () => (
           </p>
         </div>
       </div>
-      <div className="w-full tablet:gap-4 text-white">
-        {Speakers.map((speaker, i) => (
-          <div
-            key={speaker.name}
-            className={clsx(
-              'flex flex-col bg-black tablet:px-6 desktop:px-8 desktop:pt-8 desktop-xl:px-8 desktop-xl:pt-8 desktop:justify-between justify-between break-keep',
-              i == 0 ? 'rounded-t-lg' : i == 4 ? 'rounded-b-lg' : '',
-              i < 4
-                ? 'px-4 pt-5 pb-0'
-                : 'px-4 pt-5 pb-4 tablet:pb-6 desktop:pb-8'
-            )}
-          >
-            <div
-              className={clsx(
-                `h-full w-full flex justify-between items-start`,
-                i < 4
-                  ? 'border-b border-white pb-5 tablet:pb-6 desktop:pb-8'
-                  : ''
-              )}
-            >
-              <div className="mr-4 flex flex-col justify-between">
-                <div className="tablet:space-y-3">
-                  <span className="tablet:text-sub-h1 text-sub-h2 tablet:flex tablet:justify-start items-start text-white">
-                    {speaker.title}
-                  </span>
-                </div>
-                <div className="flex justify-between items-end mt-4 desktop:items-end">
-                  <div className="flex flex-col justify-between desktop:flex-row desktop:gap-4 desktop:items-center">
-                    <div>
-                      <span className="tablet:text-sub-h2 text-mobile-sub-h2">
-                        {speaker.name}
-                      </span>
+        {
+          programs.map((program, i) => (
+            <div className="flex flex-col gap-8 w-full flex-center tablet:w-[768px] desktop:w-[1024px] m-auto">
+            <p className="text-mobile-h1 tablet:text-h2 text-center">
+              {program.date}
+            </p>
+            <div className="w-full tablet:gap-4 text-white">
+            {
+              program.speakers.map((speaker,i) => (
+                <div
+                  key={speaker.name}
+                  className={clsx(
+                    'flex flex-col bg-black tablet:px-6 desktop:px-8 desktop:pt-8 desktop-xl:px-8 desktop-xl:pt-8 desktop:justify-between justify-between break-keep',
+                    i == 0 ? 'rounded-t-lg' : i == program.speakers.length - 1 ? 'rounded-b-lg' : '',
+                    i < program.speakers.length - 1
+                      ? 'px-4 pt-5 pb-0'
+                      : 'px-4 pt-5 pb-4 tablet:pb-6 desktop:pb-8'
+                  )}
+                >
+                  <div
+                    className={clsx(
+                      `h-full w-full flex justify-between items-start`,
+                      i < program.speakers.length - 1
+                        ? 'border-b border-white pb-5 tablet:pb-6 desktop:pb-8'
+                        : ''
+                    )}
+                  >
+                    <div className="mr-4 flex flex-col justify-between">
+                      <div className="tablet:space-y-3">
+                        <span className="tablet:text-sub-h1 text-sub-h2 tablet:flex tablet:justify-start items-start text-white">
+                          {speaker.title}
+                        </span>
+                      </div>
+                      <div className="flex justify-between items-end mt-4 desktop:items-end">
+                        <div className="flex flex-col justify-between desktop:flex-row desktop:gap-4 desktop:items-center">
+                          <div>
+                            <span className="tablet:text-sub-h2 text-mobile-sub-h2">
+                              {speaker.name}
+                            </span>
+                          </div>
+                        </div>
+                      </div>
                     </div>
+                    {i % 2 === 0 ? (
+                      <Image alt="speaker image" src={SpeakerPurple} />
+                    ) : (
+                      <Image alt="speaker image" src={SpeakerWhite} />
+                    )}
                   </div>
                 </div>
-              </div>
-              {i % 2 === 0 ? (
-                <Image alt="speaker image" src={SpeakerPurple} />
-              ) : (
-                <Image alt="speaker image" src={SpeakerWhite} />
-              )}
+              ))
+            }
             </div>
-          </div>
-        ))}
-      </div>
+            </div>
+          ))
+        }
     </div>
   </section>
 )
