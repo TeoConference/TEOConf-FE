@@ -10,6 +10,7 @@ import useIntersectionObservation from '@/lib/observer'
 import Logo from '@/public/images/Logo_2.svg'
 import Sidebar from './Sidebar'
 import { SectionTab } from './common/SectionTab'
+import {links} from '@/data/third/Links'
 
 export const Header = () => {
   const router = useRouter()
@@ -59,7 +60,7 @@ export const Header = () => {
           <SectionTab section="faq" currentSection={currentId}>
             FAQ
           </SectionTab>
-          <a href="https://www.jumpit.co.kr/contents/428" target="_blank">
+          <a href={links.spartaNotion} target="_blank">
             <LaunchIcon className="text-purple-main" />
           </a>
         </div>
