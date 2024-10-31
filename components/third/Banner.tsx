@@ -19,19 +19,22 @@ const Banner = () => {
             <h1 className="font-AbhayaLibre font-bold desktop:hidden text-[60px] tablet:text-[4.375rem] desktop:text-[5rem] leading-[56px] tracking-[-0.6%] text-center desktop:text-right">
               TEOConf 2024
             </h1>
-            <div className="font-Pretendard space-y-2 tracking-[-0.6%] desktop:leading-14 flex flex-col desktop:gap-y-7 desktop:mt-0 tablet:mt-12 mt-[26px]">
+            <div className="font-Pretendard space-y-2 tracking-[-0.6%] desktop:leading-14 flex flex-col desktop:gap-y-4 desktop:mt-0 tablet:mt-12 mt-[26px]">
               <div className="text-center text-black desktop:font-extrabold font-semibold text-[1.375rem] tablet:text-[2.375rem] desktop:text-[3.75rem] desktop:text-left">
                 {eventDetails.name_ko}
               </div>
-              <div className="flex flex-col tablet:flex tablet:flex-row gap-3 tablet:gap-5 justify-center desktop:justify-start">
-                <div className="text-center whitespace-pre-wrap text-black font-semibold text-[1.275rem] tablet:text-[2.475rem] tablet:mt-0 desktop:text-[3rem] desktop:text-left">
+              <div className="flex flex-col tablet:flex-row gap-1 tablet:gap-5 justify-center desktop:justify-start">
+                <div className="text-center whitespace-pre-wrap text-black font-semibold text-[1.25rem] tablet:text-[2.375rem] tablet:mt-0 desktop:text-[3rem] desktop:text-left">
                   {eventDetails.date_saturday}
                 </div>
-                <div className="text-center whitespace-pre-wrap text-black font-semibold text-[1.275rem] tablet:text-[2.375rem] tablet:mt-0 desktop:text-[3rem] desktop:text-left">
+                <div className="hidden desktop:block text-black font-semibold text-[3rem]">
+                  /
+                </div>
+                <div className="text-center whitespace-pre-wrap text-black font-semibold text-[1.25rem] tablet:text-[2.375rem] tablet:mt-0 desktop:text-[3rem] desktop:text-left">
                   {eventDetails.date_sunday}
                 </div>
               </div>
-              <div className="text-center whitespace-pre-wrap text-black font-semibold text-[1.275rem] tablet:text-[2.375rem] tablet:mt-0 desktop:text-[3rem] desktop:text-left">
+              <div className="text-center whitespace-pre-wrap text-black font-semibold text-[1.375rem] tablet:text-[2.375rem] tablet:mt-0 desktop:text-[3rem] desktop:text-left">
                 {eventDetails.location}
               </div>
             </div>
