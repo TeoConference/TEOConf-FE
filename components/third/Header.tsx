@@ -60,7 +60,7 @@ export const Header = () => {
           <SectionTab section="faq" currentSection={currentId}>
             FAQ
           </SectionTab>
-          <a href={links.spartaNotion} target="_blank">
+          <a href={links.submitForm} target="_blank">
             <LaunchIcon className="text-typo-primary" />
           </a>
         </div>

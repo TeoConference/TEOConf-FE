@@ -1,3 +1,4 @@
+import { links } from '@/data/third/Links'
 import { KeyboardArrowDown, KeyboardArrowUp, Square } from '@mui/icons-material'
 import LaunchIcon from '@mui/icons-material/Launch'
 import clsx from 'clsx'
@@ -119,7 +120,7 @@ const Sidebar = (props: SidebarProps) => {
         </div>
         <div className="w-[90%] py-4 tablet:py-5">
           <a
-            href="https://festa.io/events/3428"
+            href={links.submitForm}
             target="_blank"
             className="inline-flex items-center gap-4"
           >
