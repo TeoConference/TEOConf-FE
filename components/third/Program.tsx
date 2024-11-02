@@ -15,9 +15,13 @@ const Program = () => (
         <div className="flex flex-col tablet:space-y-4 space-y-2 items-center">
           <p className="text-mobile-h1 tablet:text-h1 text-center">프로그램</p>
           <p className="text-mobile-h2 tablet:text-h3 text-center">
-            소중한 경험을 나눠줄&nbsp;
+            <strong className="text-typo-primary rounded-lg">
+              소중한 경험
+            </strong>
+            을 나눠줄&nbsp;
             <br className="block tablet:hidden" />
-            스피커의 이야기가 준비되어 있어요!
+            <strong className="text-typo-primary rounded-lg">스피커</strong>의
+            이야기가 준비되어 있어요!
           </p>
         </div>
       </div>
@@ -39,10 +43,8 @@ const Program = () => (
           >
             <div
               className={clsx(
-                `h-full w-full flex justify-between items-start`,
-                i < programs.length
-                  ? 'border-b border-white pb-5 tablet:pb-6 desktop:pb-8'
-                  : ''
+                `h-full w-full flex justify-between items-start pb-5 tablet:pb-6 desktop:pb-8`,
+                i < programs.length - 1 ? 'border-b border-white' : ''
               )}
             >
               <div className="mr-4 flex flex-col justify-between">

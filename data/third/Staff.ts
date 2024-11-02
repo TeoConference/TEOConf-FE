@@ -1,3 +1,4 @@
+import Hubble from '@/public/images/staff/Hubble.png'
 import Teo from '@/public/images/staff/Teo.png'
 import Casey from '@/public/images/staff/third/Casey.jpg'
 import Field from '@/public/images/staff/third/Field.jpg'
@@ -80,6 +81,14 @@ export const StaffData: StaffDataType[] = [
     description: '사용자 중심의 개발 철학을 실천하는 개발자',
     image: Sooya,
     url: 'https://github.com/soojjung',
+    position: 'developer',
+  },
+  {
+    id: 9,
+    name: '허블',
+    description: '망원경처럼 넓은 시야를 가진 개발자',
+    image: Hubble,
+    url: 'https://github.com/Circlewee',
     position: 'developer',
   },
 ]

@@ -9,7 +9,8 @@ const SNS = () => (
   <div className="w-[100%] inline-flex flex-col items-center justify-center px-4 py-14 tablet:py-20 desktop:py-26 desktop-xl:py-30 bg-background-primary">
     <div className="flex flex-col items-center max-w-[700px] mx-auto">
       <p className="text-h3 text-center text-typo-white">
-        테오콘 소식을 <br className="block tablet:hidden" /> 더 빨리 알고 싶다면
+        <span className="text-typo-primary rounded-lg">테오콘 소식</span>을{' '}
+        <br className="block tablet:hidden" /> 더 빨리 알고 싶다면
       </p>
       <div className="flex mt-6 tablet:mt-14 gap-4">
         <a

@@ -13,21 +13,33 @@ module.exports = {
         AbhayaLibre: ['AbhayaLibre'],
       },
       colors: {
-        'main-primary': '#A869EE',
+        // 'main-primary': '#A869EE',
+        // 'main-secondary': '#00DE4F',
+        // 'main-tertiary': '#E8E8E8',
+
+        // 'typo-black': '#000000',
+        // 'typo-white': '#FFFFFF',
+        // 'typo-primary': '#F7CE65',
+
+        // 'background-primary': '#111827',
+        // 'background-secondary': '#f3f4f6',
+        // 'background-default': '#fff',
+        'main-primary': '#F7CE65',
         'main-secondary': '#00DE4F',
         'main-tertiary': '#E8E8E8',
 
-        'typo-black': '#000000',
-        'typo-white': '#FFFFFF',
-        'typo-primary': '#A869EE',
+        'typo-black': '#fff',
+        'typo-white': '#fff',
+        'typo-primary': '#F7CE65',
 
         'background-primary': '#111827',
-        'background-secondary': '#f3f4f6',
+        'background-secondary': '#1f2937',
+        'background-default': '#4b5563',
 
         'networking-purple': '#DDD4FC',
         'networking-purple-2': '#F3EAFD',
-        'networking-green': '#96F8C0',
-        'networking-green-2': '#D7F5E4',
+        'networking-green': '#F7CE65',
+        'networking-green-2': '#FBEBC1',
         'networking-red': '#FFB6B6',
         'networking-blue': '#CEE9FA',
       },
@@ -48,6 +60,7 @@ module.exports = {
       backgroundImage: {
         'name-card-1': "url('/images/NameCard_1.png')",
         'name-card-2': "url('/images/NameCard_2.jpg')",
+        'name-card-3': "url('/images/NameCard_3.svg')",
         banner: "url('/images/Banner_2.svg')",
       },
     },

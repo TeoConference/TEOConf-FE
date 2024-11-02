@@ -5,12 +5,12 @@ import StaffCard from './common/StaffCard'
 import SwiperSlide from './common/SwiperSlide'
 
 const Staff = () => (
-  <section className="flex flex-col py-16 tablet:py-36">
+  <section className="flex flex-col py-16 tablet:py-36" id="staff">
     <div className="flex flex-col">
       <div className="text-center text-mobile-h1 tablet:text-h1 justify-center">
         테오콘을 <br className="block tablet:hidden" />
         만들어가는
-        <span className="text-center tablet:text-typo-primary"> 사람들</span>
+        <span className="text-center text-typo-primary"> 사람들</span>
       </div>
       <p className="text-h3 text-center tablet:mt-4 text-typo-white-text hidden tablet:block">
         테오콘을 함께 만든 스태프를 소개합니다!
@@ -21,12 +21,12 @@ const Staff = () => (
         <SwiperSlide className="flex justify-between gap-3 tablet:gap-4">
           {StaffData.map(
             (staff, index) =>
-              index < StaffData.length / 2 && (
+              index < Math.ceil(StaffData.length / 2) - 1 && (
                 <StaffCard
                   key={staff.name}
                   {...staff}
                   className={clsx(
-                    index === Math.ceil(StaffData.length / 2) - 1
+                    index === Math.ceil(StaffData.length / 2) - 2
                       ? 'mr-3 tablet:mr-4'
                       : ''
                   )}
@@ -37,12 +37,12 @@ const Staff = () => (
         <SwiperSlide className="flex justify-between gap-3 tablet:gap-4">
           {StaffData.map(
             (staff, index) =>
-              index < StaffData.length / 2 && (
+              index < Math.ceil(StaffData.length / 2) - 1 && (
                 <StaffCard
                   key={staff.name}
                   {...staff}
                   className={clsx(
-                    index === Math.ceil(StaffData.length / 2) - 1
+                    index === Math.ceil(StaffData.length / 2) - 2
                       ? 'mr-3 tablet:mr-4'
                       : ''
                   )}
@@ -53,12 +53,12 @@ const Staff = () => (
         <SwiperSlide className="flex justify-between gap-3 tablet:gap-4">
           {StaffData.map(
             (staff, index) =>
-              index < StaffData.length / 2 && (
+              index < Math.ceil(StaffData.length / 2) - 1 && (
                 <StaffCard
                   key={staff.name}
                   {...staff}
                   className={clsx(
-                    index === Math.ceil(StaffData.length / 2) - 1
+                    index === Math.ceil(StaffData.length / 2) - 2
                       ? 'mr-3 tablet:mr-4'
                       : ''
                   )}
