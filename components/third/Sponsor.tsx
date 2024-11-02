@@ -1,6 +1,6 @@
 import { eventDetails } from '@/data/third/EventDetails'
 import { sponsor } from '@/data/third/Sponsor'
-import JumpitLogo from '@/public/images/JumpitLogo.svg'
+import HHPlusLogo from '@/public/images/HHPlusLogo.svg'
 import Image from 'next/image'
 
 const Sponsor = () => (
@@ -35,8 +35,8 @@ const Sponsor = () => (
       <div className="flex-center h-fit mt-4">
         <a target="_blank" href={sponsor.link}>
           <Image
-            alt="JumpitLogo"
-            src={JumpitLogo}
+            alt="HHPlusLogo"
+            src={HHPlusLogo}
             className="tablet:mt-[3.75rem] tablet:w-[206px] tablet:h-[87px]"
             width={140}
             height={59.13}
