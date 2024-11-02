@@ -1,9 +1,8 @@
-import React from 'react'
-import Image, { StaticImageData } from 'next/image'
 import clsx from 'clsx'
+import Image, { StaticImageData } from 'next/image'
 
-import GithubLogo from '@/public/images/GithubLogoPurple.svg'
 import Behance from '@/public/images/BehancePurple.svg'
+import GithubLogo from '@/public/images/GithubLogoPurple.svg'
 
 interface StaffCardProps {
   name: string
@@ -37,7 +36,7 @@ const StaffCard = ({
       <a
         href={url}
         target="_blank"
-        className="flex flex-col bg-gray-900 px-4 py-3 tablet:px-5 tablet:py-4 items-start gap-1 justify-between rounded-b-xl desktop:rounded-b-2xl"
+        className="flex flex-col bg-background-primary px-4 py-3 tablet:px-5 tablet:py-4 items-start gap-1 justify-between rounded-b-xl desktop:rounded-b-2xl"
       >
         <div className="flex justify-between items-center w-full">
           <p className="text-mobile-sub-h2 tablet:text-mobile-h2 desktop:text-sub-h1 text-white">

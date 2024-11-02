@@ -1,5 +1,4 @@
 import Image from 'next/image'
-import React from 'react'
 
 import Networking1 from '@/public/images/Networking_2_1.svg'
 import Networking2 from '@/public/images/Networking_2_2.svg'
@@ -21,7 +20,7 @@ const Networking = () => (
     </div>
     <div className="flex space-x-5 w-full overflow-x-auto desktop:justify-center desktop:max-w-[1600px] desktop-xl:max-w-[1360px] m-auto px-4">
       <div className="flex flex-col space-y-4 tablet:space-y-6 w-full min-w-[280px] tablet:min-w-[328px] desktop:max-w-[328px] desktop-xl:max-w-[440px]">
-        <div className="bg-gray-900 flex items-center justify-center rounded-lg h-[240px] tablet:h-[283px] desktop-xl:h-[380px]">
+        <div className="bg-background-primary flex items-center justify-center rounded-lg h-[240px] tablet:h-[283px] desktop-xl:h-[380px]">
           <Image
             src={Networking1}
             alt="networking image"
@@ -49,7 +48,7 @@ const Networking = () => (
         </div>
       </div>
       <div className="flex flex-col space-y-4 tablet:space-y-6 w-full min-w-[280px] tablet:min-w-[328px] desktop:max-w-[328px] desktop-xl:max-w-[440px]">
-        <div className="bg-gray-900 flex items-center justify-center rounded-lg h-[240px] tablet:h-[283px] desktop-xl:h-[380px]">
+        <div className="bg-background-primary flex items-center justify-center rounded-lg h-[240px] tablet:h-[283px] desktop-xl:h-[380px]">
           <Image
             src={Networking2}
             alt="networking image"
@@ -80,7 +79,7 @@ const Networking = () => (
         </div>
       </div>
       <div className="flex flex-col space-y-4 tablet:space-y-6 w-full min-w-[280px] tablet:min-w-[328px] desktop:max-w-[328px] desktop-xl:max-w-[440px]">
-        <div className="bg-gray-900 flex items-center justify-center rounded-lg h-[240px] tablet:h-[283px] desktop-xl:h-[380px]">
+        <div className="bg-background-primary flex items-center justify-center rounded-lg h-[240px] tablet:h-[283px] desktop-xl:h-[380px]">
           <Image
             src={Networking3}
             alt="networking image"

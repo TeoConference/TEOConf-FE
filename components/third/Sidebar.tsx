@@ -1,7 +1,7 @@
-import { useEffect, useRef, useState } from 'react'
-import clsx from 'clsx'
 import { KeyboardArrowDown, KeyboardArrowUp, Square } from '@mui/icons-material'
 import LaunchIcon from '@mui/icons-material/Launch'
+import clsx from 'clsx'
+import { useEffect, useRef, useState } from 'react'
 
 interface SidebarProps {
   currentId: string
@@ -68,9 +68,9 @@ const Sidebar = (props: SidebarProps) => {
               >
                 <a href={item.link} className="flex items-center gap-4">
                   {currentId === item.id ? (
-                    <Square className="fill-[#A869EE]" />
+                    <Square className="fill-purple-main" />
                   ) : (
-                    <Square className="fill-[#E8E8E8]" />
+                    <Square className="fill-[red]" />
                   )}
                   <span>{item.name}</span>
                 </a>
@@ -84,9 +84,9 @@ const Sidebar = (props: SidebarProps) => {
               >
                 <a href={item.link} className="flex items-center gap-4">
                   {currentId === item.id ? (
-                    <Square className="fill-[#A869EE]" />
+                    <Square className="fill-purple-main" />
                   ) : (
-                    <Square className="fill-[#E8E8E8]" />
+                    <Square className="fill-[red]" />
                   )}
                   <span>{item.name}</span>
                 </a>

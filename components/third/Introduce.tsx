@@ -99,7 +99,7 @@ const Introduce = () => {
             개발자들간에 소통하는 시간을 만들기 위해 기획되었어요!
           </p>
         </div>
-        <div className="bg-black rounded-3xl mt-[2.25rem] max-w-[85rem] w-full tablet:h-[36.875rem] h-[23.75rem]">
+        <div className="bg-background-primary rounded-3xl mt-[2.25rem] max-w-[85rem] w-full tablet:h-[36.875rem] h-[23.75rem]">
           <div className="overflow-hidden desktop:h-[590px] tablet:h-[590px] h-[380px]">
             <p className="text-h2 m-auto w-full text-white tablet:mt-10 tablet:block hidden text-center">
               언제나 궁금했던 이야기들

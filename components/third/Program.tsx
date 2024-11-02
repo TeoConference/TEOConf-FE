@@ -8,7 +8,7 @@ import SpeakerWhite from '@/public/images/SpeakerWhite.svg'
 const Program = () => (
   <section
     id="program"
-    className="content relative p-12 tablet:p-28 desktop:pb-20 desktop:pt-36 desktop-xl:pb-24 px-4 bg-gray-100"
+    className="content relative p-12 tablet:p-28 desktop:pb-20 desktop:pt-36 desktop-xl:pb-24 px-4 bg-background-secondary"
   >
     <div className="flex-col gap-12 w-full flex-center tablet:w-[768px] desktop:w-[1024px] m-auto">
       <div className="flex flex-col tablet:space-y-12 space-y-6 items-center w-full">
@@ -21,62 +21,62 @@ const Program = () => (
           </p>
         </div>
       </div>
-        {
-          programs.map((program, i) => (
-            <div className="flex flex-col gap-8 w-full flex-center tablet:w-[768px] desktop:w-[1024px] m-auto">
-            <p className="text-mobile-h1 tablet:text-h2 text-center">
-              {program.date}
-            </p>
-            <div className="w-full tablet:gap-4 text-white">
-            {
-              program.speakers.map((speaker,i) => (
+      {programs.map((program, i) => (
+        <div className="flex flex-col gap-8 w-full flex-center tablet:w-[768px] desktop:w-[1024px] m-auto">
+          <p className="text-mobile-h1 tablet:text-h2 text-center">
+            {program.date}
+          </p>
+          <div className="w-full tablet:gap-4 text-white">
+            {program.speakers.map((speaker, i) => (
+              <div
+                key={speaker.name}
+                className={clsx(
+                  'flex flex-col bg-background-primary tablet:px-6 desktop:px-8 desktop:pt-8 desktop-xl:px-8 desktop-xl:pt-8 desktop:justify-between justify-between break-keep',
+                  i == 0
+                    ? 'rounded-t-lg'
+                    : i == program.speakers.length - 1
+                    ? 'rounded-b-lg'
+                    : '',
+                  i < program.speakers.length - 1
+                    ? 'px-4 pt-5 pb-0'
+                    : 'px-4 pt-5 pb-4 tablet:pb-6 desktop:pb-8'
+                )}
+              >
                 <div
-                  key={speaker.name}
                   className={clsx(
-                    'flex flex-col bg-black tablet:px-6 desktop:px-8 desktop:pt-8 desktop-xl:px-8 desktop-xl:pt-8 desktop:justify-between justify-between break-keep',
-                    i == 0 ? 'rounded-t-lg' : i == program.speakers.length - 1 ? 'rounded-b-lg' : '',
+                    `h-full w-full flex justify-between items-start`,
                     i < program.speakers.length - 1
-                      ? 'px-4 pt-5 pb-0'
-                      : 'px-4 pt-5 pb-4 tablet:pb-6 desktop:pb-8'
+                      ? 'border-b border-white pb-5 tablet:pb-6 desktop:pb-8'
+                      : ''
                   )}
                 >
-                  <div
-                    className={clsx(
-                      `h-full w-full flex justify-between items-start`,
-                      i < program.speakers.length - 1
-                        ? 'border-b border-white pb-5 tablet:pb-6 desktop:pb-8'
-                        : ''
-                    )}
-                  >
-                    <div className="mr-4 flex flex-col justify-between">
-                      <div className="tablet:space-y-3">
-                        <span className="tablet:text-sub-h1 text-sub-h2 tablet:flex tablet:justify-start items-start text-white">
-                          {speaker.title}
-                        </span>
-                      </div>
-                      <div className="flex justify-between items-end mt-4 desktop:items-end">
-                        <div className="flex flex-col justify-between desktop:flex-row desktop:gap-4 desktop:items-center">
-                          <div>
-                            <span className="tablet:text-sub-h2 text-mobile-sub-h2">
-                              {speaker.name}
-                            </span>
-                          </div>
+                  <div className="mr-4 flex flex-col justify-between">
+                    <div className="tablet:space-y-3">
+                      <span className="tablet:text-sub-h1 text-sub-h2 tablet:flex tablet:justify-start items-start text-white">
+                        {speaker.title}
+                      </span>
+                    </div>
+                    <div className="flex justify-between items-end mt-4 desktop:items-end">
+                      <div className="flex flex-col justify-between desktop:flex-row desktop:gap-4 desktop:items-center">
+                        <div>
+                          <span className="tablet:text-sub-h2 text-mobile-sub-h2">
+                            {speaker.name}
+                          </span>
                         </div>
                       </div>
                     </div>
-                    {i % 2 === 0 ? (
-                      <Image alt="speaker image" src={SpeakerPurple} />
-                    ) : (
-                      <Image alt="speaker image" src={SpeakerWhite} />
-                    )}
                   </div>
+                  {i % 2 === 0 ? (
+                    <Image alt="speaker image" src={SpeakerPurple} />
+                  ) : (
+                    <Image alt="speaker image" src={SpeakerWhite} />
+                  )}
                 </div>
-              ))
-            }
-            </div>
-            </div>
-          ))
-        }
+              </div>
+            ))}
+          </div>
+        </div>
+      ))}
     </div>
   </section>
 )

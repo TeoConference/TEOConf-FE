@@ -15,6 +15,15 @@ module.exports = {
       colors: {
         'green-main': '#00DE4F',
         'purple-main': '#A869EE',
+        'white-main': '#E8E8E8',
+        'white-bg': '#FFFFFF',
+        'white-text': '#000000',
+        'black-bg': '#000000',
+
+        'background-primary': '#111827',
+        'background-secondary': '#f3f4f6',
+
+        'black-text': '#FFFFFF',
         'networking-purple': '#DDD4FC',
         'networking-purple-2': '#F3EAFD',
         'networking-green': '#96F8C0',
