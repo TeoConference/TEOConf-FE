@@ -5,6 +5,7 @@ import Behance from '@/public/images/BehancePurple.svg'
 import GithubLogo from '@/public/images/GithubLogoPurple.svg'
 
 interface StaffCardProps {
+  id: number
   name: string
   description: string
   image: StaticImageData
@@ -14,6 +15,7 @@ interface StaffCardProps {
 }
 
 const StaffCard = ({
+  id,
   name,
   description,
   image,
@@ -32,6 +34,7 @@ const StaffCard = ({
         src={image}
         alt={`${name} 이미지`}
         className="w-full desktop:h-[231.17px] tablet:h-[161.7px] h-[131px]"
+        style={{ objectFit: 'cover', objectPosition: 'center' }}
       />
       <a
         href={url}
