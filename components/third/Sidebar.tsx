@@ -54,7 +54,7 @@ const Sidebar = (props: SidebarProps) => {
   return (
     <div
       className={clsx(
-        'transition-all duration-300 text-white bg-black',
+        'transition-all duration-300 text-typo-white bg-black',
         isOpen ? 'toggleOn' : 'hidden'
       )}
     >
@@ -68,9 +68,9 @@ const Sidebar = (props: SidebarProps) => {
               >
                 <a href={item.link} className="flex items-center gap-4">
                   {currentId === item.id ? (
-                    <Square className="fill-purple-main" />
+                    <Square className="fill-main-primary" />
                   ) : (
-                    <Square className="fill-[red]" />
+                    <Square className="fill-[#E8E8E8]" />
                   )}
                   <span>{item.name}</span>
                 </a>
@@ -84,9 +84,9 @@ const Sidebar = (props: SidebarProps) => {
               >
                 <a href={item.link} className="flex items-center gap-4">
                   {currentId === item.id ? (
-                    <Square className="fill-purple-main" />
+                    <Square className="fill-main-primary" />
                   ) : (
-                    <Square className="fill-[red]" />
+                    <Square className="fill-[#E8E8E8]" />
                   )}
                   <span>{item.name}</span>
                 </a>
@@ -123,8 +123,8 @@ const Sidebar = (props: SidebarProps) => {
             target="_blank"
             className="inline-flex items-center gap-4"
           >
-            <LaunchIcon className="text-purple-main" />{' '}
-            <span className="text-purple-main">참가신청</span>
+            <LaunchIcon className="text-typo-primary" />{' '}
+            <span className="text-typo-primary">참가신청</span>
           </a>
         </div>
       </div>

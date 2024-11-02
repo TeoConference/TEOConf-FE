@@ -88,9 +88,9 @@ const Introduce = () => {
               열려있는 컨퍼런스
             </p>
           </div>
-          <p className="tablet:text-body1 text-mobile-body2 text-center mt-6 text-gray-900">
+          <p className="tablet:text-body1 text-mobile-body2 text-center mt-6 text-typo-white-text">
             테오의 컨퍼런스는{' '}
-            <strong className="text-purple-main rounded-lg">
+            <strong className="text-typo-primary rounded-lg">
               모두에게 열려있는 컨퍼런스
             </strong>
             라는 컨셉을 목표로 <br className="hidden tablet:block" />
@@ -101,7 +101,7 @@ const Introduce = () => {
         </div>
         <div className="bg-background-primary rounded-3xl mt-[2.25rem] max-w-[85rem] w-full tablet:h-[36.875rem] h-[23.75rem]">
           <div className="overflow-hidden desktop:h-[590px] tablet:h-[590px] h-[380px]">
-            <p className="text-h2 m-auto w-full text-white tablet:mt-10 tablet:block hidden text-center">
+            <p className="text-h2 m-auto w-full text-typo-white tablet:mt-10 tablet:block hidden text-center">
               언제나 궁금했던 이야기들
             </p>
             <div className="tablet:mt-12 mt-6 flex">

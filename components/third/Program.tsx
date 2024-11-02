@@ -26,7 +26,7 @@ const Program = () => (
           <p className="text-mobile-h1 tablet:text-h2 text-center">
             {program.date}
           </p>
-          <div className="w-full tablet:gap-4 text-white">
+          <div className="w-full tablet:gap-4 text-typo-white">
             {program.speakers.map((speaker, i) => (
               <div
                 key={speaker.name}
@@ -52,7 +52,7 @@ const Program = () => (
                 >
                   <div className="mr-4 flex flex-col justify-between">
                     <div className="tablet:space-y-3">
-                      <span className="tablet:text-sub-h1 text-sub-h2 tablet:flex tablet:justify-start items-start text-white">
+                      <span className="tablet:text-sub-h1 text-sub-h2 tablet:flex tablet:justify-start items-start text-typo-white">
                         {speaker.title}
                       </span>
                     </div>

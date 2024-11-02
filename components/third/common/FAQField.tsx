@@ -24,7 +24,7 @@ const FAQField = ({ question, answer }: FAQFieldProps) => {
         )}
         onClick={onClickFAQ}
       >
-        <p className="text-mobile-sub-h2 tablet:text-sub-h1 text-gray-900">
+        <p className="text-mobile-sub-h2 tablet:text-sub-h1 text-typo-white-text">
           {question}
         </p>
         {isOpen ? <KeyboardArrowUp /> : <KeyboardArrowDown />}
@@ -35,7 +35,7 @@ const FAQField = ({ question, answer }: FAQFieldProps) => {
           isOpen ? 'h-fit py-2 opacity-100' : 'h-0 opacity-0'
         )}
       >
-        <p className="text-mobile-body2 tablet:text-body2 text-gray-900 pb-4 tablet:pb-4">
+        <p className="text-mobile-body2 tablet:text-body2 text-typo-white-text pb-4 tablet:pb-4">
           {answer}
         </p>
       </div>
