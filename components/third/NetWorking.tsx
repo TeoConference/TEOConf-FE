@@ -14,7 +14,10 @@ const Networking = () => (
         <p className="text-mobile-h1 tablet:text-h1">네트워킹</p>
         <p className="text-mobile-h2 text-center tablet:text-sub-h1 desktop:text-h3 ">
           명함 굿즈를 통해서 자연스럽게 <br className="block tablet:hidden" />
-          좋은 사람들을 찾고 연락처를 공유해보세요!
+          <strong className="text-typo-primary rounded-lg">좋은 사람들</strong>
+          을 찾고 연락처를{' '}
+          <strong className="text-typo-primary rounded-lg">공유</strong>
+          해보세요!
         </p>
       </div>
     </div>
@@ -39,10 +42,10 @@ const Networking = () => (
           </div>
           <div className="inline-flex space-x-2 text-mobile-body2 tablet:text-body3">
             <div className="inline-flex flex-col px-3.5 py-0.5 bg-networking-purple-2 rounded">
-              <p className="text-typo-white-text">#취업</p>
+              <p className="text-black">#취업</p>
             </div>
             <div className="inline-flex flex-col px-3.5 py-0.5 bg-networking-purple-2 rounded">
-              <p className="text-typo-white-text">#개발입문</p>
+              <p className="text-black">#개발입문</p>
             </div>
           </div>
         </div>
@@ -67,13 +70,13 @@ const Networking = () => (
           </div>
           <div className="inline-flex space-x-2 text-mobile-body2 tablet:text-body3">
             <div className="inline-flex flex-col px-3.5 py-0.5 bg-networking-green-2 rounded">
-              <p className="text-typo-white-text">#회사문화</p>
+              <p className="text-black">#회사문화</p>
             </div>
             <div className="inline-flex flex-col px-3.5 py-0.5 bg-networking-green-2 rounded">
-              <p className="text-typo-white-text">#자기계발</p>
+              <p className="text-black">#자기계발</p>
             </div>
             <div className="inline-flex flex-col px-3.5 py-0.5 bg-networking-green-2 rounded">
-              <p className="text-typo-white-text">#성장</p>
+              <p className="text-black">#성장</p>
             </div>
           </div>
         </div>
@@ -98,13 +101,13 @@ const Networking = () => (
           </div>
           <div className="inline-flex space-x-2 text-mobile-body2 tablet:text-body3">
             <div className="inline-flex flex-col px-3.5 py-0.5 bg-networking-blue rounded">
-              <p className="text-typo-white-text">#행사기획</p>
+              <p className="text-black">#행사기획</p>
             </div>
             <div className="inline-flex flex-col px-3.5 py-0.5 bg-networking-blue rounded">
-              <p className="text-typo-white-text">#외부활동</p>
+              <p className="text-black">#외부활동</p>
             </div>
             <div className="inline-flex flex-col px-3.5 py-0.5 bg-networking-blue rounded">
-              <p className="text-typo-white-text">#경험공유</p>
+              <p className="text-black">#경험공유</p>
             </div>
           </div>
         </div>

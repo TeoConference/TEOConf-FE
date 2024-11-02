@@ -10,11 +10,11 @@ interface SidebarProps {
   setIsOpen: React.Dispatch<React.SetStateAction<boolean>>
 }
 
+// TODO: 스태프 추가하기
 const SIDEBAR_ITEMS = {
   CONTENTS: [
     { name: '프로그램', link: '#program', id: 'program' },
     { name: '네트워킹', link: '#networking', id: 'networking' },
-    { name: '현장 스케치', link: '#gallery', id: 'gallery' },
     { name: '명함', link: '#name-card', id: 'name-card' },
     { name: '후원사', link: '#sponsor', id: 'sponsor' },
     { name: '장소', link: '#location', id: 'location' },
@@ -61,7 +61,7 @@ const Sidebar = (props: SidebarProps) => {
     >
       <div className="flex flex-col items-center pt-20 h-full">
         {SIDEBAR_ITEMS.CONTENTS.map((item, idx) => {
-          if (idx < 6) {
+          if (item.name !== 'FAQ') {
             return (
               <div
                 key={idx}
