@@ -1,11 +1,12 @@
-import React, { useState } from 'react'
+import CloseIcon from '@mui/icons-material/Close'
+import LaunchIcon from '@mui/icons-material/Launch'
+import MenuIcon from '@mui/icons-material/Menu'
 import clsx from 'clsx'
 import Image from 'next/image'
 import { useRouter } from 'next/router'
-import CloseIcon from '@mui/icons-material/Close'
-import MenuIcon from '@mui/icons-material/Menu'
-import LaunchIcon from '@mui/icons-material/Launch'
+import { useState } from 'react'
 
+import { links } from '@/data/third/Links'
 import useIntersectionObservation from '@/lib/observer'
 import Logo from '@/public/images/Logo_2.svg'
 import Sidebar from './Sidebar'
@@ -59,8 +60,8 @@ export const Header = () => {
           <SectionTab section="faq" currentSection={currentId}>
             FAQ
           </SectionTab>
-          <a href="https://www.jumpit.co.kr/contents/428" target="_blank">
-            <LaunchIcon className="text-purple-main" />
+          <a href={links.spartaNotion} target="_blank">
+            <LaunchIcon className="text-typo-primary" />
           </a>
         </div>
         {isOpen ? (

@@ -1,4 +1,3 @@
-import React from 'react'
 import clsx from 'clsx'
 
 import { StaffData } from '@/data/second/Staff'
@@ -22,7 +21,7 @@ const Staff = () => (
         <SwiperSlide className="flex justify-between gap-3 tablet:gap-4">
           {StaffData.map(
             (staff, index) =>
-              index < 5 && (
+              index < StaffData.length / 2 + 1 && (
                 <StaffCard
                   key={staff.name}
                   {...staff}
@@ -34,7 +33,7 @@ const Staff = () => (
         <SwiperSlide className="flex justify-between gap-3 tablet:gap-4">
           {StaffData.map(
             (staff, index) =>
-              index < 5 && (
+              index < StaffData.length / 2 + 1 && (
                 <StaffCard
                   key={staff.name}
                   {...staff}
@@ -46,7 +45,7 @@ const Staff = () => (
         <SwiperSlide className="flex justify-between gap-3 tablet:gap-4">
           {StaffData.map(
             (staff, index) =>
-              index < 5 && (
+              index < StaffData.length / 2 + 1 && (
                 <StaffCard
                   key={staff.name}
                   {...staff}
@@ -63,7 +62,7 @@ const Staff = () => (
         >
           {StaffData.map(
             (staff, index) =>
-              index > 4 && (
+              index > StaffData.length / 2 && (
                 <StaffCard
                   key={staff.name}
                   {...staff}
@@ -78,7 +77,7 @@ const Staff = () => (
         >
           {StaffData.map(
             (staff, index) =>
-              index > 4 && (
+              index > StaffData.length / 2 && (
                 <StaffCard
                   key={staff.name}
                   {...staff}
@@ -93,7 +92,7 @@ const Staff = () => (
         >
           {StaffData.map(
             (staff, index) =>
-              index > 4 && (
+              index > StaffData.length / 2 && (
                 <StaffCard
                   key={staff.name}
                   {...staff}

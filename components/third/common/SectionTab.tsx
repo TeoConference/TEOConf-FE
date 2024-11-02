@@ -15,7 +15,9 @@ export const SectionTab = ({
     <Link
       href={`#${section}`}
       className={`${
-        currentSection === section ? 'font-bold text-purple-main' : 'text-white'
+        currentSection === section
+          ? 'font-bold text-typo-primary'
+          : 'text-typo-white'
       }`}
     >
       {children}

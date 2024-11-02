@@ -1,6 +1,6 @@
 import Image from 'next/image'
 
-import { links } from '@/data/third/links'
+import { links } from '@/data/third/Links'
 import Instagram from '@/public/images/Instagram_2.svg'
 import LinkedIn from '@/public/images/LinkedIn_2.svg'
 import Logo from '@/public/images/Logo_2.svg'
@@ -17,16 +17,16 @@ const Footer = () => {
   }
 
   return (
-    <footer className="relative bg-gray-900 px-6 pt-10 pb-8 tablet:pt-20 tablet:pb-16">
+    <footer className="relative bg-background-primary px-6 pt-10 pb-8 tablet:pt-20 tablet:pb-16">
       <div className="tablet:max-w-[768px] desktop:max-w-[1024px] desktop-xl:max-w-[1360px] m-auto">
         <Image alt="logo" src={Logo} width={150} height={25.96} />
-        <p className="text-sub-h2 text-white mt-4 pb-2">
+        <p className="text-sub-h2 text-typo-white mt-4 pb-2">
           ⓒ TEOCON. All Right Reserved.
         </p>
         <div className="tablet:flex items-end justify-between">
           <button
             type="button"
-            className="text-mobile-h2 tablet:text-sub-h2 text-white mt-1"
+            className="text-mobile-h2 tablet:text-sub-h2 text-typo-white mt-1"
             onClick={powerModal}
           >
             개인정보 처리방침

@@ -1,31 +1,41 @@
-import KeyboardDoubleArrowDownOutlinedIcon from '@mui/icons-material/KeyboardDoubleArrowDownOutlined'
-import Image from 'next/image'
-
-import { eventDetails } from '@/data/third/eventDetails'
+import { eventDetails } from '@/data/third/EventDetails'
 import Mouse from '@/public/images/Mouse_2.svg'
 import Red from '@/public/images/red_2.svg'
 import TabletBI1 from '@/public/images/TabletBI1_2.svg'
 import TabletBI2 from '@/public/images/TabletBI2_2.svg'
 import Yellow from '@/public/images/yellow_2.svg'
+import KeyboardDoubleArrowDownOutlinedIcon from '@mui/icons-material/KeyboardDoubleArrowDownOutlined'
+import Image from 'next/image'
 
 const Banner = () => {
   return (
     <section
       id="banner"
-      className="content bg-[#F8F8F8] desktop:h-[916px] tablet:h-[894px] h-[590px] desktop:bg-banner bg-center bg-no-repeat flex-center relative desktop:px-8 tablet:px-10"
+      className="content bg-background-secondary desktop:h-[916px] tablet:h-[894px] h-[590px] desktop:bg-banner bg-center bg-no-repeat flex-center relative desktop:px-8 tablet:px-10"
     >
       <div className="w-full tablet:h-full flex-center flex-col tablet:justify-center desktop:relative desktop:max-w-[100%] desktop-xl:max-w-[1620px] tablet:px-20 px-[50.5px]">
-        <div className="w-full desktop:absolute desktop:bottom-20 relative z-[1]">
+        <div className="w-full desktop:absolute desktop:bottom-10 relative z-[1]">
           <div className="z-[1] tablet:mt-0 desktop:w-full desktop:space-y-20">
             <h1 className="font-AbhayaLibre font-bold desktop:hidden text-[60px] tablet:text-[4.375rem] desktop:text-[5rem] leading-[56px] tracking-[-0.6%] text-center desktop:text-right">
-              TEOConf
+              TEOConf 2024
             </h1>
-            <div className="font-Pretendard space-y-2 tracking-[-0.6%] desktop:leading-14 flex flex-col desktop:gap-y-7 desktop:mt-0 tablet:mt-12 mt-[26px]">
-              <div className="text-center text-black desktop:font-extrabold font-semibold text-[1.375rem] tablet:text-[2.375rem] desktop:text-[3.75rem] desktop:text-left">
+            <div className="font-Pretendard space-y-2 tracking-[-0.6%] desktop:leading-14 flex flex-col desktop:gap-y-4 desktop:mt-0 tablet:mt-12 mt-[26px]">
+              <div className="text-center text-typo-black desktop:font-extrabold font-semibold text-[1.375rem] tablet:text-[2.375rem] desktop:text-[3.75rem] desktop:text-left">
                 {eventDetails.name_ko}
               </div>
-              <div className="text-center whitespace-pre-wrap text-black font-semibold text-[1.375rem] tablet:text-[2.375rem] tablet:mt-0 desktop:text-[3rem] desktop:text-left">
-                {eventDetails.dateAndLocation}
+              <div className="flex flex-col tablet:flex-row gap-1 tablet:gap-5 justify-center desktop:justify-start">
+                <div className="text-center whitespace-pre-wrap text-typo-black font-semibold text-[1.25rem] tablet:text-[2.375rem] tablet:mt-0 desktop:text-[3rem] desktop:text-left">
+                  {eventDetails.date_saturday}
+                </div>
+                <div className="hidden desktop:block text-typo-black font-semibold text-[3rem]">
+                  /
+                </div>
+                <div className="text-center whitespace-pre-wrap text-typo-black font-semibold text-[1.25rem] tablet:text-[2.375rem] tablet:mt-0 desktop:text-[3rem] desktop:text-left">
+                  {eventDetails.date_sunday}
+                </div>
+              </div>
+              <div className="text-center whitespace-pre-wrap text-typo-black font-semibold text-[1.375rem] tablet:text-[2.375rem] tablet:mt-0 desktop:text-[3rem] desktop:text-left">
+                {eventDetails.location}
               </div>
             </div>
           </div>

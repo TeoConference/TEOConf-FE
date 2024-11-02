@@ -1,7 +1,7 @@
-import { useEffect, useRef, useState } from 'react'
-import clsx from 'clsx'
 import { KeyboardArrowDown, KeyboardArrowUp, Square } from '@mui/icons-material'
 import LaunchIcon from '@mui/icons-material/Launch'
+import clsx from 'clsx'
+import { useEffect, useRef, useState } from 'react'
 
 interface SidebarProps {
   currentId: string
@@ -54,7 +54,7 @@ const Sidebar = (props: SidebarProps) => {
   return (
     <div
       className={clsx(
-        'transition-all duration-300 text-white bg-black',
+        'transition-all duration-300 text-typo-white bg-black',
         isOpen ? 'toggleOn' : 'hidden'
       )}
     >
@@ -68,7 +68,7 @@ const Sidebar = (props: SidebarProps) => {
               >
                 <a href={item.link} className="flex items-center gap-4">
                   {currentId === item.id ? (
-                    <Square className="fill-[#A869EE]" />
+                    <Square className="fill-main-primary" />
                   ) : (
                     <Square className="fill-[#E8E8E8]" />
                   )}
@@ -84,7 +84,7 @@ const Sidebar = (props: SidebarProps) => {
               >
                 <a href={item.link} className="flex items-center gap-4">
                   {currentId === item.id ? (
-                    <Square className="fill-[#A869EE]" />
+                    <Square className="fill-main-primary" />
                   ) : (
                     <Square className="fill-[#E8E8E8]" />
                   )}
@@ -123,8 +123,8 @@ const Sidebar = (props: SidebarProps) => {
             target="_blank"
             className="inline-flex items-center gap-4"
           >
-            <LaunchIcon className="text-purple-main" />{' '}
-            <span className="text-purple-main">참가신청</span>
+            <LaunchIcon className="text-typo-primary" />{' '}
+            <span className="text-typo-primary">참가신청</span>
           </a>
         </div>
       </div>

@@ -13,8 +13,17 @@ module.exports = {
         AbhayaLibre: ['AbhayaLibre'],
       },
       colors: {
-        'green-main': '#00DE4F',
-        'purple-main': '#A869EE',
+        'main-primary': '#A869EE',
+        'main-secondary': '#00DE4F',
+        'main-tertiary': '#E8E8E8',
+
+        'typo-black': '#000000',
+        'typo-white': '#FFFFFF',
+        'typo-primary': '#A869EE',
+
+        'background-primary': '#111827',
+        'background-secondary': '#f3f4f6',
+
         'networking-purple': '#DDD4FC',
         'networking-purple-2': '#F3EAFD',
         'networking-green': '#96F8C0',

@@ -72,7 +72,7 @@ const PrivacyModal = (props: PrivacyModalProps) => {
           type="button"
           onClick={powerModal}
         >
-          <span className="text-white text-body2">닫기</span>
+          <span className="text-typo-white text-body2">닫기</span>
         </button>
       </CreateModalContainer>
     </ModalBackDrop>

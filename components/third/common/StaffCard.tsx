@@ -1,11 +1,11 @@
-import React from 'react'
-import Image, { StaticImageData } from 'next/image'
 import clsx from 'clsx'
+import Image, { StaticImageData } from 'next/image'
 
-import GithubLogo from '@/public/images/GithubLogoPurple.svg'
 import Behance from '@/public/images/BehancePurple.svg'
+import GithubLogo from '@/public/images/GithubLogoPurple.svg'
 
 interface StaffCardProps {
+  id: number
   name: string
   description: string
   image: StaticImageData
@@ -15,6 +15,7 @@ interface StaffCardProps {
 }
 
 const StaffCard = ({
+  id,
   name,
   description,
   image,
@@ -33,14 +34,15 @@ const StaffCard = ({
         src={image}
         alt={`${name} 이미지`}
         className="w-full desktop:h-[231.17px] tablet:h-[161.7px] h-[131px]"
+        style={{ objectFit: 'cover', objectPosition: 'center' }}
       />
       <a
         href={url}
         target="_blank"
-        className="flex flex-col bg-gray-900 px-4 py-3 tablet:px-5 tablet:py-4 items-start gap-1 justify-between rounded-b-xl desktop:rounded-b-2xl"
+        className="flex flex-col bg-background-primary px-4 py-3 tablet:px-5 tablet:py-4 items-start gap-1 justify-between rounded-b-xl desktop:rounded-b-2xl"
       >
         <div className="flex justify-between items-center w-full">
-          <p className="text-mobile-sub-h2 tablet:text-mobile-h2 desktop:text-sub-h1 text-white">
+          <p className="text-mobile-sub-h2 tablet:text-mobile-h2 desktop:text-sub-h1 text-typo-white">
             {name}
           </p>
           <div>
@@ -59,7 +61,7 @@ const StaffCard = ({
             )}
           </div>
         </div>
-        <p className="hidden desktop:block text-white text-body3 mt-1">
+        <p className="hidden desktop:block text-typo-white text-body3 mt-1">
           {description}
         </p>
       </a>

@@ -30,9 +30,9 @@ const FAQ = () => {
             <button
               type="button"
               className={clsx(
-                'text-gray-900 px-2 py-1 tablet:px-3 tablet:py-2 transition-all',
+                'text-typo-white-text px-2 py-1 tablet:px-3 tablet:py-2 transition-all',
                 selected === Category.APPLY &&
-                  'text-purple-main border-purple-main border-b'
+                  'text-typo-primary border-main-primary border-b'
               )}
               onClick={() => onClickCategory(Category.APPLY)}
             >
@@ -43,7 +43,7 @@ const FAQ = () => {
               className={clsx(
                 'text-gray-90 px-2 py-1 tablet:px-3 tablet:py-2 transition-all',
                 selected === Category.ON_SITE &&
-                  'text-purple-main border-purple-main border-b'
+                  'text-typo-primary border-main-primary border-b'
               )}
               onClick={() => onClickCategory(Category.ON_SITE)}
             >
@@ -52,9 +52,9 @@ const FAQ = () => {
             <button
               type="button"
               className={clsx(
-                'px-2 py-1 tablet:px-3 tablet:py-2 text-gray-900 transition-all',
+                'px-2 py-1 tablet:px-3 tablet:py-2 text-typo-white-text transition-all',
                 selected === Category.EVENT &&
-                  'text-purple-main border-purple-main border-b'
+                  'text-typo-primary border-main-primary border-b'
               )}
               onClick={() => onClickCategory(Category.EVENT)}
             >
@@ -63,9 +63,9 @@ const FAQ = () => {
             <button
               type="button"
               className={clsx(
-                'px-2 py-1 tablet:px-3 tablet:py-2 text-gray-900 transition-all',
+                'px-2 py-1 tablet:px-3 tablet:py-2 text-typo-white-text transition-all',
                 selected === Category.ETC &&
-                  'text-purple-main border-purple-main border-b'
+                  'text-typo-primary border-main-primary border-b'
               )}
               onClick={() => onClickCategory(Category.ETC)}
             >

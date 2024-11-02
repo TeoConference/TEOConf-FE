@@ -1,4 +1,4 @@
-import { Html, Head, Main, NextScript } from 'next/document'
+import { Head, Html, Main, NextScript } from 'next/document'
 
 export default function Document() {
   return (
@@ -6,7 +6,7 @@ export default function Document() {
       <Head>
         <link rel="shortcut icon" href="images/favicon/favicon.ico" />
       </Head>
-      <body>
+      <body className="text-typo-black">
         <Main />
         <NextScript />
       </body>
