@@ -1,3 +1,4 @@
+import ApplyAndSNS from '@/components/third/ApplyAndSNS'
 import Banner from '@/components/third/Banner'
 import CodeOfConduct from '@/components/third/CodeOfConduct'
 import MetaHead from '@/components/third/common/MetaHead'
@@ -9,13 +10,12 @@ import Map from '@/components/third/Map'
 import NameCard from '@/components/third/NameCard'
 import Networking from '@/components/third/NetWorking'
 import Program from '@/components/third/Program'
-import SNS from '@/components/third/SNS'
 import Sponsor from '@/components/third/Sponsor'
 import Staff from '@/components/third/Staff'
 
 export default function Home() {
   return (
-    <>
+    <div className="text-typo-black bg-background-default">
       <MetaHead />
       <Header />
       <Banner />
@@ -27,9 +27,9 @@ export default function Home() {
       <Map />
       <FAQ />
       <CodeOfConduct />
-      <SNS />
+      <ApplyAndSNS />
       <Staff />
       <Footer />
-    </>
+    </div>
   )
 }

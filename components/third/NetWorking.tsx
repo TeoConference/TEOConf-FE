@@ -1,8 +1,8 @@
 import Image from 'next/image'
 
-import Networking1 from '@/public/images/Networking_2_1.svg'
-import Networking2 from '@/public/images/Networking_2_2.svg'
-import Networking3 from '@/public/images/Networking_2_3.svg'
+import Networking1 from '@/public/images/Networking_3_1.svg'
+import Networking2 from '@/public/images/Networking_3_2.svg'
+import Networking3 from '@/public/images/Networking_3_3.svg'
 
 const Networking = () => (
   <div
@@ -69,13 +69,13 @@ const Networking = () => (
             </p>
           </div>
           <div className="inline-flex space-x-2 text-mobile-body2 tablet:text-body3">
-            <div className="inline-flex flex-col px-3.5 py-0.5 bg-networking-green-2 rounded">
+            <div className="inline-flex flex-col px-3.5 py-0.5 bg-networking-yellow-2 rounded">
               <p className="text-black">#회사문화</p>
             </div>
-            <div className="inline-flex flex-col px-3.5 py-0.5 bg-networking-green-2 rounded">
+            <div className="inline-flex flex-col px-3.5 py-0.5 bg-networking-yellow-2 rounded">
               <p className="text-black">#자기계발</p>
             </div>
-            <div className="inline-flex flex-col px-3.5 py-0.5 bg-networking-green-2 rounded">
+            <div className="inline-flex flex-col px-3.5 py-0.5 bg-networking-yellow-2 rounded">
               <p className="text-black">#성장</p>
             </div>
           </div>

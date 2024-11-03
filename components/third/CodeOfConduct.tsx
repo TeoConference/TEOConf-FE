@@ -4,7 +4,7 @@ import FAQField from './common/FAQField'
 
 const CodeOfConduct = () => {
   return (
-    <section className="pb-14 tablet:pb-32 px-4">
+    <section id="faq2" className="content pb-14 tablet:pb-32 px-4">
       <div className="flex-col w-full gap-6 tablet:gap-20 flex-center tablet:w-[768px] desktop:w-[1024px] m-auto">
         {' '}
         <div className="flex flex-col">

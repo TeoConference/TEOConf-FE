@@ -4,10 +4,10 @@ import Image from 'next/image'
 import SwiperSlide from '@/components/first/common/SwiperSlide'
 import Talk from '@/components/first/introduce/Talk'
 import { talkData } from '@/data/third/Talk'
-import Introduce1 from '@/public/images/Introduce1_2.svg'
-import Introduce2 from '@/public/images/Introduce2_2.svg'
-import Introduce3 from '@/public/images/Introduce3_2.svg'
-import Introduce4 from '@/public/images/Introduce4_2.svg'
+import Introduce1 from '@/public/images/Introduce1_3.svg'
+import Introduce2 from '@/public/images/Introduce2_3.svg'
+import Introduce3 from '@/public/images/Introduce3_3.svg'
+import Introduce4 from '@/public/images/Introduce4_3.svg'
 
 const Icon = (index: number) => {
   switch (index) {

@@ -5,7 +5,7 @@ import StaffCard from './common/StaffCard'
 import SwiperSlide from './common/SwiperSlide'
 
 const Staff = () => (
-  <section className="flex flex-col py-16 tablet:py-36" id="staff">
+  <section id="staff" className="content flex flex-col py-16 tablet:py-36">
     <div className="flex flex-col">
       <div className="text-center text-mobile-h1 tablet:text-h1 justify-center">
         테오콘을 <br className="block tablet:hidden" />

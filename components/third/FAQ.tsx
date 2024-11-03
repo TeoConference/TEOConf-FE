@@ -23,7 +23,7 @@ const FAQ = () => {
     <section id="faq" className="content py-12 tablet:pt-32 tablet:pb-24 px-4">
       <div className="flex-col w-full gap-6 tablet:gap-20 flex-center tablet:w-[768px] desktop:w-[1024px] m-auto">
         <div className="flex flex-col">
-          <p id="sub1" className="text-mobile-h1 tablet:text-h1 text-center">
+          <p id="faq1" className="text-mobile-h1 tablet:text-h1 text-center">
             자주 묻는 질문
           </p>
           <div className="text-mobile-sub-h2 tablet:text-sub-h1 inline-flex mt-2 tablet:mt-4 desktop:mt-8">

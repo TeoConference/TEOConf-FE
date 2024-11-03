@@ -24,13 +24,7 @@ const useIntersectionObservation = (setActiveId: any, currentId: any) => {
         (content: any) => content.isIntersecting
       )
       checkScrollDirection(prevYposition)
-      setActiveId((prev: any) => {
-        if (prev === 'faq' && direction === 'down') {
-          return 'faq'
-        } else {
-          return visibleContent[0]?.target.id
-        }
-      })
+      setActiveId(visibleContent[0]?.target.id)
     }
     //1. 새로운 observer 설정
     const observer = new IntersectionObserver(callback, {

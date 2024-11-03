@@ -8,21 +8,21 @@ import { useState } from 'react'
 
 import { links } from '@/data/third/Links'
 import useIntersectionObservation from '@/lib/observer'
-import Logo from '@/public/images/Logo_2.svg'
-import Sidebar from './Sidebar'
-import { SectionTab } from './common/SectionTab'
+import Logo from '@/public/images/Logo_3.svg'
+import { SectionTab } from '../common/SectionTab'
+import SideBar from '../SideBar'
+import PassedConfMenu from './PassedConfMenu'
 
 export const Header = () => {
   const router = useRouter()
 
   const [currentId, setCurrentId] = useState('banner')
-  const [isOpen, setIsOpen] = useState(false)
+  const [isSideBarOpen, setIsSideBarOpen] = useState(false)
 
   useIntersectionObservation(setCurrentId, currentId)
 
-  const toggleSide = () => {
-    setIsOpen((prev) => !prev)
-  }
+  const openSideBar = () => setIsSideBarOpen(true)
+  const closeSideBar = () => setIsSideBarOpen(false)
 
   return (
     <header
@@ -60,24 +60,38 @@ export const Header = () => {
           <SectionTab section="faq" currentSection={currentId}>
             FAQ
           </SectionTab>
+          <SectionTab section="staff" currentSection={currentId}>
+            스태프
+          </SectionTab>
+          <PassedConfMenu />
           <a href={links.submitForm} target="_blank">
-            <LaunchIcon className="text-typo-primary" />
+            <p className="text-center">
+              <span className="text-typo-primary rounded-lg">참가신청</span>
+              <LaunchIcon
+                className="text-typo-primary"
+                sx={{ fontSize: '18px' }}
+              />
+            </p>
           </a>
         </div>
-        {isOpen ? (
+        {isSideBarOpen ? (
           <CloseIcon
-            onClick={toggleSide}
+            onClick={closeSideBar}
             className="desktop:hidden tablet:block cursor-pointer"
             sx={{ color: '#ffffff' }}
           />
         ) : (
           <MenuIcon
-            onClick={toggleSide}
+            onClick={openSideBar}
             className="desktop:hidden tablet:block cursor-pointer"
             sx={{ color: '#ffffff' }}
           />
         )}
-        <Sidebar currentId={currentId} isOpen={isOpen} setIsOpen={setIsOpen} />
+        <SideBar
+          currentId={currentId}
+          close={closeSideBar}
+          isOpen={isSideBarOpen}
+        />
       </nav>
     </header>
   )

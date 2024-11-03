@@ -13,17 +13,8 @@ module.exports = {
         AbhayaLibre: ['AbhayaLibre'],
       },
       colors: {
-        // 'main-primary': '#A869EE',
-        // 'main-secondary': '#00DE4F',
-        // 'main-tertiary': '#E8E8E8',
+        'purple-main': '#A869EE',
 
-        // 'typo-black': '#000000',
-        // 'typo-white': '#FFFFFF',
-        // 'typo-primary': '#F7CE65',
-
-        // 'background-primary': '#111827',
-        // 'background-secondary': '#f3f4f6',
-        // 'background-default': '#fff',
         'main-primary': '#F7CE65',
         'main-secondary': '#00DE4F',
         'main-tertiary': '#E8E8E8',
@@ -38,8 +29,10 @@ module.exports = {
 
         'networking-purple': '#DDD4FC',
         'networking-purple-2': '#F3EAFD',
-        'networking-green': '#F7CE65',
-        'networking-green-2': '#FBEBC1',
+        'networking-green': '#96F8C0',
+        'networking-green-2': '#D7F5E4',
+        'networking-yellow': '#F7CE65',
+        'networking-yellow-2': '#FBEBC1',
         'networking-red': '#FFB6B6',
         'networking-blue': '#CEE9FA',
       },

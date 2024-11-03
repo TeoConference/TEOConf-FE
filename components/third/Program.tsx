@@ -2,8 +2,8 @@ import clsx from 'clsx'
 import Image from 'next/image'
 
 import { programs } from '@/data/third/Programs'
-import SpeakerPurple from '@/public/images/SpeakerPurple.svg'
-import SpeakerWhite from '@/public/images/SpeakerWhite.svg'
+import SpeakerPrimary from '@/public/images/SpeakerPrimary_3.svg'
+import SpeakerWhite from '@/public/images/SpeakerWhite_3.svg'
 
 const Program = () => (
   <section
@@ -56,7 +56,7 @@ const Program = () => (
                 <div className="flex justify-between items-end mt-4 desktop:items-end">
                   <div className="flex flex-col justify-between desktop:flex-row desktop:gap-4 desktop:items-center">
                     <div>
-                      <span className="tablet:text-sub-h2 text-mobile-sub-h2">
+                      <span className="tablet:text-sub-h2 text-mobile-sub-h2 text-typo-primary">
                         {speaker.name}
                       </span>
                     </div>
@@ -64,9 +64,19 @@ const Program = () => (
                 </div>
               </div>
               {i % 2 === 0 ? (
-                <Image alt="speaker image" src={SpeakerPurple} />
+                <Image
+                  alt="speaker image"
+                  src={speaker.image ?? SpeakerPrimary}
+                  className="w-[70px] aspect-square rounded-lg"
+                  style={{ objectFit: 'cover', objectPosition: 'center' }}
+                />
               ) : (
-                <Image alt="speaker image" src={SpeakerWhite} />
+                <Image
+                  alt="speaker image"
+                  src={speaker.image ?? SpeakerWhite}
+                  className="w-[70px] aspect-square rounded-lg"
+                  style={{ objectFit: 'cover', objectPosition: 'center' }}
+                />
               )}
             </div>
           </div>

@@ -2,7 +2,7 @@ import clsx from 'clsx'
 import Image, { StaticImageData } from 'next/image'
 
 import Behance from '@/public/images/BehancePurple.svg'
-import GithubLogo from '@/public/images/GithubLogoPurple.svg'
+import GithubLogo from '@/public/images/GithubLogoWhite.svg'
 
 interface StaffCardProps {
   name: string
