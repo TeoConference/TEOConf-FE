@@ -9,8 +9,9 @@ import { useState } from 'react'
 import { links } from '@/data/third/Links'
 import useIntersectionObservation from '@/lib/observer'
 import Logo from '@/public/images/Logo_3.svg'
-import { SectionTab } from './common/SectionTab'
-import SideBar from './SideBar'
+import { SectionTab } from '../common/SectionTab'
+import SideBar from '../SideBar'
+import PassedConfMenu from './PassedConfMenu'
 
 export const Header = () => {
   const router = useRouter()
@@ -62,6 +63,7 @@ export const Header = () => {
           <SectionTab section="staff" currentSection={currentId}>
             스태프
           </SectionTab>
+          <PassedConfMenu />
           <a href={links.submitForm} target="_blank">
             <p className="text-center">
               <span className="text-typo-primary rounded-lg">참가신청</span>
