@@ -61,7 +61,13 @@ export const Header = () => {
             FAQ
           </SectionTab>
           <a href={links.submitForm} target="_blank">
-            <LaunchIcon className="text-typo-primary" />
+            <p className="text-center">
+              <span className="text-typo-primary rounded-lg">참가신청</span>
+              <LaunchIcon
+                className="text-typo-primary"
+                sx={{ fontSize: '18px' }}
+              />
+            </p>
           </a>
         </div>
         {isOpen ? (
