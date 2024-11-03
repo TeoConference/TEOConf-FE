@@ -64,9 +64,19 @@ const Program = () => (
                 </div>
               </div>
               {i % 2 === 0 ? (
-                <Image alt="speaker image" src={SpeakerPurple} />
+                <Image
+                  alt="speaker image"
+                  src={speaker.image ?? SpeakerPurple}
+                  className="w-[70px] aspect-square rounded-lg"
+                  style={{ objectFit: 'cover', objectPosition: 'center' }}
+                />
               ) : (
-                <Image alt="speaker image" src={SpeakerWhite} />
+                <Image
+                  alt="speaker image"
+                  src={speaker.image ?? SpeakerWhite}
+                  className="w-[70px] aspect-square rounded-lg"
+                  style={{ objectFit: 'cover', objectPosition: 'center' }}
+                />
               )}
             </div>
           </div>
