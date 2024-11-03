@@ -2,8 +2,8 @@ import clsx from 'clsx'
 import Image from 'next/image'
 
 import { programs } from '@/data/third/Programs'
-import SpeakerPurple from '@/public/images/SpeakerPurple.svg'
-import SpeakerWhite from '@/public/images/SpeakerWhite.svg'
+import SpeakerPrimary from '@/public/images/SpeakerPrimary_3.svg'
+import SpeakerWhite from '@/public/images/SpeakerWhite_3.svg'
 
 const Program = () => (
   <section
@@ -66,7 +66,7 @@ const Program = () => (
               {i % 2 === 0 ? (
                 <Image
                   alt="speaker image"
-                  src={speaker.image ?? SpeakerPurple}
+                  src={speaker.image ?? SpeakerPrimary}
                   className="w-[70px] aspect-square rounded-lg"
                   style={{ objectFit: 'cover', objectPosition: 'center' }}
                 />

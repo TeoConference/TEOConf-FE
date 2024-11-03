@@ -3,7 +3,7 @@ import Image from 'next/image'
 import { links } from '@/data/third/Links'
 import Instagram from '@/public/images/Instagram.svg'
 import LinkedIn from '@/public/images/LinkedIn.svg'
-import Logo from '@/public/images/Logo_2.svg'
+import Logo from '@/public/images/Logo_3.svg'
 import Twitter from '@/public/images/Twitter.svg'
 import LaunchIcon from '@mui/icons-material/Launch'
 

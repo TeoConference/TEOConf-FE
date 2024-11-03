@@ -38,8 +38,10 @@ module.exports = {
 
         'networking-purple': '#DDD4FC',
         'networking-purple-2': '#F3EAFD',
-        'networking-green': '#F7CE65',
-        'networking-green-2': '#FBEBC1',
+        'networking-green': '#96F8C0',
+        'networking-green-2': '#D7F5E4',
+        'networking-yellow': '#F7CE65',
+        'networking-yellow-2': '#FBEBC1',
         'networking-red': '#FFB6B6',
         'networking-blue': '#CEE9FA',
       },

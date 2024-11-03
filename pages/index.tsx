@@ -15,7 +15,7 @@ import Staff from '@/components/third/Staff'
 
 export default function Home() {
   return (
-    <>
+    <div className="text-typo-black bg-background-default">
       <MetaHead />
       <Header />
       <Banner />
@@ -30,6 +30,6 @@ export default function Home() {
       <ApplyAndSNS />
       <Staff />
       <Footer />
-    </>
+    </div>
   )
 }
