@@ -53,7 +53,7 @@ const SideBarItem = ({ menu, currentId }: Props) => {
               <div key={idx} className={`${idx === 0 ? 'pt-6' : ''}`}>
                 <Square className="invisible" />
                 &nbsp;
-                <a href={item.link}>{item.name}</a>
+                <a href={item.link ?? `#${item.id}`}>{item.name}</a>
               </div>
             )
           })}

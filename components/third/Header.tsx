@@ -59,6 +59,9 @@ export const Header = () => {
           <SectionTab section="faq" currentSection={currentId}>
             FAQ
           </SectionTab>
+          <SectionTab section="staff" currentSection={currentId}>
+            스태프
+          </SectionTab>
           <a href={links.submitForm} target="_blank">
             <p className="text-center">
               <span className="text-typo-primary rounded-lg">참가신청</span>
