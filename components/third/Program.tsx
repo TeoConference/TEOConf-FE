@@ -56,7 +56,7 @@ const Program = () => (
                 <div className="flex justify-between items-end mt-4 desktop:items-end">
                   <div className="flex flex-col justify-between desktop:flex-row desktop:gap-4 desktop:items-center">
                     <div>
-                      <span className="tablet:text-sub-h2 text-mobile-sub-h2">
+                      <span className="tablet:text-sub-h2 text-mobile-sub-h2 text-typo-primary">
                         {speaker.name}
                       </span>
                     </div>
