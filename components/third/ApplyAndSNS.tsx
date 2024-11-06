@@ -3,7 +3,7 @@ import Image from 'next/image'
 import { links } from '@/data/third/Links'
 import Instagram from '@/public/images/Instagram.svg'
 import LinkedIn from '@/public/images/LinkedIn.svg'
-import Logo from '@/public/images/Logo_3.svg'
+import Logo from '@/public/images/Logo_primary_3.svg'
 import Twitter from '@/public/images/Twitter.svg'
 import LaunchIcon from '@mui/icons-material/Launch'
 import { useEffect, useState } from 'react'
@@ -69,14 +69,14 @@ const ApplyAndSNS = () => {
           남았어요.
         </p>
         <a
-          className="w-full py-6 mb-4 flex justify-center rounded-lg bg-background-default"
+          className="w-full py-6 mb-4 flex justify-center rounded-lg bg-typo-primary"
           href={links.submitForm}
           target="_blank"
         >
           <Image alt="logo" src={Logo} />
           <div className="ml-4">
-            <p className="text-h3 text-center">
-              참가신청하기 <LaunchIcon className="text-typo-primary" />
+            <p className="text-h3 text-center text-background-primary">
+              참가신청하기 <LaunchIcon className="text-background-primary" />
             </p>
           </div>
         </a>

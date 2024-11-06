@@ -10,7 +10,7 @@ export const programs = [
     date: '11.23 토요일',
     speakers: [
       {
-        title: '3년차 개발자의 모임 프로젝트',
+        title: '30명의 심리 싸움, 오프라인 주식게임 제작기',
         name: '하이안',
         image: Hyan,
       },
@@ -25,17 +25,13 @@ export const programs = [
         name: '병스커',
         image: Byeongsker,
       },
-      {
-        title: '네트워킹으로 성장하기',
-        name: '모승',
-      },
     ],
   },
   {
     date: '11.24 일요일',
     speakers: [
       {
-        title: '3년차 개발자의 모임 프로젝트',
+        title: '30명의 심리 싸움, 오프라인 주식게임 제작기',
         name: '하이안',
         image: Hyan,
       },
