@@ -39,7 +39,7 @@ const SideBar = ({ currentId, isOpen, close }: Props) => {
         isOpen ? 'toggleOn' : 'hidden'
       )}
     >
-      <div className="flex flex-col items-center pt-20 h-full">
+      <div className="flex flex-col px-6 tablet:px-12 pt-20 h-full">
         {menu.map((item) => (
           <SideBarItem
             key={`side-bar-item-${item.id}`}
@@ -47,14 +47,14 @@ const SideBar = ({ currentId, isOpen, close }: Props) => {
             currentId={currentId}
           />
         ))}
-        <div className="w-[90%] py-4 tablet:py-5">
+        <div className="py-4 tablet:py-5">
           <a
             href={links.submitForm}
             target="_blank"
-            className="inline-flex items-center gap-4"
+            className="inline-flex items-center gap-1"
           >
-            <LaunchIcon className="text-typo-primary" />{' '}
             <span className="text-typo-primary">참가신청</span>
+            <LaunchIcon className="text-typo-primary" />
           </a>
         </div>
       </div>

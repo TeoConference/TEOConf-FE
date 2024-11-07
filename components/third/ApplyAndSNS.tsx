@@ -59,7 +59,7 @@ const ApplyAndSNS = () => {
   return (
     <div className="w-[100%] inline-flex flex-col items-center justify-center px-4 py-14 tablet:py-20 desktop:py-26 desktop-xl:py-30 bg-background-primary">
       <div className="w-full flex flex-col items-center max-w-[700px] mx-auto">
-        <p className="mb-20 text-mobile-h1 tablet:text-h3 text-center text-typo-white">
+        <p className="text-mobile-h1 tablet:text-h3 text-center text-typo-white">
           신청 마감까지 <br className="block tablet:hidden" />
           <span className="text-typo-primary text-mobile-h1 tablet:text-h2 rounded-lg">
             <span>{timeLeft.days}일</span> <span>{timeLeft.hours}시간</span>{' '}
@@ -68,22 +68,22 @@ const ApplyAndSNS = () => {
           <br className="block tablet:hidden" />
           남았어요.
         </p>
+        <p className="mt-4 text-body3 tablet:text-body2 text-center text-typo-white">
+          신청 기간: 11.09.까지
+        </p>
         <a
-          className="w-full py-6 mb-4 flex justify-center rounded-lg bg-typo-primary"
+          className="w-full py-4 mt-12 mb-4 flex items-center justify-center rounded-lg bg-typo-primary"
           href={links.submitForm}
           target="_blank"
         >
-          <Image alt="logo" src={Logo} />
-          <div className="ml-4">
-            <p className="text-h3 text-center text-background-primary">
+          <Image alt="logo" src={Logo} height={24} />
+          <div className="ml-3">
+            <p className="text-h3 font-bold text-center text-background-primary">
               참가신청하기 <LaunchIcon className="text-background-primary" />
             </p>
           </div>
         </a>
-        <p className="mb-24 font-bold text-body2 text-center text-typo-white">
-          신청마감일: 2024년 11월 09일
-        </p>
-        <p className="text-h3 text-center text-typo-white">
+        <p className="mt-12 text-h3 text-center text-typo-white">
           <span className="text-typo-primary rounded-lg">테오콘 소식</span>을{' '}
           <br className="block tablet:hidden" /> 더 빨리 알고 싶다면?
         </p>

@@ -17,6 +17,7 @@ export const Header = () => {
   const router = useRouter()
 
   const [currentId, setCurrentId] = useState('banner')
+
   const [isSideBarOpen, setIsSideBarOpen] = useState(false)
 
   useIntersectionObservation(setCurrentId, currentId)
@@ -45,14 +46,8 @@ export const Header = () => {
           <SectionTab section="program" currentSection={currentId}>
             프로그램
           </SectionTab>
-          <SectionTab section="networking" currentSection={currentId}>
-            네트워킹
-          </SectionTab>
-          <SectionTab section="name-card" currentSection={currentId}>
-            명함
-          </SectionTab>
-          <SectionTab section="sponsor" currentSection={currentId}>
-            후원사
+          <SectionTab section="timetable" currentSection={currentId}>
+            타임테이블
           </SectionTab>
           <SectionTab section="location" currentSection={currentId}>
             장소
@@ -60,12 +55,9 @@ export const Header = () => {
           <SectionTab section="faq" currentSection={currentId}>
             FAQ
           </SectionTab>
-          <SectionTab section="staff" currentSection={currentId}>
-            스태프
-          </SectionTab>
           <PassedConfMenu />
           <a href={links.submitForm} target="_blank">
-            <p className="text-center">
+            <p className="text-center flex items-center gap-0.5">
               <span className="text-typo-primary rounded-lg">참가신청</span>
               <LaunchIcon
                 className="text-typo-primary"

@@ -5,9 +5,9 @@ import Hyan from '@/public/images/speakers/third/Hyan.jpg'
 import Kimcheomji from '@/public/images/speakers/third/Kimcheomji.jpg'
 import Kimsan from '@/public/images/speakers/third/Kimsan.jpg'
 
-export const programs = [
+export const sessions = [
   {
-    date: '11.23 토요일',
+    date: '11.23. 토요일',
     speakers: [
       {
         title: '30명의 심리 싸움, 오프라인 주식게임 제작기',
@@ -28,7 +28,7 @@ export const programs = [
     ],
   },
   {
-    date: '11.24 일요일',
+    date: '11.24. 일요일',
     speakers: [
       {
         title: '30명의 심리 싸움, 오프라인 주식게임 제작기',

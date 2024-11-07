@@ -7,11 +7,10 @@ import Footer from '@/components/third/Footer'
 import Header from '@/components/third/Header'
 import Introduce from '@/components/third/Introduce'
 import Map from '@/components/third/Map'
-import NameCard from '@/components/third/NameCard'
-import Networking from '@/components/third/NetWorking'
 import Program from '@/components/third/Program'
 import Sponsor from '@/components/third/Sponsor'
 import Staff from '@/components/third/Staff'
+import Timetable from '@/components/third/Timetable'
 
 export default function Home() {
   return (
@@ -20,10 +19,9 @@ export default function Home() {
       <Header />
       <Banner />
       <Introduce />
-      <Program />
-      <Networking />
-      <NameCard />
       <Sponsor />
+      <Program />
+      <Timetable />
       <Map />
       <FAQ />
       <CodeOfConduct />

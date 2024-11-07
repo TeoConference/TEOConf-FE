@@ -1,7 +1,7 @@
-import { Menu } from '@/data/third/Menu'
-import { KeyboardArrowDown, KeyboardArrowUp, Square } from '@mui/icons-material'
-import clsx from 'clsx'
 import { useMemo, useState } from 'react'
+import { Menu } from '@/data/third/Menu'
+import { KeyboardArrowUp } from '@mui/icons-material'
+import clsx from 'clsx'
 
 interface Props {
   menu: Menu
@@ -20,39 +20,37 @@ const SideBarItem = ({ menu, currentId }: Props) => {
     <>
       <div
         className={clsx(
-          'w-[90%] tablet:w-[85%] py-4 tablet:py-5 border-b-[0.5px] flex',
-          hasChildren ? ' justify-between' : ''
+          'py-4 tablet:py-5 border-b flex',
+          hasChildren && ' justify-between',
+          selected && 'border-b-main-primary'
         )}
       >
         <a href={link} className="flex items-center gap-4">
-          {selected ? (
-            <Square className="fill-main-primary" />
-          ) : (
-            <Square className="fill-[#E8E8E8]" />
-          )}
           <span>{menu.name}</span>
         </a>
         {hasChildren && (
           <div className="flex-center" onClick={toggleIsOpen}>
             <button type="button">
-              {isOpen ? <KeyboardArrowUp /> : <KeyboardArrowDown />}
+              <KeyboardArrowUp
+                className={clsx(
+                  'transition-transform',
+                  isOpen ? 'rotate-[0deg]' : '-rotate-[180deg]'
+                )}
+              />
             </button>
           </div>
         )}
       </div>
       {menu.children && (
         <div
-          className="text-[1.25rem] tablet:text-[1.625rem] space-y-4 w-[90%] tablet:w-[85%] overflow-y-hidden"
-          style={{
-            maxHeight: isOpen ? '100%' : '0',
-            transition: 'max-height 1s ease',
-          }}
+          className={clsx(
+            'text-[1.25rem] tablet:text-[1.625rem] space-y-4 overflow-y-hidden transition-all',
+            isOpen ? 'pb-4 max-h-full' : 'pb-0 max-h-0'
+          )}
         >
           {menu.children.map((item, idx) => {
             return (
               <div key={idx} className={`${idx === 0 ? 'pt-6' : ''}`}>
-                <Square className="invisible" />
-                &nbsp;
                 <a href={item.link ?? `#${item.id}`}>{item.name}</a>
               </div>
             )

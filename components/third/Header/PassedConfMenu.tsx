@@ -79,7 +79,7 @@ const PassedConfMenu = () => {
                 placement === 'bottom-start' ? 'left top' : 'left bottom',
             }}
           >
-            <Paper>
+            <Paper className="bg-background-default/80 text-typo-white">
               <ClickAwayListener onClickAway={handleClose}>
                 <MenuList autoFocusItem={open}>
                   <MenuItem onClick={handleRedirect('/first')}>
