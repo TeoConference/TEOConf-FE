@@ -1,7 +1,7 @@
 export const eventDetails = {
-  name_ko: '테오의 컨퍼런스 3기',
-  name_en: 'TeoConf',
-  date_saturday: '24.11.23 토요일',
-  date_sunday: '24.11.24 일요일',
-  location: '아이콘역삼빌딩',
+  name_ko: 'TEOConf 2024',
+  name_en: 'TEOConf 2024',
+  date_saturday: '11.23. 토요일',
+  date_sunday: '11.24. 일요일',
+  location: '팀스파르타 본사',
 }

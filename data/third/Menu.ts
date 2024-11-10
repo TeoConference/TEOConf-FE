@@ -7,7 +7,7 @@ export type Menu = {
 
 export const menu: Array<Menu> = [
   { name: '프로그램', id: 'program' },
-  { name: '후원사', id: 'sponsor' },
+  { name: '타임테이블', id: 'timetable' },
   { name: '장소', id: 'location' },
   {
     name: 'FAQ',
@@ -17,7 +17,6 @@ export const menu: Array<Menu> = [
       { name: '행동강령', id: 'faq2' },
     ],
   },
-  { name: '스태프', id: 'staff' },
   {
     name: '지난 행사',
     id: 'passed-confs',

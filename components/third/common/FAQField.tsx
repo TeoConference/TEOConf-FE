@@ -1,7 +1,7 @@
-import KeyboardArrowDown from '@mui/icons-material/KeyboardArrowDown'
-import KeyboardArrowUp from '@mui/icons-material/KeyboardArrowUp'
-import clsx from 'clsx'
 import { useState } from 'react'
+import clsx from 'clsx'
+import { Accordion, AccordionSummary, AccordionDetails } from '@mui/material'
+import { ExpandMore } from '@mui/icons-material'
 
 interface FAQFieldProps {
   question: string
@@ -16,30 +16,31 @@ const FAQField = ({ question, answer }: FAQFieldProps) => {
   }
 
   return (
-    <div className="flex flex-col w-full">
-      <div
+    <Accordion
+      expanded={isOpen}
+      className="flex flex-col w-full rounded-lg m-0 bg-background-secondary text-typo-white break-keep"
+    >
+      <AccordionSummary
+        expandIcon={<ExpandMore className="fill-typo-white" />}
         className={clsx(
-          'flex justify-between cursor-pointer w-full items-center px-4 py-3.5 tablet:py-5 tablet:px-7 bg-background-secondary',
+          'flex justify-between w-full items-center px-4 py-3.5 tablet:py-5 tablet:px-8 transition-all min-h-fit [&_.MuiAccordionSummary-content]:m-0',
           isOpen ? 'rounded-t-lg' : 'rounded-lg'
         )}
         onClick={onClickFAQ}
       >
-        <p className="text-mobile-sub-h2 tablet:text-sub-h1 text-typo-white-text">
-          {question}
-        </p>
-        {isOpen ? <KeyboardArrowUp /> : <KeyboardArrowDown />}
-      </div>
-      <div
+        <p className="text-mobile-sub-h2 tablet:text-sub-h1">{question}</p>
+      </AccordionSummary>
+      <AccordionDetails
         className={clsx(
-          'pl-4 pr-11 tablet:pl-8 tablet:pr-20 bg-background-secondary rounded-b-lg overflow-hidden transition-all',
-          isOpen ? 'h-fit py-2 opacity-100' : 'h-0 opacity-0'
+          'px-4 tablet:px-8 bg-background-secondary rounded-b-lg overflow-hidden transition-opacity',
+          isOpen ? 'opacity-100' : 'opacity-0'
         )}
       >
-        <p className="text-mobile-body2 tablet:text-body2 text-typo-white-text pb-4 tablet:pb-4">
+        <p className="text-mobile-body2 tablet:text-body2 text-gray-300 tablet:pb-4">
           {answer}
         </p>
-      </div>
-    </div>
+      </AccordionDetails>
+    </Accordion>
   )
 }
 
