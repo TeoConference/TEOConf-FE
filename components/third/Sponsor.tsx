@@ -11,17 +11,20 @@ const Sponsor = () => (
           <p className="font-Pretendard text-mobile-h2 text-center tablet:hidden">
             {eventDetails.name_ko}는 <br />
             <a className="hover:underline" target="_blank" href={sponsor.link}>
-              &apos;{sponsor.name}&apos;
+              현직 개발자 역량 강화 코스
+              <br />
+              <span className="text-[#f50000]">{sponsor.name}</span>
             </a>
-            에서 후원합니다.
+            와 함께합니다.
             <br />
           </p>
           <p className="hidden tablet:block font-Pretendard font-bold text-h3 mt-8">
             {eventDetails.name_ko}는{' '}
             <a className="hover:underline" target="_blank" href={sponsor.link}>
-              &apos;{sponsor.name}&apos;
+              현직 개발자 역량 강화 코스{' '}
+              <span className="text-[#f50000]">{sponsor.name}</span>
             </a>
-            에서 후원합니다.
+            와 함께합니다.
             <br />
           </p>
         </div>

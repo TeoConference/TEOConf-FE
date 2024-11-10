@@ -53,7 +53,7 @@ const SideBar = ({ currentId, isOpen, close }: Props) => {
             target="_blank"
             className="inline-flex items-center gap-1"
           >
-            <span className="text-typo-primary">참가신청</span>
+            <span className="text-typo-primary">행사 소개</span>
             <LaunchIcon className="text-typo-primary" />
           </a>
         </div>

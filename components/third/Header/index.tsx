@@ -58,7 +58,7 @@ export const Header = () => {
           <PassedConfMenu />
           <a href={links.submitForm} target="_blank">
             <p className="text-center flex items-center gap-0.5">
-              <span className="text-typo-primary rounded-lg">참가신청</span>
+              <span className="text-typo-primary rounded-lg">행사 소개</span>
               <LaunchIcon
                 className="text-typo-primary"
                 sx={{ fontSize: '18px' }}

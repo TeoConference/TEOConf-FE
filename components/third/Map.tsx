@@ -20,7 +20,7 @@ const Map = () => {
                 (아이콘역삼빌딩, 12층)
               </p>
               <p className="tablet:text-body2 text-body-3 text-center text-gray-400">
-                선릉역 4번 출구에서 400M 거리
+                선릉역 4번 출구에서 400m
               </p>
             </div>
           </div>
