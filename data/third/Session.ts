@@ -60,7 +60,7 @@ export const sessions = [
           'https://drive.google.com/file/d/1oLdu81OLpLNN-2N9rLqgMLFmppwdMWfw/view?usp=drive_link',
       },
       {
-        title: 'EventManager 패턴을 통해 클라이언트 환경 개선하기',
+        title: 'EventManager 패턴을 활용하여 상태를 전역처럼 관리하기',
         name: '김첨지',
         image: Kimcheomji,
         resource:
