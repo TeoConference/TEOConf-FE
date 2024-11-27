@@ -1,5 +1,6 @@
 import clsx from 'clsx'
 import Image from 'next/image'
+import SaveAltIcon from '@mui/icons-material/SaveAlt'
 
 import { sessions } from '@/data/third/Session'
 import SpeakerPrimary from '@/public/images/SpeakerPrimary_3.svg'
@@ -61,6 +62,15 @@ const Session = () => (
                             {speaker.name}
                           </span>
                         </div>
+                        <button className="border rounded w-fit py-1 px-2 mt-2 desktop:mt-0">
+                          <a
+                            href={speaker.resource}
+                            target="_blank"
+                            className="text-mobile-body2 hover:text-gray-300 transition tablet:text-body3 flex items-center gap-1"
+                          >
+                            <SaveAltIcon className="w-4 h-4" /> 발표자료
+                          </a>
+                        </button>
                       </div>
                     </div>
                   </div>

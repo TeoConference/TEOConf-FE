@@ -18,18 +18,20 @@ export const timetables = [
       {
         startTime: '14:40',
         endTime: '15:10',
-        content: '세션 네트워킹 & 쉬는 시간',
+        content:
+          'Trunk Code Quality로 일관성 있는 코드를 쓰는 개발자 되기 - 앤드류',
+        isSession: true,
       },
       {
         startTime: '15:10',
         endTime: '15:40',
-        content: '출근해서 바로 써먹을 수 있는 커뮤니케이션 팁 - 동훈',
-        isSession: true,
+        content: '세션 네트워킹 & 쉬는 시간',
       },
       {
         startTime: '15:40',
         endTime: '16:10',
-        content: '세션 네트워킹 & 쉬는 시간',
+        content: '출근해서 바로 써먹을 수 있는 커뮤니케이션 팁 - 동훈',
+        isSession: true,
       },
       {
         startTime: '16:10',
