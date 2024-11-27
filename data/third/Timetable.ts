@@ -82,7 +82,7 @@ export const timetables = [
       {
         startTime: '15:40',
         endTime: '16:10',
-        content: 'EventManager 패턴을 통해 클라이언트 환경 개선하기 - 김첨지',
+        content: 'EventManager 패턴을 활용하여 상태를 전역처럼 관리하기 - 김첨지',
         isSession: true,
       },
       {
