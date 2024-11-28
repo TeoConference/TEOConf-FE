@@ -38,7 +38,7 @@ export const sessions = [
         name: '병스커',
         image: Byeongsker,
         resource:
-          'https://drive.google.com/file/d/1GxEzmv9WKBQjTjU_KJlcvpAbBVevpzJn/view?usp=drive_link',
+          'https://drive.google.com/file/d/1i2GMA9CuxSKmFoLDe6Tvwzosci4NOuNM/view?usp=sharing',
       },
     ],
   },
