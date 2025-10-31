@@ -80,7 +80,7 @@ const Hero = () => {
         </div>
 
         {/* 카운트다운 섹션 */}
-        <div className="relative w-full flex-center mt-8 tablet:mt-12">
+        <div className="relative w-full flex-center min-h-[300px]">
           {/* Group 105 캐릭터 그룹 */}
           <div className="absolute inset-0 flex-center -z-10">
             <Image
