@@ -52,7 +52,7 @@ const Hero = () => {
         backgroundImage: "url('/images/2025/background/commingsoon-bg.png')",
       }}
     >
-      <div className="w-full max-w-[1200px] mx-auto px-4 tablet:px-8 flex-center flex-col relative z-[1] gap-12 tablet:gap-16">
+      <div className="w-full max-w-[1200px] mx-auto px-4 tablet:px-8 flex-center flex-col relative z-[1] gap-6 tablet:gap-4">
         {/* 상단 콘텐츠 */}
         <div className="flex-center flex-col gap-2 tablet:gap-2 text-center">
           {/* COMING.SOON 배너 */}
@@ -90,6 +90,83 @@ const Hero = () => {
               height={409}
               className="w-full max-w-[900px] h-auto"
             />
+          </div>
+
+          {/* 카운트다운 컨테이너 */}
+          <div className="relative z-10 w-full max-w-[800px]  px-8 py-12 tablet:px-12 tablet:py-16 flex-center flex-col gap-2">
+            {/* 테오콘 오픈까지 텍스트 */}
+            <h2 className="text-white font-bold text-center color-[#38ED85] text-[24px] mb-4">
+              테오콘 오픈까지
+            </h2>
+
+            {/* 카운트다운 숫자 및 라벨 */}
+            <div className="flex items-start justify-center gap-4 tablet:gap-6 flex-wrap">
+              {/* DAYS */}
+              <div className="flex flex-col gap-2">
+                <div className="text-white text-[80px] font-bold leading-[80px] h-[80px] flex items-center">
+                  {timeLeft.days}
+                </div>
+                <div className="text-white text-[20px] font-medium uppercase tracking-wider">
+                  DAYS
+                </div>
+              </div>
+
+              {/* 구분자 */}
+              <div className="text-white text-[80px] font-bold leading-[80px] h-[80px] flex items-center justify-center">
+                :
+              </div>
+
+              {/* HOURS */}
+              <div className="flex flex-col gap-2">
+                <div className="text-white text-[80px] font-bold leading-[80px] h-[80px] flex items-center">
+                  {timeLeft.hours}
+                </div>
+                <div className="text-white text-[20px] font-medium uppercase tracking-wider">
+                  HOURS
+                </div>
+              </div>
+
+              {/* 구분자 */}
+              <div className="text-white text-[80px] font-bold leading-[80px] h-[80px] flex items-center justify-center">
+                :
+              </div>
+
+              {/* MINUTES */}
+              <div className="flex flex-col gap-2">
+                <div className="text-white text-[80px] font-bold leading-[80px] h-[80px] flex items-center">
+                  {timeLeft.minutes}
+                </div>
+                <div className="text-white text-[20px] font-medium uppercase tracking-wider">
+                  MINUTES
+                </div>
+              </div>
+
+              {/* 구분자 */}
+              <div className="text-white text-[80px] font-bold leading-[80px] h-[80px] flex items-center justify-center">
+                :
+              </div>
+
+              {/* SECONDS */}
+              <div className="flex flex-col gap-2">
+                <div className="text-white text-[80px] font-bold leading-[80px] h-[80px] flex items-center">
+                  {timeLeft.seconds}
+                </div>
+                <div className="text-white text-[20px] font-medium uppercase tracking-wider">
+                  SECONDS
+                </div>
+              </div>
+            </div>
+
+            {/* 참가 신청 버튼 */}
+            <button
+              className="bg-[#9C27B0] hover:bg-[#7B1FA2] text-white px-8 py-3 tablet:px-12 tablet:py-4 rounded-lg text-base tablet:text-lg font-medium transition-colors duration-200"
+              onClick={() => {
+                // 참가 신청 링크로 이동할 수 있도록 설정 필요
+                console.log('참가 신청 클릭')
+              }}
+            >
+              참가 신청
+            </button>
           </div>
         </div>
       </div>
