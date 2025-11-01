@@ -10,6 +10,16 @@ const Hero = () => {
     minutes: '00',
     seconds: '57',
   })
+  const [isMobile, setIsMobile] = useState(false)
+
+  useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth < 768) // tablet breakpoint
+    }
+    checkMobile()
+    window.addEventListener('resize', checkMobile)
+    return () => window.removeEventListener('resize', checkMobile)
+  }, [])
 
   useEffect(() => {
     // 실제 날짜로 변경 필요 (예: 2025년 12월 6일)
@@ -49,9 +59,11 @@ const Hero = () => {
   return (
     <section
       id="banner"
-      className="relative w-full min-h-[calc(100vh_-_4rem)] flex-center overflow-hidden bg-white bg-center bg-cover bg-no-repeat py-12 tablet:py-20"
+      className="relative w-full min-h-[calc(100vh_-_8rem)] tablet:min-h-[calc(100vh_-_4rem)] flex tablet:flex-center overflow-hidden bg-white bg-center bg-cover bg-no-repeat py-12 tablet:py-20"
       style={{
-        backgroundImage: "url('/images/2025/background/commingsoon-bg.png')",
+        backgroundImage: `url('/images/2025/background/${
+          isMobile ? 'commingsoon-mobile-bg.png' : 'commingsoon-bg.png'
+        }')`,
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         backgroundRepeat: 'no-repeat',
@@ -59,11 +71,14 @@ const Hero = () => {
     >
       <div className="w-full max-w-[1200px] mx-auto px-4 tablet:px-8 flex-center flex-col relative z-[1] gap-6 tablet:gap-4">
         {/* 모바일용 콘텐츠 */}
-        <div className="flex-center flex-col gap-2 text-center tablet:hidden -mt-8">
-          <h1 className="font-bold text-[2rem] leading-tight">
-            <span className="text-[#8814F4]">TEO</span>Conf 2025
+        <div className="flex flex-col text-center tablet:hidden py-8">
+          <h1 className="font-bold text-[3.5rem] leading-normal">
+            <span className="text-[#8814F4]">TEO</span> Conf
           </h1>
-          <p className="font-semibold text-black text-[1.5rem] leading-tight">
+          <h1 className="font-bold text-[3.5rem] leading-normal -mt-[20px]">
+            2025
+          </h1>
+          <p className="font-semibold text-black text-[1.5rem] leading-tight pb-4">
             모두에게 열려있는 컨퍼런스
           </p>
           <p className="font-medium text-[#6B7280] text-[1.25rem] leading-tight">

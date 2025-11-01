@@ -1,5 +1,5 @@
 import Header from '@/components/2025-commingsoon/shared/Header/Header'
-import Hero from '@/components/2025-commingsoon/sections/CountDown'
+import Hero from '@/components/2025-commingsoon/sections/Hero'
 import Introduce from '@/components/2025-commingsoon/sections/Introduce'
 import Overview from '@/components/2025-commingsoon/sections/Overview'
 import Sponsor from '@/components/2025-commingsoon/sections/Sponsor'
