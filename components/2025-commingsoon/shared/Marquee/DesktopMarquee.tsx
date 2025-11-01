@@ -4,7 +4,7 @@ interface DesktopMarqueeProps {
 
 const DesktopMarquee = ({ children }: DesktopMarqueeProps) => {
   return (
-    <div className="w-full overflow-hidden tablet:hidden">
+    <div className="w-full overflow-hidden tablet:hidden desktop:block">
       <div className="flex flex-row gap-4 animate-move-left">
         {/* 첫 번째 세트 */}
         <div className="flex flex-row gap-4 flex-shrink-0">{children}</div>

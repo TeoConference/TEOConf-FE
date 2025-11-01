@@ -3,7 +3,7 @@ import Image from 'next/image'
 
 const IntroSection = () => {
   return (
-    <section className="relative w-full overflow-hidden py-16 tablet:py-24 bg-[#F9FAFB] min-h-[calc(100vh_-_4rem)]">
+    <section className="relative w-full overflow-hidden py-16 tablet:py-24 bg-[#F9FAFB] min-h-[600px] tablet:min-h-[700px] desktop:min-h-[calc(100vh_-_4rem)]">
       <div className="w-full max-w-[1200px] mx-auto px-4 tablet:px-8 flex-center flex-col">
         {/* Talk, Experience, Openly */}
         <h3 className="text-[#A855F7] text-[1.25rem] tablet:text-[1.5rem] font-regular text-center mb-6 tablet:mb-8">
