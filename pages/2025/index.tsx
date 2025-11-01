@@ -3,6 +3,7 @@ import Hero from '@/components/2025-commingsoon/sections/CountDown'
 import IntroSection from '@/components/2025-commingsoon/sections/Intro'
 import TeoconOverview from '@/components/2025-commingsoon/sections/TeoconOverview'
 import EliceLab from '@/components/2025-commingsoon/sections/EliceLab'
+import SNS from '@/components/2025-commingsoon/sections/SNS'
 
 export default function Home() {
   return (
@@ -12,6 +13,7 @@ export default function Home() {
       <IntroSection />
       <TeoconOverview />
       <EliceLab />
+      <SNS />
     </div>
   )
 }
