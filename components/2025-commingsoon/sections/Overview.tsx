@@ -6,12 +6,12 @@ const Overview = () => {
   return (
     <section
       id="overview"
-      className="relative w-full overflow-hidden bg-white  bg-[#F9FAFB] py-16 tablet:py-24"
+      className="relative w-full overflow-hidden bg-[#F9FAFB] py-16 tablet:py-24"
     >
       <div className="w-full flex-center flex-col">
         {/* 제목 */}
         <div className="flex flex-col gap-4 p-2 tablet:p-0 mb-8 tablet:mb-12 ">
-          <h2 className="w-full text-center text-[#1F2937] text-[1.875rem] tablet:text-[2rem] desktop:text-[2.25rem] font-semibold text-center max-w-4xl ">
+          <h2 className="w-full text-[#1F2937] text-[1.875rem] tablet:text-[2rem] desktop:text-[2.25rem] font-semibold text-center max-w-4xl ">
             테오콘 <strong className="text-[#A855F7]">모아보기</strong>
           </h2>
 
