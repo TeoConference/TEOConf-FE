@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import Image from 'next/image'
+import CountdownItem from './comming-soon/CountdownItem'
+import CountdownSeparator from './comming-soon/CountdownSeparator'
 
 const Hero = () => {
   const [timeLeft, setTimeLeft] = useState({
@@ -97,8 +99,8 @@ const Hero = () => {
           </div>
 
           {/* 카운트다운 컨테이너 */}
-          <div className="relative z-10 w-full max-w-[800px]  px-8 py-12 tablet:px-12 tablet:py-16 flex-center flex-col gap-2   ">
-            <div className="w-full flex-center flex-col gap-2 border-2 border-red-500">
+          <div className="relative z-10 w-full max-w-[800px] px-8 py-12 tablet:px-12 tablet:py-16 flex-center flex-col gap-2">
+            <div className="w-full flex-center flex-col gap-2">
               {/* 테오콘 오픈까지 텍스트 */}
               <h2 className="text-white text-center text-[1.5rem] mt-12 font-normal">
                 테오콘 오픈까지
@@ -106,60 +108,13 @@ const Hero = () => {
 
               {/* 카운트다운 숫자 및 라벨 */}
               <div className="flex items-start justify-center gap-4 tablet:gap-6 flex-wrap">
-                {/* DAYS */}
-                <div className="flex flex-col gap-2">
-                  <div className="text-white text-[5rem] font-bold ">
-                    {timeLeft.days}
-                  </div>
-                  <div className="text-[#D1D5D8] text-[1.25rem] font-normal uppercase tracking-wider text-center">
-                    DAYS
-                  </div>
-                </div>
-
-                {/* 구분자 */}
-                <div className="text-white text-[80px] font-bold leading-[80px] h-[80px] flex items-center justify-center">
-                  :
-                </div>
-
-                {/* HOURS */}
-                <div className="flex flex-col gap-2">
-                  <div className="text-white text-[5rem] font-bold leading-[5rem] h-[5rem] flex items-center">
-                    {timeLeft.hours}
-                  </div>
-                  <div className="text-[#D1D5D8] text-[1.25rem] font-normal uppercase tracking-wider text-center">
-                    HOURS
-                  </div>
-                </div>
-
-                {/* 구분자 */}
-                <div className="text-white text-[5rem] font-bold flex items-center justify-center">
-                  :
-                </div>
-
-                {/* MINUTES */}
-                <div className="flex flex-col gap-2">
-                  <div className="text-white text-[5rem] font-bold leading-[5rem] h-[5rem] flex items-center">
-                    {timeLeft.minutes}
-                  </div>
-                  <div className="text-[#D1D5D8] text-[1.25rem] font-normal uppercase tracking-wider text-center">
-                    MINUTES
-                  </div>
-                </div>
-
-                {/* 구분자 */}
-                <div className="text-white text-[80px] font-bold leading-[80px] h-[80px] flex items-center justify-center">
-                  :
-                </div>
-
-                {/* SECONDS */}
-                <div className="flex flex-col gap-2">
-                  <div className="text-white text-[80px] font-bold leading-[80px] h-[80px] flex items-center">
-                    {timeLeft.seconds}
-                  </div>
-                  <div className="text-[#D1D5D8] text-[1.25rem] font-normal uppercase tracking-wider text-center">
-                    SECONDS
-                  </div>
-                </div>
+                <CountdownItem value={timeLeft.days} label="DAYS" />
+                <CountdownSeparator />
+                <CountdownItem value={timeLeft.hours} label="HOURS" />
+                <CountdownSeparator />
+                <CountdownItem value={timeLeft.minutes} label="MINUTES" />
+                <CountdownSeparator />
+                <CountdownItem value={timeLeft.seconds} label="SECONDS" />
               </div>
 
               {/* 참가 신청 버튼 */}
