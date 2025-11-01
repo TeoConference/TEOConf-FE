@@ -52,6 +52,9 @@ const Hero = () => {
       className="relative w-full min-h-[calc(100vh_-_4rem)] flex-center overflow-hidden bg-white bg-center bg-cover bg-no-repeat py-12 tablet:py-20"
       style={{
         backgroundImage: "url('/images/2025/background/commingsoon-bg.png')",
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        backgroundRepeat: 'no-repeat',
       }}
     >
       <div className="w-full max-w-[1200px] mx-auto px-4 tablet:px-8 flex-center flex-col relative z-[1] gap-6 tablet:gap-4">

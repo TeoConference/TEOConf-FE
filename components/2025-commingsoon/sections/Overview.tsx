@@ -1,8 +1,8 @@
 import TeoconCard from '../shared/Card/TeoconCard'
 import MarqueeWrapper from '../shared/Marquee/MarqueeWrapper'
-import { TeoConOverview } from '../constants/TeoConOverview'
+import { Overview as OverviewData } from '../constants/data'
 
-const TeoconOverview = () => {
+const Overview = () => {
   return (
     <section className="relative w-full overflow-hidden bg-white  bg-[#F9FAFB] py-16 tablet:py-24">
       <div className="w-full flex-center flex-col">
@@ -19,7 +19,7 @@ const TeoconOverview = () => {
 
         {/* 내용 영역 */}
         <MarqueeWrapper>
-          {TeoConOverview.map((item, index) => (
+          {OverviewData.map((item, index) => (
             <div
               key={index}
               className="flex-shrink-0 w-[320px] tablet:w-[400px] desktop:w-[360px]"
@@ -33,4 +33,4 @@ const TeoconOverview = () => {
   )
 }
 
-export default TeoconOverview
+export default Overview

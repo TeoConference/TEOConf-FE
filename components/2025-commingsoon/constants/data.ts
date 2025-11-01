@@ -1,4 +1,4 @@
-interface TeoConOverview {
+interface Overview {
   title: string
   description: string
   thumbnail: string
@@ -6,7 +6,7 @@ interface TeoConOverview {
   nickname?: string
 }
 
-export const TeoConOverview: TeoConOverview[] = [
+export const Overview: Overview[] = [
   {
     title: 'TEOConf 2025: 스태프 미팅 이야기',
     description: '스태프 미팅 이야기',
