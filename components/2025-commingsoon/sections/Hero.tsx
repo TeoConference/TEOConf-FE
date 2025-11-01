@@ -82,7 +82,7 @@ const Hero = () => {
             모두에게 열려있는 컨퍼런스
           </p>
           <p className="font-medium text-[#6B7280] text-[1.25rem] leading-tight">
-            12.6 ~ 12.7 성수 앨리스Lab
+            12.6 ~ 12.7 성수 엘리스Lab
           </p>
         </div>
 
@@ -109,7 +109,7 @@ const Hero = () => {
 
           {/* 날짜 및 장소 */}
           <p className="font-medium text-[#6B7280] text-[1.25rem] leading-tight">
-            12월 6일(토) ~ 7일(일) | 서울 성수 앨리스Lab
+            12월 6일(토) ~ 7일(일) | 서울 성수 엘리스Lab
           </p>
         </div>
 

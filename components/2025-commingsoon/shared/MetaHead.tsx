@@ -80,7 +80,7 @@ const MetaHead = () => {
       <meta name="theme-color" content="#44067F" />
       <meta
         name="description"
-        content="모두에게 열려있는 컨퍼런스, 테오콘 2025 - TEOConf. 12월 6일(토) ~ 7일(일) 서울 성수 앨리스Lab에서 개최됩니다."
+        content="모두에게 열려있는 컨퍼런스, 테오콘 2025 - TEOConf. 12월 6일(토) ~ 7일(일) 서울 성수 엘리스Lab에서 개최됩니다."
       />
       {/* Facebook Meta Tags  */}
       <meta property="og:title" content="테오콘 2025 - TEOConf" />
@@ -91,7 +91,7 @@ const MetaHead = () => {
       <meta property="og:image:height" content="630" />
       <meta
         property="og:description"
-        content="모두에게 열려있는 컨퍼런스, 테오콘 2025 - TEOConf. 12월 6일(토) ~ 7일(일) 서울 성수 앨리스Lab에서 개최됩니다."
+        content="모두에게 열려있는 컨퍼런스, 테오콘 2025 - TEOConf. 12월 6일(토) ~ 7일(일) 서울 성수 엘리스Lab에서 개최됩니다."
       />
       <meta property="og:site_name" content="테오콘 2025 - TEOConf" />
       <meta property="og:locale" content="ko" />
@@ -101,7 +101,7 @@ const MetaHead = () => {
       <meta name="twitter:title" content="테오콘 2025 - TEOConf" />
       <meta
         name="twitter:description"
-        content="모두에게 열려있는 컨퍼런스, 테오콘 2025 - TEOConf. 12월 6일(토) ~ 7일(일) 서울 성수 앨리스Lab에서 개최됩니다."
+        content="모두에게 열려있는 컨퍼런스, 테오콘 2025 - TEOConf. 12월 6일(토) ~ 7일(일) 서울 성수 엘리스Lab에서 개최됩니다."
       />
       <meta name="twitter:image" content="/images/OgImage.png" />
     </Head>
