@@ -1,4 +1,4 @@
-import TeoconCard from '../shared/Card/TeoconCard'
+import OverviewCard from '../shared/Card/OverviewCard'
 import MarqueeWrapper from '../shared/Marquee/MarqueeWrapper'
 import { Overview as OverviewData } from '../constants/data'
 
@@ -24,7 +24,7 @@ const Overview = () => {
               key={index}
               className="flex-shrink-0 w-[320px] tablet:w-[400px] desktop:w-[360px]"
             >
-              <TeoconCard {...item} />
+              <OverviewCard {...item} />
             </div>
           ))}
         </MarqueeWrapper>

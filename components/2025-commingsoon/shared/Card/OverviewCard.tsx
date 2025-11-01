@@ -1,7 +1,7 @@
 import React from 'react'
 import Image from 'next/image'
 
-interface TeoconCardProps {
+interface OverviewCardProps {
   title: string
   description: string
   thumbnail: string
@@ -9,13 +9,13 @@ interface TeoconCardProps {
   nickname?: string
 }
 
-const TeoconCard = ({
+const OverviewCard = ({
   title,
   description,
   thumbnail,
   link,
   nickname,
-}: TeoconCardProps) => {
+}: OverviewCardProps) => {
   // 디스크립션이 100자 이상이면 100자로   자르고 ... 추가
   const truncatedDescription =
     description.length > 100
@@ -57,4 +57,4 @@ const TeoconCard = ({
   )
 }
 
-export default TeoconCard
+export default OverviewCard
