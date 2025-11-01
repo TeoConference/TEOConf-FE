@@ -23,8 +23,7 @@ const Hero = () => {
   }, [])
 
   useEffect(() => {
-    // 실제 날짜로 변경 필요 (예: 2025년 12월 6일)
-    const targetDate = new Date(2025, 11, 6, 0, 0, 0).getTime()
+    const targetDate = new Date(2025, 12, 8, 0, 0, 0).getTime()
 
     const updateCountdown = () => {
       const now = new Date().getTime()
