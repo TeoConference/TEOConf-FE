@@ -1,4 +1,3 @@
-import React from 'react'
 import Image from 'next/image'
 
 const Introduce = () => {
@@ -20,8 +19,9 @@ const Introduce = () => {
         {/* 솔직한 당신의 경험이 누군가의 영감이 되는 네트워킹 공간에 초대합니다! */}
         <div className="flex flex-col text-center max-w-[840px] mx-auto ">
           <p className="text-[#A855F7] text-[2rem] tablet:text-[2.25rem] desktop:text-[3rem] font-medium">
-            솔직한 당신의 경험이{' '}
-            <span className="text-[#8814F4]">누군가의 영감이 되는</span>
+            솔직한 당신의 경험이
+            <br className="tablet:hidden" />
+            <span className="text-[#8814F4]"> 누군가의 영감이 되는</span>
             <br />
             <span>네트워킹 공간에 초대합니다!</span>
           </p>

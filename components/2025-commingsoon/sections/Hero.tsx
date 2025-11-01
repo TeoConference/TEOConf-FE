@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import Image from 'next/image'
 import CountdownItem from '../shared/Countdown/CountdownItem'
 import CountdownSeparator from '../shared/Countdown/CountdownSeparator'
+import ScrambleText from '../shared/Typography/ScrambleText'
 
 const Hero = () => {
   const [timeLeft, setTimeLeft] = useState({
@@ -59,7 +60,7 @@ const Hero = () => {
   return (
     <section
       id="banner"
-      className="relative w-full min-h-[calc(100vh_-_8rem)] tablet:min-h-[calc(100vh_-_4rem)] flex tablet:flex-center overflow-hidden bg-white bg-center bg-cover bg-no-repeat py-12 tablet:py-20"
+      className="relative w-full min-h-[80vh] tablet:min-h-[calc(100vh_-_4rem)] flex tablet:flex-center overflow-hidden bg-white py-12 tablet:py-20"
       style={{
         backgroundImage: `url('/images/2025/background/${
           isMobile ? 'commingsoon-mobile-bg.png' : 'commingsoon-bg.png'
@@ -69,9 +70,9 @@ const Hero = () => {
         backgroundRepeat: 'no-repeat',
       }}
     >
-      <div className="w-full max-w-[1200px] mx-auto px-4 tablet:px-8 flex-center flex-col relative z-[1] gap-6 tablet:gap-4">
+      <div className="w-full max-w-[1200px] mx-auto px-4 tablet:px-8 tablet:flex-center flex-col relative z-[1] gap-6 tablet:gap-4">
         {/* 모바일용 콘텐츠 */}
-        <div className="flex flex-col text-center tablet:hidden py-8">
+        <div className="flex flex-col text-center tablet:hidden py-16">
           <h1 className="font-bold text-[3.5rem] leading-normal">
             <span className="text-[#8814F4]">TEO</span> Conf
           </h1>
@@ -89,8 +90,8 @@ const Hero = () => {
         {/* 태블릿 이상 상단 콘텐츠 */}
         <div className="flex-center flex-col gap-2 tablet:gap-2 text-center hidden tablet:flex">
           {/* COMING.SOON 배너 */}
-          <div className="bg-[#1F2937] px-4 py-2 rounded-lg font-mono text-[#38ED85] text-[0.8rem] tablet:text-[1rem] desktop:text-[1.75rem]">
-            &lt;COMING.SOON /&gt;
+          <div className="bg-[#1F2937] p-2 rounded-lg font-mono text-[#38ED85] text-[0.8rem] tablet:text-[1rem] desktop:text-[1.75rem]">
+            <ScrambleText text="<COMING.SOON/>" />
           </div>
 
           {/* TEOConf 2025 제목 */}
