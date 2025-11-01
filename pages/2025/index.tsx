@@ -1,4 +1,5 @@
 import Header from '@/components/2025-commingsoon/shared/Header/Header'
+import MetaHead from '@/components/2025-commingsoon/shared/MetaHead'
 import Hero from '@/components/2025-commingsoon/sections/Hero'
 import Introduce from '@/components/2025-commingsoon/sections/Introduce'
 import Overview from '@/components/2025-commingsoon/sections/Overview'
@@ -9,6 +10,7 @@ import Footer from '@/components/2025-commingsoon/sections/Footer'
 export default function Home() {
   return (
     <div>
+      <MetaHead />
       <Header />
       <Hero />
       <Introduce />

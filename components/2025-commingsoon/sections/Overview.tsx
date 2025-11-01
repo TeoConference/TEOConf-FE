@@ -16,8 +16,7 @@ const Overview = () => {
           </h2>
 
           <strong className="text-[#1F2937] text-[1.25rem] tablet:text-[1.5rem] font-normal text-center max-w-4xl mb-8 tablet:mb-12">
-            역대 테오콘이 궁금하다면?
-            <br className="desktop:hidden" />
+            역대 테오콘이 궁금하다면? <br className="desktop:hidden" />
             아래 글들을 확인해보세요!
           </strong>
         </div>
