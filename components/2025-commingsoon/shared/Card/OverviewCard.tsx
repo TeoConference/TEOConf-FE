@@ -32,7 +32,7 @@ const OverviewCard = ({
       href={link}
       target="_blank"
       rel="noopener noreferrer"
-      className="flex flex-col rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow duration-200 bg-[#1F2937] cursor-pointer h-[409px] tablet:h-[511px] desktop:h-[460px]"
+      className="flex flex-col rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow duration-200 bg-white tablet:bg-[#1F2937] cursor-pointer h-[409px] tablet:h-[511px] desktop:h-[460px]"
     >
       {/* 썸네일 이미지 */}
       <div className="relative w-full flex-1 min-h-0">
@@ -41,15 +41,15 @@ const OverviewCard = ({
 
       {/* 타이틀 및 디스크립션 */}
       <div className="p-4 tablet:p-6 flex flex-col gap-2 flex-shrink-0">
-        <h3 className="text-white text-[1.125rem] tablet:text-[1.25rem] font-semibold leading-tight line-clamp-2">
+        <h3 className="text-black tablet:text-white text-[1.125rem] tablet:text-[1.25rem] font-semibold leading-tight line-clamp-2">
           {title}
         </h3>
         {nickname && (
-          <p className="text-white text-[0.875rem] tablet:text-[1rem] font-medium">
+          <p className="text-black tablet:text-white text-[0.875rem] tablet:text-[1rem] font-medium">
             {nickname}
           </p>
         )}
-        <p className="text-[#9CA3AF] text-[0.875rem] tablet:text-[1rem] leading-relaxed line-clamp-3">
+        <p className="hidden tablet:block text-[#9CA3AF] text-[0.875rem] tablet:text-[1rem] leading-relaxed line-clamp-3">
           {truncatedDescription}
         </p>
       </div>
