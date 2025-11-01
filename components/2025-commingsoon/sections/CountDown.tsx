@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import Image from 'next/image'
-import CountdownItem from './comming-soon/CountdownItem'
-import CountdownSeparator from './comming-soon/CountdownSeparator'
+import CountdownItem from '../shared/Countdown/CountdownItem'
+import CountdownSeparator from '../shared/Countdown/CountdownSeparator'
 
 const Hero = () => {
   const [timeLeft, setTimeLeft] = useState({
