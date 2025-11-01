@@ -23,7 +23,7 @@ const Hero = () => {
   }, [])
 
   useEffect(() => {
-    const targetDate = new Date(2025, 12, 8, 0, 0, 0).getTime()
+    const targetDate = new Date(2025, 11, 8, 0, 0, 0).getTime()
 
     const updateCountdown = () => {
       const now = new Date().getTime()
