@@ -24,7 +24,7 @@ const Overview = () => {
           {OverviewData.map((item, index) => (
             <div
               key={index}
-              className="flex-shrink-0 w-[320px] tablet:w-[400px] desktop:w-[360px]"
+              className="flex-shrink-0 w-[228px] tablet:w-[400px] desktop:w-[360px]"
             >
               <OverviewCard {...item} />
             </div>

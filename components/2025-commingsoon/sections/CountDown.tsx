@@ -69,61 +69,6 @@ const Hero = () => {
           <p className="font-medium text-[#6B7280] text-[1.25rem] leading-tight">
             12.6 ~ 12.7 성수 앨리스Lab
           </p>
-
-          {/* 모바일용 카운트다운 섹션 */}
-          <div className="w-full flex flex-col items-center justify-center gap-2 mt-4">
-            <h2 className="text-black text-center text-[1.25rem] font-normal">
-              테오콘 오픈까지
-            </h2>
-
-            {/* 카운트다운 숫자 및 라벨 */}
-            <div className="flex items-center justify-center gap-2 flex-wrap w-full">
-              <CountdownItem
-                value={timeLeft.days}
-                label="DAYS"
-                textColor="text-black"
-                textSize="text-[2rem]"
-                labelColor="text-[#6B7280]"
-                labelSize="text-[0.875rem]"
-              />
-              <CountdownSeparator
-                textColor="text-black"
-                textSize="text-[2rem]"
-              />
-              <CountdownItem
-                value={timeLeft.hours}
-                label="HOURS"
-                textColor="text-black"
-                textSize="text-[2rem]"
-                labelColor="text-[#6B7280]"
-                labelSize="text-[0.875rem]"
-              />
-              <CountdownSeparator
-                textColor="text-black"
-                textSize="text-[2rem]"
-              />
-              <CountdownItem
-                value={timeLeft.minutes}
-                label="MINUTES"
-                textColor="text-black"
-                textSize="text-[2rem]"
-                labelColor="text-[#6B7280]"
-                labelSize="text-[0.875rem]"
-              />
-              <CountdownSeparator
-                textColor="text-black"
-                textSize="text-[2rem]"
-              />
-              <CountdownItem
-                value={timeLeft.seconds}
-                label="SECONDS"
-                textColor="text-black"
-                textSize="text-[2rem]"
-                labelColor="text-[#6B7280]"
-                labelSize="text-[0.875rem]"
-              />
-            </div>
-          </div>
         </div>
 
         {/* 태블릿 이상 상단 콘텐츠 */}
