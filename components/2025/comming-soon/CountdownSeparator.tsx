@@ -1,8 +1,18 @@
 import React from 'react'
 
-const CountdownSeparator: React.FC = () => {
+interface CountdownSeparatorProps {
+  textColor?: string
+  textSize?: string
+}
+
+const CountdownSeparator: React.FC<CountdownSeparatorProps> = ({ 
+  textColor = 'text-white',
+  textSize = 'text-[3rem] tablet:text-[5rem]'
+}) => {
+  const textHeight = textSize.includes('2rem') ? 'h-[2rem] leading-[2rem]' : 'h-[3rem] tablet:h-[5rem] leading-[3rem] tablet:leading-[5rem]'
+  
   return (
-    <div className="text-white text-[3rem] tablet:text-[5rem] font-bold leading-[3rem] tablet:leading-[5rem] h-[3rem] tablet:h-[5rem] flex items-center justify-center">
+    <div className={`${textColor} ${textSize} font-bold ${textHeight} flex items-center justify-center`}>
       :
     </div>
   )
