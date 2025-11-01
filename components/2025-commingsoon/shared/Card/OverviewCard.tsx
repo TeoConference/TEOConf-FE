@@ -15,6 +15,8 @@ const OverviewCard = ({
   link,
   nickname,
 }: OverviewCardProps) => {
+  const defaultThumbnail = '/images/2025/overview/card_default_img.png'
+  const imageSrc = thumbnail || defaultThumbnail
   // 디스크립션이 100자 이상이면 100자로   자르고 ... 추가
   // const truncatedDescription =
   //   description.length > 100
@@ -35,9 +37,7 @@ const OverviewCard = ({
     >
       {/* 썸네일 이미지 */}
       <div className="relative flex-none w-full h-[228px] tablet:h-[280px]">
-        {thumbnail && (
-          <Image src={thumbnail} alt={title} fill className="object-cover" />
-        )}
+        <Image src={imageSrc} alt={title} fill className="object-cover" />
       </div>
 
       {/* 타이틀 및 디스크립션 */}
