@@ -18,13 +18,12 @@ const Introduce = () => {
         </h2>
 
         {/* 솔직한 당신의 경험이 누군가의 영감이 되는 네트워킹 공간에 초대합니다! */}
-        <div className="flex flex-col text-center">
-          <p className="text-[#A855F7] text-[1.5rem] tablet:text-[2.25rem] desktop:text-[3rem] font-medium">
+        <div className="flex flex-col text-center max-w-[840px] mx-auto ">
+          <p className="text-[#A855F7] text-[2rem] tablet:text-[2.25rem] desktop:text-[3rem] font-medium">
             솔직한 당신의 경험이{' '}
             <span className="text-[#8814F4]">누군가의 영감이 되는</span>
-            <br className="hidden tablet:block desktop:hidden" />
             <br />
-            네트워킹 공간에 초대합니다!
+            <span>네트워킹 공간에 초대합니다!</span>
           </p>
         </div>
       </div>

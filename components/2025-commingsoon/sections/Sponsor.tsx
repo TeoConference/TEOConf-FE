@@ -3,7 +3,10 @@ import Image from 'next/image'
 
 const Sponsor = () => {
   return (
-    <section className="relative w-full min-h-[500px] tablet:min-h-[600px] desktop:min-h-[700px] overflow-hidden">
+    <section
+      id="sponsor"
+      className="relative w-full min-h-[500px] tablet:min-h-[600px] desktop:min-h-[700px] overflow-hidden"
+    >
       {/* 배경 이미지 - 모바일/데스크탑 */}
       <div
         className="absolute inset-0 bg-cover bg-center bg-no-repeat hidden tablet:hidden desktop:block"

@@ -4,7 +4,10 @@ import { Overview as OverviewData } from '../constants/data'
 
 const Overview = () => {
   return (
-    <section className="relative w-full overflow-hidden bg-white  bg-[#F9FAFB] py-16 tablet:py-24">
+    <section
+      id="overview"
+      className="relative w-full overflow-hidden bg-white  bg-[#F9FAFB] py-16 tablet:py-24"
+    >
       <div className="w-full flex-center flex-col">
         {/* 제목 */}
         <div className="flex flex-col gap-4 p-2 tablet:p-0 mb-8 tablet:mb-12 ">

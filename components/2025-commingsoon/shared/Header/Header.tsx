@@ -1,11 +1,19 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Image from 'next/image'
 import { useRouter } from 'next/router'
+import MenuIcon from '@mui/icons-material/Menu'
+import CloseIcon from '@mui/icons-material/Close'
 
 import Logo from '@/public/images/Logo_2.svg'
+import Sidebar from './Sidebar'
 
 export const Header = () => {
   const router = useRouter()
+  const [isOpen, setIsOpen] = useState(false)
+
+  const toggleSide = () => {
+    setIsOpen((prev) => !prev)
+  }
 
   return (
     <header
@@ -37,6 +45,20 @@ export const Header = () => {
             후원사
           </a>
         </div>
+        {isOpen ? (
+          <CloseIcon
+            onClick={toggleSide}
+            className="desktop:hidden cursor-pointer text-white"
+            sx={{ fontSize: '28px' }}
+          />
+        ) : (
+          <MenuIcon
+            onClick={toggleSide}
+            className="desktop:hidden cursor-pointer text-white"
+            sx={{ fontSize: '28px' }}
+          />
+        )}
+        <Sidebar isOpen={isOpen} setIsOpen={setIsOpen} />
       </nav>
     </header>
   )
