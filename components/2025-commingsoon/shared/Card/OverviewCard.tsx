@@ -31,7 +31,7 @@ const OverviewCard = ({
       href={link}
       target="_blank"
       rel="noopener noreferrer"
-      className="flex flex-col rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow duration-200 bg-white tablet:bg-[#1F2937] cursor-pointer h-[409px] tablet:h-[511px] desktop:h-[460px]"
+      className="flex flex-col rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow duration-200 bg-white tablet:bg-[#1F2937] cursor-pointer h-[288px] tablet:h-[511px] desktop:h-[460px]"
     >
       {/* 썸네일 이미지 */}
       <div className="relative w-full h-[228px] tablet:h-auto tablet:flex-1 min-h-0">
