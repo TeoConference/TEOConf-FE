@@ -3,9 +3,7 @@ import Image from 'next/image'
 
 const IntroSection = () => {
   return (
-    <section
-      className="relative w-full overflow-hidden bg-white py-16 tablet:py-24"
-    >
+    <section className="relative w-full overflow-hidden bg-white py-16 tablet:py-24 bg-[#F9FAFB]">
       <div className="w-full max-w-[1200px] mx-auto px-4 tablet:px-8 flex-center flex-col">
         {/* Talk, Experience, Openly */}
         <h3 className="text-[#A855F7] text-[1.25rem] tablet:text-[1.5rem] font-medium text-center mb-6 tablet:mb-8">
@@ -20,11 +18,12 @@ const IntroSection = () => {
         </h2>
 
         {/* 솔직한 당신의 경험이 누군가의 영감이 되는 네트워킹 공간에 초대합니다! */}
-        <div className="flex flex-col gap-2 text-center">
-          <p className="text-[#A855F7] text-[3rem] font-medium">
-            솔직한 당신의 경험이 누군가의 <span className="text-[#8814F4]">영감</span>이 되는
+        <div className="flex flex-col text-center">
+          <p className="text-[#A855F7] text-[1.5rem] tablet:text-[2.25rem] desktop:text-[3rem] font-medium">
+            솔직한 당신의 경험이 누군가의{' '}
+            <span className="text-[#8814F4]">영감</span>이 되는
           </p>
-          <p className="text-[#A855F7] text-[3rem] font-medium">
+          <p className="text-[#A855F7] text-[1.5rem] tablet:text-[2.25rem] desktop:text-[3rem] font-medium">
             네트워킹 공간에 초대합니다!
           </p>
         </div>
@@ -75,4 +74,3 @@ const IntroSection = () => {
 }
 
 export default IntroSection
-

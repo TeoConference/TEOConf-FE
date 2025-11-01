@@ -58,10 +58,7 @@ const Hero = () => {
         {/* 상단 콘텐츠 */}
         <div className="flex-center flex-col gap-2 tablet:gap-2 text-center">
           {/* COMING.SOON 배너 */}
-          <div
-            className="bg-[#1F2937] px-4 py-2 rounded-lg font-mono"
-            style={{ color: '#38ED85', fontSize: '28px' }}
-          >
+          <div className="bg-[#1F2937] px-4 py-2 rounded-lg font-mono text-[#38ED85] text-[0.8rem] tablet:text-[1rem] desktop:text-[1.75rem]">
             &lt;COMING.SOON /&gt;
           </div>
 
