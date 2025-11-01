@@ -118,7 +118,7 @@ const Hero = () => {
           {/* 캐릭터 그룹 */}
           <div className="absolute inset-0 flex-center -z-10">
             <Image
-              src="/images/2025/assets/Group 105.svg"
+              src="/images/2025/assets/Group 87.svg"
               alt="characters group"
               width={1275}
               height={409}
@@ -127,10 +127,10 @@ const Hero = () => {
           </div>
 
           {/* 카운트다운 컨테이너 */}
-          <div className="relative z-10 w-full max-w-[800px] px-8 py-12 tablet:px-12 tablet:py-16 flex-center flex-col gap-2">
+          <div className="relative z-10 w-full max-w-[800px] px-8 py-8 tablet:px-12 tablet:py-16 flex-center flex-col gap-2">
             <div className="w-full flex-center flex-col gap-2">
               {/* 테오콘 오픈까지 텍스트 */}
-              <h2 className="text-white text-center text-[1.5rem] mt-12 font-normal">
+              <h2 className="text-white text-center text-[1.5rem] mt-2 font-normal">
                 테오콘 오픈까지
               </h2>
 
