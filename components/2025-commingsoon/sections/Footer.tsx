@@ -3,6 +3,7 @@ import Image from 'next/image'
 
 import UpArrow from '@/public/images/UpArrow.svg'
 import PrivacyModal from '../shared/Modal/PrivacyModal'
+import Logo from '@/public/images/Logo_2.svg'
 
 const Footer = () => {
   const [isModalOpen, setIsModalOpen] = useState(false)
@@ -20,12 +21,9 @@ const Footer = () => {
       <div className="tablet:max-w-[768px] desktop:max-w-[1024px] desktop-xl:max-w-[1360px] m-auto flex flex-col tablet:flex-row items-start tablet:items-center justify-between gap-6 tablet:gap-0">
         {/* 왼쪽: 로고, 저작권, 개인정보 처리방침 */}
         <div className="flex flex-col gap-3 tablet:gap-4">
-          {/* 로고 */}
-          <h2 className="text-[1.5rem] tablet:text-[2rem] font-bold">
-            <span className="text-white">TEO</span>
-            <span className="text-[#8814F4]">Conf</span>
-          </h2>
-
+          <div>
+            <Image src={Logo} alt="logo" width={150} height={25.96} />
+          </div>
           {/* 저작권 */}
           <p className="text-white text-[0.875rem] tablet:text-[1rem]">
             © TEOCONF. All Right Reserved.

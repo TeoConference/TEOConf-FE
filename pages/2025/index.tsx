@@ -1,6 +1,6 @@
 import Header from '@/components/2025-commingsoon/shared/Header/Header'
 import Hero from '@/components/2025-commingsoon/sections/CountDown'
-import IntroSection from '@/components/2025-commingsoon/sections/Intro'
+import Introduce from '@/components/2025-commingsoon/sections/Introduce'
 import Overview from '@/components/2025-commingsoon/sections/Overview'
 import Sponsor from '@/components/2025-commingsoon/sections/Sponsor'
 import SNS from '@/components/2025-commingsoon/sections/SNS'
@@ -11,7 +11,7 @@ export default function Home() {
     <div>
       <Header />
       <Hero />
-      <IntroSection />
+      <Introduce />
       <Overview />
       <Sponsor />
       <SNS />
