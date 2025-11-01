@@ -2,8 +2,8 @@ import React from 'react'
 import Image from 'next/image'
 
 import LinkedIn from '@/public/images/LinkedIn.svg'
-import Twitter from '@/public/images/Twitter.svg'
 import Instagram from '@/public/images/Instagram.svg'
+import X from '@/public/images/X.svg'
 
 const SNS = () => (
   <section className="w-full bg-[#8814F4] py-24 tablet:py-32 desktop:py-40 px-4">
@@ -33,8 +33,8 @@ const SNS = () => (
           className="flex p-3 tablet:p-4 bg-white rounded-lg hover:opacity-80 transition-opacity"
         >
           <Image
-            src={Twitter}
-            alt="twitter 바로가기"
+            src={X}
+            alt="X 바로가기"
             className="h-full"
             width={34}
             height={34}
