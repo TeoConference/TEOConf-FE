@@ -10,7 +10,7 @@ export const Overview: Overview[] = [
   {
     title: 'TEOConf 2025: 스태프 미팅 이야기',
     description:
-      '회의실의 아이스브레이킹부터 현장 답사까지, 테오콘을 함께 만들어간 스태프들의 활기 넘치는 준비기.',
+      '회의실의 아이스브레이킹부터 현장 답사까지, 테오콘을 함께 만들어간 스태프들의 활기 넘치는 준비기',
     thumbnail:
       'https://velog.velcdn.com/images/hying/post/b486bc1c-5cf9-496b-ad26-0d59277fb194/image.jpeg',
     link: 'https://velog.io/@hying/teo-conf-2025-staff-1-3',
@@ -29,7 +29,7 @@ export const Overview: Overview[] = [
   {
     title: 'TeoConf 2024를 다녀오다',
     description:
-      '자연스럽게 대화가 이어지고, 웃음이 끊이지 않았던 네트워킹. 올해 다녀온 컨퍼런스 중 가장 따뜻했던 테오콘.',
+      '자연스럽게 대화가 이어지고, 웃음이 끊이지 않았던 네트워킹. 올해 다녀온 컨퍼런스 중 가장 따뜻했던 테오콘',
     thumbnail: '', // no image
     link: 'https://booktechbio.tistory.com/54',
     nickname: '고블렛',
@@ -44,7 +44,8 @@ export const Overview: Overview[] = [
   },
   {
     title: 'TeoConf2024 스피커 후기',
-    description: '', // 설명 채워넣기
+    description:
+      "첫 발표 도전! 테오의 꼼꼼한 피드백과 5개월의 준비를 거쳐, 네트워킹으로 만들어진 '내 팀'의 응원 속에서 완성한 200일 글쓰기 챌린지 이야기",
     thumbnail:
       'https://velog.velcdn.com/images/byungsker/post/b15db6d6-bf08-4939-8001-5f9cb4f6742c/image.png',
     link: 'https://velog.io/@byungsker/TeoConf2024-%EC%8A%A4%ED%94%BC%EC%BB%A4-%ED%9B%84%EA%B8%B0-bloj8ivk',
