@@ -64,27 +64,31 @@ const Hero = () => {
           </div>
 
           {/* TEOConf 2025 제목 */}
-          <h1 className="font-bold text-[#A869EE]" style={{ fontSize: '60px' }}>
-            &#123; TEOConf 2025 &#125;
+          <h1 className="font-bold text-[2rem] tablet:text-[3rem] desktop:text-[3.75rem] leading-tight">
+            <span className="text-[#DDBBFD]">&#123;</span>
+            <span className="px-2">
+              <span className="text-[#8814F4]">TEO</span>Conf 2025
+            </span>
+            <span className="text-[#DDBBFD]">&#125;</span>
           </h1>
 
           {/* 모두에게 열려있는 컨퍼런스 */}
-          <p className="font-semibold text-black" style={{ fontSize: '48px' }}>
+          <p className="font-semibold text-black text-[1.5rem] tablet:text-[2.25rem] desktop:text-[3rem] leading-tight">
             모두에게 열려있는 컨퍼런스
           </p>
 
           {/* 날짜 및 장소 */}
-          <p className="text-base tablet:text-lg desktop:text-xl text-black">
+          <p className="font-medium text-[#6B7280] text-[1.25rem] leading-tight">
             12월 6일(토) ~ 7일(일) | 서울 성수 앨리스Lab
           </p>
         </div>
 
         {/* 카운트다운 섹션 */}
-        <div className="relative w-full flex-center min-h-[300px]">
-          {/* Group 105 캐릭터 그룹 */}
+        <div className="relative w-full flex-center">
+          {/* 캐릭터 그룹 */}
           <div className="absolute inset-0 flex-center -z-10">
             <Image
-              src="/images/2025/Group 105.svg"
+              src="/images/2025/assets/Group 105.svg"
               alt="characters group"
               width={1275}
               height={409}
@@ -94,9 +98,9 @@ const Hero = () => {
 
           {/* 카운트다운 컨테이너 */}
           <div className="relative z-10 w-full max-w-[800px]  px-8 py-12 tablet:px-12 tablet:py-16 flex-center flex-col gap-2   ">
-            <div className="w-full flex-center flex-col gap-2 p-[100px] tablet:p-[24px] ">
+            <div className="w-full flex-center flex-col gap-2 border-2 border-red-500">
               {/* 테오콘 오픈까지 텍스트 */}
-              <h2 className="text-white text-center color-[#38ED85] text-[24px] mt-12 font-normal">
+              <h2 className="text-white text-center text-[1.5rem] mt-12 font-normal">
                 테오콘 오픈까지
               </h2>
 
@@ -104,10 +108,10 @@ const Hero = () => {
               <div className="flex items-start justify-center gap-4 tablet:gap-6 flex-wrap">
                 {/* DAYS */}
                 <div className="flex flex-col gap-2">
-                  <div className="text-white text-[80px] font-bold leading-[80px] h-[80px] flex items-center">
+                  <div className="text-white text-[5rem] font-bold ">
                     {timeLeft.days}
                   </div>
-                  <div className="text-[#D1D5D8] text-[20px] font-normal uppercase tracking-wider text-center">
+                  <div className="text-[#D1D5D8] text-[1.25rem] font-normal uppercase tracking-wider text-center">
                     DAYS
                   </div>
                 </div>
@@ -119,25 +123,25 @@ const Hero = () => {
 
                 {/* HOURS */}
                 <div className="flex flex-col gap-2">
-                  <div className="text-white text-[80px] font-bold leading-[80px] h-[80px] flex items-center">
+                  <div className="text-white text-[5rem] font-bold leading-[5rem] h-[5rem] flex items-center">
                     {timeLeft.hours}
                   </div>
-                  <div className="text-[#D1D5D8] text-[20px] font-normal uppercase tracking-wider text-center">
+                  <div className="text-[#D1D5D8] text-[1.25rem] font-normal uppercase tracking-wider text-center">
                     HOURS
                   </div>
                 </div>
 
                 {/* 구분자 */}
-                <div className="text-white text-[80px] font-bold leading-[80px] h-[80px] flex items-center justify-center">
+                <div className="text-white text-[5rem] font-bold flex items-center justify-center">
                   :
                 </div>
 
                 {/* MINUTES */}
                 <div className="flex flex-col gap-2">
-                  <div className="text-white text-[80px] font-bold leading-[80px] h-[80px] flex items-center">
+                  <div className="text-white text-[5rem] font-bold leading-[5rem] h-[5rem] flex items-center">
                     {timeLeft.minutes}
                   </div>
-                  <div className="text-[#D1D5D8] text-[20px] font-normal uppercase tracking-wider text-center">
+                  <div className="text-[#D1D5D8] text-[1.25rem] font-normal uppercase tracking-wider text-center">
                     MINUTES
                   </div>
                 </div>
@@ -152,7 +156,7 @@ const Hero = () => {
                   <div className="text-white text-[80px] font-bold leading-[80px] h-[80px] flex items-center">
                     {timeLeft.seconds}
                   </div>
-                  <div className="text-[#D1D5D8] text-[20px] font-normal uppercase tracking-wider text-center">
+                  <div className="text-[#D1D5D8] text-[1.25rem] font-normal uppercase tracking-wider text-center">
                     SECONDS
                   </div>
                 </div>
