@@ -1,5 +1,6 @@
 import React from 'react'
 import Image from 'next/image'
+import { getPath } from '@/utils/path'
 
 const Sponsor = () => {
   return (
@@ -11,7 +12,9 @@ const Sponsor = () => {
       <div
         className="absolute inset-0 bg-cover bg-center bg-no-repeat hidden tablet:hidden desktop:block"
         style={{
-          backgroundImage: "url('/images/2025/background/elicelap-bg.png')",
+          backgroundImage: `url('${getPath(
+            '/images/2025/background/elicelap-bg.png'
+          )}')`,
         }}
       />
 
@@ -19,8 +22,9 @@ const Sponsor = () => {
       <div
         className="absolute inset-0 bg-cover bg-center bg-no-repeat hidden tablet:block desktop:hidden"
         style={{
-          backgroundImage:
-            "url('/images/2025/background/elicelap-mobile-bg.png')",
+          backgroundImage: `url('${getPath(
+            '/images/2025/background/elicelap-mobile-bg.png'
+          )}')`,
         }}
       />
 
@@ -28,8 +32,9 @@ const Sponsor = () => {
       <div
         className="absolute inset-0 bg-cover bg-center bg-no-repeat block tablet:hidden"
         style={{
-          backgroundImage:
-            "url('/images/2025/background/elicelap-mobile-bg.png')",
+          backgroundImage: `url('${getPath(
+            '/images/2025/background/elicelap-mobile-bg.png'
+          )}')`,
         }}
       />
 
@@ -52,7 +57,7 @@ const Sponsor = () => {
           {/* 로고 */}
           <div className="mt-4 tablet:mt-6">
             <Image
-              src="/images/2025/assets/logo/elice-logo.svg"
+              src={getPath('/images/2025/assets/logo/elice-logo.svg')}
               alt="엘리스랩 로고"
               width={249}
               height={78}

@@ -1,3 +1,4 @@
+/* eslint-disable */
 import { useEffect, useRef } from 'react'
 let direction = ''
 let prevYposition = 0

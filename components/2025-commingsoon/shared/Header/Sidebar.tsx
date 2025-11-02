@@ -11,7 +11,6 @@ const SIDEBAR_ITEMS = [
 ]
 
 const Sidebar = ({ isOpen, setIsOpen }: SidebarProps) => {
-
   // 링크 클릭 시 사이드바 닫기
   useEffect(() => {
     const handleClick = () => {
@@ -42,10 +41,7 @@ const Sidebar = ({ isOpen, setIsOpen }: SidebarProps) => {
     >
       <div className="flex flex-col items-center pt-8">
         {SIDEBAR_ITEMS.map((item, idx) => (
-          <div
-            key={idx}
-            className="w-[90%] py-5 border-b border-white/20 flex"
-          >
+          <div key={idx} className="w-[90%] py-5 border-b border-white/20 flex">
             <a
               href={item.link}
               className="flex items-center text-white text-[18px] hover:opacity-80 transition-opacity"

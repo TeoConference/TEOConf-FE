@@ -21,7 +21,10 @@ const Session = () => (
         </div>
       </div>
       {sessions.map((session) => (
-        <div className="flex flex-col gap-8 w-full flex-center tablet:w-[768px] desktop:w-[1024px] m-auto">
+        <div
+          key={session.date}
+          className="flex flex-col gap-8 w-full flex-center tablet:w-[768px] desktop:w-[1024px] m-auto"
+        >
           <p className="text-mobile-h1 tablet:text-h2 text-center">
             {session.date}
           </p>

@@ -11,3 +11,4 @@ export const basePath =
  * @returns basePath를 포함한 전체 경로 (예: '/TEOConf-FE/images/logo.png' 또는 '/images/logo.png')
  */
 export const getPath = (path: string): string => `${basePath}${path}`
+

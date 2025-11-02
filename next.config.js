@@ -6,6 +6,7 @@ const assetPrefix = isDev ? '' : '/TEOConf-FE/'
 
 const nextConfig = {
   reactStrictMode: true,
+  output: 'export',
   images: {
     remotePatterns: [
       {
@@ -33,11 +34,9 @@ const nextConfig = {
         pathname: '/dna/**',
       },
     ],
-    basePath,
-    assetPrefix,
-    images: {
-      unoptimized: true,
-    },
+    unoptimized: true,
   },
+  basePath,
+  assetPrefix,
 }
 module.exports = nextConfig

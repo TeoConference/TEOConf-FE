@@ -1,8 +1,9 @@
 import Image from 'next/image'
-
+import { getPath } from '@/utils/path'
+// test
 const Introduce = () => {
   return (
-    <section className="relative w-full overflow-hidden py-16 tablet:py-24 bg-[#F9FAFB] min-h-[600px] tablet:min-h-[700px] desktop:min-h-[calc(100vh_-_4rem)]">
+    <section className="relative w-full overflow-hidden py-12 tablet:py-20 desktop:py-24 bg-[#F9FAFB]">
       <div className="w-full max-w-[1200px] mx-auto px-4 tablet:px-8 flex-center flex-col">
         {/* Talk, Experience, Openly */}
         <h3 className="text-[#A855F7] text-[1.25rem] tablet:text-[1.5rem] font-regular text-center mb-6 tablet:mb-8">
@@ -17,7 +18,7 @@ const Introduce = () => {
         </h2>
 
         {/* 솔직한 당신의 경험이 누군가의 영감이 되는 네트워킹 공간에 초대합니다! */}
-        <div className="flex flex-col text-center max-w-[840px] mx-auto ">
+        <div className="flex flex-col text-center max-w-[840px] mx-auto pb-44 tablet:pb-48 desktop:pb-56">
           <p className="text-[#A855F7] text-[2rem] tablet:text-[2.25rem] desktop:text-[3rem] font-medium">
             솔직한 당신의 경험이
             <br className="tablet:hidden" />
@@ -31,7 +32,7 @@ const Introduce = () => {
       {/* 캐릭터 일러스트 */}
       <div className="absolute bottom-0 left-0 right-0 flex justify-center">
         <Image
-          src="/images/2025/assets/Group 101.svg"
+          src={getPath('/images/2025/assets/Group 101.svg')}
           alt="character"
           width={664}
           height={424}

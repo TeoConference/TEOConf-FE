@@ -1,6 +1,5 @@
 import { Head, Html, Main, NextScript } from 'next/document'
-
-const basePath = process.env.NODE_ENV === 'development' ? '' : '/TEOConf-FE'
+import { getPath } from '@/utils/path'
 
 export default function Document() {
   return (
@@ -8,7 +7,7 @@ export default function Document() {
       <Head>
         <link
           rel="shortcut icon"
-          href={`${basePath}/images/favicon/favicon.ico`}
+          href={getPath('/images/favicon/favicon.ico')}
         />
       </Head>
       <body>

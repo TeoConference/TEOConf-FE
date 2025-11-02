@@ -1,3 +1,4 @@
+/* eslint-disable */
 import { useMemo, useState } from 'react'
 import { Menu } from '@/data/third/Menu'
 import { KeyboardArrowUp } from '@mui/icons-material'

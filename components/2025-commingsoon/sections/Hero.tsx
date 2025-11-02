@@ -3,7 +3,9 @@ import Image from 'next/image'
 import CountdownItem from '../shared/Countdown/CountdownItem'
 import CountdownSeparator from '../shared/Countdown/CountdownSeparator'
 import ScrambleText from '../shared/Typography/ScrambleText'
+import { getPath } from '@/utils/path'
 
+// test
 const Hero = () => {
   const [timeLeft, setTimeLeft] = useState({
     days: '99',
@@ -61,9 +63,11 @@ const Hero = () => {
       id="banner"
       className="relative w-full min-h-[80vh] tablet:min-h-[calc(100vh_-_4rem)] flex tablet:flex-center overflow-hidden bg-white py-12 tablet:py-20"
       style={{
-        backgroundImage: `url('/images/2025/background/${
-          isMobile ? 'commingsoon-mobile-bg.png' : 'commingsoon-bg.png'
-        }')`,
+        backgroundImage: `url('${getPath(
+          `/images/2025/background/${
+            isMobile ? 'commingsoon-mobile-bg.png' : 'commingsoon-bg.png'
+          }`
+        )}')`,
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         backgroundRepeat: 'no-repeat',
@@ -118,7 +122,7 @@ const Hero = () => {
           {/* 캐릭터 그룹 */}
           <div className="absolute inset-0 flex-center -z-10">
             <Image
-              src="/images/2025/assets/Group 87.svg"
+              src={getPath('/images/2025/assets/Group 87.svg')}
               alt="characters group"
               width={1275}
               height={409}
