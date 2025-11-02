@@ -93,7 +93,7 @@ const Hero = () => {
         {/* 태블릿 이상 상단 콘텐츠 */}
         <div className="flex-center flex-col gap-2 tablet:gap-2 text-center hidden tablet:flex">
           {/* COMING.SOON 배너 */}
-          <div className="bg-[#1F2937] p-2 rounded-lg font-mono text-[#38ED85] text-[0.8rem] tablet:text-[1rem] desktop:text-[1.75rem]">
+          <div className="bg-gray-800 p-2 rounded-lg font-mono text-[#38ED85] text-[0.8rem] tablet:text-[1rem] desktop:text-[1.75rem]">
             <ScrambleText text="<COMING.SOON/>" />
           </div>
 

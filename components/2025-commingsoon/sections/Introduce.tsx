@@ -11,7 +11,7 @@ const Introduce = () => {
         </h3>
 
         {/* 테두리 없이, 오늘의 경험을 나누는 놀이터 */}
-        <h2 className="hidden desktop:block text-[#1F2937] text-[1.875rem] tablet:text-[2rem] desktop:text-[2.25rem] font-semibold text-center max-w-4xl mb-8 tablet:mb-6">
+        <h2 className="hidden desktop:block text-gray-800 text-[1.875rem] tablet:text-[2rem] desktop:text-[2.25rem] font-semibold text-center max-w-4xl mb-8 tablet:mb-6">
           <span className="text-[#8814F4]">테</span>
           두리 없이, <span className="text-[#8814F4]">오</span>
           늘의 경험을 나누는 놀이터
