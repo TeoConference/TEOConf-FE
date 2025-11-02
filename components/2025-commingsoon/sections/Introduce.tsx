@@ -6,7 +6,7 @@ const Introduce = () => {
     <section className="relative w-full overflow-hidden py-12 tablet:py-20 desktop:py-24 bg-[#F9FAFB]">
       <div className="w-full max-w-[1200px] mx-auto px-4 tablet:px-8 flex-center flex-col">
         {/* Talk, Experience, Openly */}
-        <h3 className="text-[#A855F7] text-[1.25rem] tablet:text-[1.5rem] font-regular text-center mb-6 tablet:mb-8">
+        <h3 className="text-purple-500 text-[1.25rem] tablet:text-[1.5rem] font-regular text-center mb-6 tablet:mb-8">
           Talk, Experience, Openly
         </h3>
 
@@ -19,7 +19,7 @@ const Introduce = () => {
 
         {/* 솔직한 당신의 경험이 누군가의 영감이 되는 네트워킹 공간에 초대합니다! */}
         <div className="flex flex-col text-center max-w-[840px] mx-auto pb-44 tablet:pb-48 desktop:pb-56">
-          <p className="text-[#A855F7] text-[2rem] tablet:text-[2.25rem] desktop:text-[3rem] font-medium">
+          <p className="text-purple-500 text-[2rem] tablet:text-[2.25rem] desktop:text-[3rem] font-medium">
             솔직한 당신의 경험이
             <br className="tablet:hidden" />
             <span className="text-[#8814F4]"> 누군가의 영감이 되는</span>

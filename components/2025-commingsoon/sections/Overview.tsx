@@ -12,7 +12,7 @@ const Overview = () => {
         {/* 제목 */}
         <div className="flex flex-col gap-4 p-2 tablet:p-0 mb-8 tablet:mb-12 ">
           <h2 className="w-full text-gray-800 text-[1.875rem] tablet:text-[2rem] desktop:text-[2.25rem] font-semibold text-center max-w-4xl ">
-            테오콘 <strong className="text-[#A855F7]">모아보기</strong>
+            테오콘 <strong className="text-purple-500">모아보기</strong>
           </h2>
 
           <strong className="text-gray-800 text-[1.25rem] tablet:text-[1.5rem] font-normal text-center max-w-4xl mb-8 tablet:mb-12">

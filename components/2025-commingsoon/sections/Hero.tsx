@@ -152,7 +152,7 @@ const Hero = () => {
               {/* 참가 신청 버튼 */}
               <div className="w-full px-12 tablet:px-16">
                 <button
-                  className="w-full text-[20px] bg-[#A855F7] hover:bg-[#9333EA] text-white px-6 py-2 tablet:px-8 tablet:py-2.5 rounded-lg text-sm tablet:text-base font-medium transition-colors duration-200 h-[64px]"
+                  className="w-full text-[20px] bg-purple-500 hover:bg-[#9333EA] text-white px-6 py-2 tablet:px-8 tablet:py-2.5 rounded-lg text-sm tablet:text-base font-medium transition-colors duration-200 h-[64px]"
                   onClick={() => {
                     // 참가 신청 링크로 이동할 수 있도록 설정 필요
                     console.log('참가 신청 클릭')
@@ -168,7 +168,7 @@ const Hero = () => {
         {/* 모바일용 참가 신청 버튼 */}
         <div className="w-full max-w-[800px] px-12 tablet:hidden">
           <button
-            className="w-full text-[20px] bg-[#A855F7] hover:bg-[#9333EA] text-white px-6 py-2 rounded-lg text-sm font-medium transition-colors duration-200 h-[64px]"
+            className="w-full text-[20px] bg-purple-500 hover:bg-[#9333EA] text-white px-6 py-2 rounded-lg text-sm font-medium transition-colors duration-200 h-[64px]"
             onClick={() => {
               // 참가 신청 링크로 이동할 수 있도록 설정 필요
               console.log('참가 신청 클릭')
