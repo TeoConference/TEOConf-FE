@@ -1,6 +1,6 @@
 'use client'
 
-import { useEffect, useRef } from 'react'
+import { Children, useEffect, useRef } from 'react'
 
 interface MobileMarqueeProps {
   children: React.ReactNode
@@ -10,35 +10,14 @@ const MobileMarquee = ({ children }: MobileMarqueeProps) => {
   const topRowRef = useRef<HTMLDivElement>(null)
   const bottomRowRef = useRef<HTMLDivElement>(null)
 
+  const childrenArray = Children.toArray(children)
+  const halfLength = Math.ceil(childrenArray.length / 2)
+  const topHalf = childrenArray.slice(0, halfLength)
+  const bottomHalf = childrenArray.slice(halfLength)
+
   useEffect(() => {
-    // 모바일에서 부드러운 스크롤 및 스냅 설정
-    const topRow = topRowRef.current
-    const bottomRow = bottomRowRef.current
-
-    const applySnapToCards = (container: HTMLDivElement | null) => {
-      if (!container) return
-
-      // flex-shrink-0 클래스를 가진 직접 자식 div들을 찾아서 스냅 적용
-      // Overview.tsx에서 각 카드가 flex-shrink-0 클래스를 가진 div로 감싸져 있음
-      const cardWrappers = container.querySelectorAll('.flex-shrink-0')
-      cardWrappers.forEach((wrapper) => {
-        if (wrapper instanceof HTMLElement) {
-          wrapper.style.scrollSnapAlign = 'start'
-          wrapper.style.scrollSnapStop = 'always'
-        }
-      })
-    }
-
-    if (topRow) {
-      topRow.style.scrollBehavior = 'smooth'
-      topRow.style.scrollSnapType = 'x mandatory'
-      applySnapToCards(topRow)
-    }
-
-    if (bottomRow) {
-      bottomRow.style.scrollBehavior = 'smooth'
-      bottomRow.style.scrollSnapType = 'x mandatory'
-      applySnapToCards(bottomRow)
+    if (bottomRowRef.current) {
+      bottomRowRef.current.scrollLeft = 114
     }
   }, [])
 
@@ -53,12 +32,8 @@ const MobileMarquee = ({ children }: MobileMarqueeProps) => {
           scrollBehavior: 'smooth',
         }}
       >
-        <div className="flex flex-row gap-4" style={{ width: 'max-content' }}>
-          <div className="flex flex-row gap-4 flex-shrink-0 -ml-[114px]">
-            {children}
-          </div>
-          <div className="flex flex-row gap-4 flex-shrink-0">{children}</div>
-          <div className="flex flex-row gap-4 flex-shrink-0">{children}</div>
+        <div className="flex flex-row gap-4 " style={{ width: 'max-content' }}>
+          <div className="flex flex-row gap-4 flex-shrink-0 p-8">{topHalf}</div>
         </div>
       </div>
 
@@ -72,11 +47,7 @@ const MobileMarquee = ({ children }: MobileMarqueeProps) => {
         }}
       >
         <div className="flex flex-row gap-4" style={{ width: 'max-content' }}>
-          <div className="flex flex-row gap-4 flex-shrink-0 -mr-[114px]">
-            {children}
-          </div>
-          <div className="flex flex-row gap-4 flex-shrink-0">{children}</div>
-          <div className="flex flex-row gap-4 flex-shrink-0">{children}</div>
+          <div className="flex flex-row gap-4 flex-shrink-0 ">{bottomHalf}</div>
         </div>
       </div>
     </div>
