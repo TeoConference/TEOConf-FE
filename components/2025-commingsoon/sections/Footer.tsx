@@ -4,16 +4,13 @@ import Image from 'next/image'
 import UpArrow from '@/public/images/UpArrow_4.svg'
 import PrivacyModal from '../shared/Modal/PrivacyModal'
 import Logo from '@/public/images/Logo_2.svg'
+import { scrollToTop } from '@/utils/scroll'
 
 const Footer = () => {
   const [isModalOpen, setIsModalOpen] = useState(false)
 
   const handlePrivacyClick = () => {
     setIsModalOpen((prev) => !prev)
-  }
-
-  const scrollToTop = () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' })
   }
 
   return (
