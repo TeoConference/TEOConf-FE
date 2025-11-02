@@ -16,7 +16,7 @@ const Sidebar = ({ isOpen, setIsOpen }: SidebarProps) => {
 
   return (
     <div
-      className="fixed inset-0 top-[64px] tablet:top-14 bg-[#44067F] text-white z-40 overflow-y-auto desktop:hidden"
+      className="fixed inset-0 top-[64px] tablet:top-14 bg-purple-800 text-white z-40 overflow-y-auto desktop:hidden"
       onClick={(e) => {
         if (e.target === e.currentTarget) {
           setIsOpen(false)

@@ -6,7 +6,7 @@ import Instagram from '@/public/images/Instagram.svg'
 import X from '@/public/images/X.svg'
 
 const SNS = () => (
-  <section className="w-full bg-[#8814F4] py-24 tablet:py-32 desktop:py-40 px-4">
+  <section className="w-full bg-purple-600 py-24 tablet:py-32 desktop:py-40 px-4">
     <div className="flex flex-col items-center justify-center max-w-[700px] mx-auto">
       <p className="text-white text-[1.5rem] tablet:text-[2rem] desktop:text-[2.5rem] font-semibold text-center">
         테오콘 소식을 더 빨리 알고 싶다면?

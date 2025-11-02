@@ -50,7 +50,7 @@ const OverviewCard = ({
             {nickname}
           </p>
         )}
-        <p className="hidden tablet:block text-[#9CA3AF] text-[0.875rem] tablet:text-[1rem] leading-relaxed line-clamp-2 min-w-0">
+        <p className="hidden tablet:block text-gray-400 text-[0.875rem] tablet:text-[1rem] leading-relaxed line-clamp-2 min-w-0">
           {description}
         </p>
       </div>

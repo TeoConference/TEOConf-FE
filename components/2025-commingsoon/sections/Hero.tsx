@@ -77,7 +77,7 @@ const Hero = () => {
         {/* 모바일용 콘텐츠 */}
         <div className="flex flex-col text-center tablet:hidden py-16">
           <h1 className="font-bold text-[3.5rem] leading-normal">
-            <span className="text-[#8814F4]">TEO</span> Conf
+            <span className="text-purple-600">TEO</span> Conf
           </h1>
           <h1 className="font-bold text-[3.5rem] leading-normal -mt-[20px]">
             2025
@@ -85,7 +85,7 @@ const Hero = () => {
           <p className="font-semibold text-black text-[1.5rem] leading-tight pb-4">
             모두에게 열려있는 컨퍼런스
           </p>
-          <p className="font-medium text-[#6B7280] text-[1.25rem] leading-tight">
+          <p className="font-medium text-gray-500 text-[1.25rem] leading-tight">
             12.6 ~ 12.7 성수 엘리스Lab
           </p>
         </div>
@@ -99,11 +99,11 @@ const Hero = () => {
 
           {/* TEOConf 2025 제목 */}
           <h1 className="font-bold text-[2rem] tablet:text-[3rem] desktop:text-[3.75rem] leading-tight">
-            <span className="text-[#DDBBFD]">&#123;</span>
+            <span className="text-purple-200">&#123;</span>
             <span className="px-2">
-              <span className="text-[#8814F4]">TEO</span>Conf 2025
+              <span className="text-purple-600">TEO</span>Conf 2025
             </span>
-            <span className="text-[#DDBBFD]">&#125;</span>
+            <span className="text-purple-200">&#125;</span>
           </h1>
 
           {/* 모두에게 열려있는 컨퍼런스 */}
@@ -112,7 +112,7 @@ const Hero = () => {
           </p>
 
           {/* 날짜 및 장소 */}
-          <p className="font-medium text-[#6B7280] text-[1.25rem] leading-tight">
+          <p className="font-medium text-gray-500 text-[1.25rem] leading-tight">
             12월 6일(토) ~ 7일(일) | 서울 성수 엘리스Lab
           </p>
         </div>
@@ -168,7 +168,7 @@ const Hero = () => {
         {/* 모바일용 참가 신청 버튼 */}
         <div className="w-full max-w-[800px] px-12 tablet:hidden">
           <button
-            className="w-full text-[20px] bg-purple-500 hover:bg-[#9333EA] text-white px-6 py-2 rounded-lg text-sm font-medium transition-colors duration-200 h-[64px]"
+            className="w-full text-[20px] bg-purple-500 hover:bg-purple-600 text-white px-6 py-2 rounded-lg text-sm font-medium transition-colors duration-200 h-[64px]"
             onClick={() => {
               // 참가 신청 링크로 이동할 수 있도록 설정 필요
               console.log('참가 신청 클릭')

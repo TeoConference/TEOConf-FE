@@ -6,7 +6,7 @@ const Overview = () => {
   return (
     <section
       id="overview"
-      className="relative w-full overflow-hidden bg-[#F9FAFB] py-16 tablet:py-24"
+      className="relative w-full overflow-hidden bg-gray-50 py-16 tablet:py-24"
     >
       <div className="w-full flex-center flex-col">
         {/* 제목 */}
