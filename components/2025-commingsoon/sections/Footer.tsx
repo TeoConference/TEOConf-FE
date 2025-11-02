@@ -1,9 +1,9 @@
-import React, { useState } from 'react'
+import { useState } from 'react'
 import Image from 'next/image'
 
 import UpArrow from '@/public/images/UpArrow_4.svg'
 import PrivacyModal from '../shared/Modal/PrivacyModal'
-import Logo from '@/public/images/Logo_2.svg'
+import Logo from '@/public/images/2025/assets/logo/logo.svg'
 
 const Footer = () => {
   const [isModalOpen, setIsModalOpen] = useState(false)

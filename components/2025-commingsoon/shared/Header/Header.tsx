@@ -1,10 +1,10 @@
-import React, { useState } from 'react'
+import { useState } from 'react'
 import Image from 'next/image'
 import { useRouter } from 'next/router'
 import MenuIcon from '@mui/icons-material/Menu'
 import CloseIcon from '@mui/icons-material/Close'
 
-import Logo from '@/public/images/Logo_2.svg'
+import Logo from '@/public/images/2025/assets/logo/logo.svg'
 import Sidebar from './Sidebar'
 
 export const Header = () => {
