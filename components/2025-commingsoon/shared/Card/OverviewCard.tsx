@@ -15,7 +15,8 @@ const OverviewCard = ({
   link,
   nickname,
 }: OverviewCardProps) => {
-  const defaultThumbnail = '/images/2025/overview/card_default_img.png'
+  const basePath = process.env.NODE_ENV === 'production' ? '/TEOConf-FE' : ''
+  const defaultThumbnail = `${basePath}/images/2025/overview/card_default_img.png`
   const imageSrc = thumbnail || defaultThumbnail
   // 디스크립션이 100자 이상이면 100자로   자르고 ... 추가
   // const truncatedDescription =
