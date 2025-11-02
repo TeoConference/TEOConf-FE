@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React from 'react'
 import { scrollToSection } from '@/utils/scroll'
 
 interface SidebarProps {
@@ -12,23 +12,6 @@ const SIDEBAR_ITEMS = [
 ]
 
 const Sidebar = ({ isOpen, setIsOpen }: SidebarProps) => {
-  // 링크 클릭 시 사이드바 닫기
-  useEffect(() => {
-    const handleClick = () => {
-      setIsOpen(false)
-    }
-    if (isOpen) {
-      document.querySelectorAll("a[href^='#']").forEach((anchor) => {
-        anchor.addEventListener('click', handleClick)
-      })
-    }
-    return () => {
-      document.querySelectorAll("a[href^='#']").forEach((anchor) => {
-        anchor.removeEventListener('click', handleClick)
-      })
-    }
-  }, [isOpen, setIsOpen])
-
   if (!isOpen) return null
 
   return (
@@ -45,7 +28,7 @@ const Sidebar = ({ isOpen, setIsOpen }: SidebarProps) => {
           <div key={idx} className="w-[90%] py-5 border-b border-white/20 flex">
             <button
               type="button"
-              className="flex items-center text-white text-[18px] hover:opacity-80 transition-opacity"
+              className="w-full flex items-center text-white text-[18px] hover:opacity-80 transition-opacity"
               onClick={() => {
                 scrollToSection(item.sectionId)
                 setIsOpen(false)
