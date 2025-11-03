@@ -15,7 +15,8 @@ const OverviewCard = ({
   link,
   nickname,
 }: OverviewCardProps) => {
-  const defaultThumbnail = '/images/2025/overview/card_default_img.png'
+  const basePath = process.env.NODE_ENV === 'production' ? '/TEOConf-FE' : ''
+  const defaultThumbnail = `${basePath}/images/2025/overview/card_default_img.png`
   const imageSrc = thumbnail || defaultThumbnail
   // 디스크립션이 100자 이상이면 100자로   자르고 ... 추가
   // const truncatedDescription =
@@ -33,7 +34,7 @@ const OverviewCard = ({
       href={link}
       target="_blank"
       rel="noopener noreferrer"
-      className="flex flex-col rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow duration-200 bg-white tablet:bg-[#1F2937] cursor-pointer tablet:h-[460px]"
+      className="flex flex-col rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow duration-200 bg-gray-800 cursor-pointer tablet:h-[460px]"
     >
       {/* 썸네일 이미지 */}
       <div className="relative flex-none w-full h-[228px] tablet:h-[280px]">
@@ -42,15 +43,15 @@ const OverviewCard = ({
 
       {/* 타이틀 및 디스크립션 */}
       <div className="p-4 tablet:h-[180px] tablet:py-6 tablet:px-8 flex flex-col gap-2 overflow-hidden">
-        <h3 className="text-black tablet:text-white text-[1.125rem] tablet:text-[1.25rem] font-semibold leading-tight line-clamp-2 tablet:line-clamp-1 min-w-0">
+        <h3 className="text-white text-[1.125rem] tablet:text-[1.25rem] font-semibold leading-tight line-clamp-2 tablet:line-clamp-1 min-w-0">
           {title}
         </h3>
         {nickname && (
-          <p className="text-black tablet:text-white text-[0.875rem] tablet:text-[1rem] font-medium line-clamp-1 min-w-0">
+          <p className="text-white text-[0.875rem] tablet:text-[1rem] font-medium line-clamp-1 min-w-0">
             {nickname}
           </p>
         )}
-        <p className="hidden tablet:block text-[#9CA3AF] text-[0.875rem] tablet:text-[1rem] leading-relaxed line-clamp-2 min-w-0">
+        <p className="hidden tablet:block text-gray-400 text-[0.875rem] tablet:text-[1rem] leading-relaxed line-clamp-2 min-w-0">
           {description}
         </p>
       </div>
