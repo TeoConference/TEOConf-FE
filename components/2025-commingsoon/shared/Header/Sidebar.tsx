@@ -1,22 +1,12 @@
 import React from 'react'
 import { scrollToSection } from '@/utils/scroll'
+import { ARCHIVE_ITEMS, SIDEBAR_ITEMS } from '@/data/2025/navigation'
 import SidebarAccordionItem from './SidebarAccordionItem'
 
 interface SidebarProps {
   isOpen: boolean
   setIsOpen: React.Dispatch<React.SetStateAction<boolean>>
 }
-
-const SIDEBAR_ITEMS = [
-  { name: '모아보기', sectionId: 'overview' },
-  { name: '후원사', sectionId: 'sponsor' },
-]
-
-const ARCHIVE_ITEMS = [
-  { name: '테오콘 1기', path: '/first' },
-  { name: '테오콘 2기', path: '/second' },
-  { name: '테오콘 2024', path: '/third' },
-]
 
 const Sidebar = ({ isOpen, setIsOpen }: SidebarProps) => {
   if (!isOpen) return null

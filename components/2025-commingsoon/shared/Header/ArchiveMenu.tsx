@@ -6,11 +6,21 @@ import MenuList from '@mui/material/MenuList'
 import Paper from '@mui/material/Paper'
 import Popper from '@mui/material/Popper'
 import Stack from '@mui/material/Stack'
+import { useRouter } from 'next/router'
 import { SyntheticEvent, useEffect, useRef, useState } from 'react'
+import { ARCHIVE_ITEMS } from '@/data/2025/navigation'
 
 const ArchiveMenu = () => {
   const [open, setOpen] = useState(false)
   const anchorRef = useRef<HTMLButtonElement>(null)
+  const router = useRouter()
+
+  const handleRedirect = (path: string) => {
+    return (event: Event | SyntheticEvent) => {
+      router.push(path)
+      handleClose(event)
+    }
+  }
 
   const handleToggle = () => {
     setOpen((prevOpen) => !prevOpen)
@@ -77,27 +87,15 @@ const ArchiveMenu = () => {
                   autoFocusItem={open}
                   onKeyDown={handleListKeyDown as any}
                 >
-                  <MenuItem
-                    component="a"
-                    href="/first"
-                    className="hover:bg-purple-800 transition-colors"
-                  >
-                    테오콘 1기
-                  </MenuItem>
-                  <MenuItem
-                    component="a"
-                    href="/second"
-                    className="hover:bg-purple-800 transition-colors"
-                  >
-                    테오콘 2기
-                  </MenuItem>
-                  <MenuItem
-                    component="a"
-                    href="/third"
-                    className="hover:bg-purple-800 transition-colors"
-                  >
-                    테오콘 2024
-                  </MenuItem>
+                  {ARCHIVE_ITEMS.map((item) => (
+                    <MenuItem
+                      key={item.path}
+                      onClick={handleRedirect(item.path)}
+                      className="hover:bg-purple-800 transition-colors"
+                    >
+                      {item.name}
+                    </MenuItem>
+                  ))}
                 </MenuList>
               </ClickAwayListener>
             </Paper>
