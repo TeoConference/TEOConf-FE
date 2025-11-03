@@ -36,7 +36,7 @@ const nextConfig = {
     ],
     unoptimized: true,
   },
-  basePath,
-  assetPrefix,
+  basePath: '',
+  assetPrefix: '',
 }
 module.exports = nextConfig
