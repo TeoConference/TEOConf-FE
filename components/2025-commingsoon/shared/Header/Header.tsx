@@ -1,11 +1,13 @@
-import React, { useState } from 'react'
+import { useState } from 'react'
 import Image from 'next/image'
 import { useRouter } from 'next/router'
 import MenuIcon from '@mui/icons-material/Menu'
 import CloseIcon from '@mui/icons-material/Close'
 
-import Logo from '@/public/images/Logo_2.svg'
+import Logo from '@/public/images/2025/assets/logo/logo.svg'
 import Sidebar from './Sidebar'
+import ArchiveMenu from './ArchiveMenu'
+import { scrollToSection } from '@/utils/scroll'
 
 export const Header = () => {
   const router = useRouter()
@@ -32,18 +34,21 @@ export const Header = () => {
           />
         </div>
         <div className="space-x-10 items-center justify-start hidden desktop:inline-flex text-white">
-          <a
-            href="#overview"
+          <button
+            type="button"
+            onClick={() => scrollToSection('overview')}
             className="text-white hover:opacity-80 transition-opacity text-[16px]"
           >
             모아보기
-          </a>
-          <a
-            href="#sponsor"
+          </button>
+          <button
+            type="button"
+            onClick={() => scrollToSection('sponsor')}
             className="text-white hover:opacity-80 transition-opacity text-[16px]"
           >
             후원사
-          </a>
+          </button>
+          <ArchiveMenu />
         </div>
         {isOpen ? (
           <CloseIcon

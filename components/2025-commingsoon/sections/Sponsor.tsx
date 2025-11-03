@@ -1,5 +1,6 @@
 import React from 'react'
 import Image from 'next/image'
+import { getPath } from '@/utils/path'
 
 const Sponsor = () => {
   return (
@@ -7,11 +8,13 @@ const Sponsor = () => {
       id="sponsor"
       className="relative w-full min-h-[500px] tablet:min-h-[600px] desktop:min-h-[700px] overflow-hidden"
     >
-      {/* 배경 이미지 - 모바일/데스크탑 */}
+      {/* 배경 이미지 - 데스크탑 */}
       <div
         className="absolute inset-0 bg-cover bg-center bg-no-repeat hidden tablet:hidden desktop:block"
         style={{
-          backgroundImage: "url('/images/2025/background/elicelap-bg.png')",
+          backgroundImage: `url('${getPath(
+            '/images/2025/background/elicelap-bg.png'
+          )}')`,
         }}
       />
 
@@ -19,22 +22,14 @@ const Sponsor = () => {
       <div
         className="absolute inset-0 bg-cover bg-center bg-no-repeat hidden tablet:block desktop:hidden"
         style={{
-          backgroundImage:
-            "url('/images/2025/background/elicelap-mobile-bg.png')",
-        }}
-      />
-
-      {/* 배경 이미지 - 모바일 */}
-      <div
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat block tablet:hidden"
-        style={{
-          backgroundImage:
-            "url('/images/2025/background/elicelap-mobile-bg.png')",
+          backgroundImage: `url('${getPath(
+            '/images/2025/background/elicelap-mobile-bg.png'
+          )}')`,
         }}
       />
 
       {/* 보라색 계열 오버레이 */}
-      <div className="absolute inset-0 bg-[#EEDDFD]/50" />
+      <div className="absolute inset-0 bg-purple-100/50" />
 
       {/* 콘텐츠 */}
       <div className="relative z-10 w-full h-full min-h-[500px] tablet:min-h-[600px] desktop:min-h-[700px] flex items-center justify-center px-4 tablet:px-8">
@@ -45,14 +40,14 @@ const Sponsor = () => {
               TEOConf 2025는 K-하이테크 플랫폼
             </h2>
             <p className="text-black text-[1.25rem] tablet:text-[1.5rem] desktop:text-[2rem] font-medium leading-tight">
-              <span className="text-[#8814F4]">엘리스Lab</span>과 함께합니다.
+              <span className="text-purple-600">엘리스Lab</span>과 함께합니다.
             </p>
           </div>
 
           {/* 로고 */}
           <div className="mt-4 tablet:mt-6">
             <Image
-              src="/images/2025/assets/logo/elice-logo.svg"
+              src={getPath('/images/2025/assets/logo/elice-logo.svg')}
               alt="엘리스랩 로고"
               width={249}
               height={78}

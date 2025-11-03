@@ -1,5 +1,7 @@
-/** @type {import('tailwindcss').Config} */
-module.exports = {
+import type { Config } from 'tailwindcss'
+import { basePath } from './utils/path'
+
+const config: Config = {
   important: true,
   content: [
     './pages/**/*.{js,ts,jsx,tsx,mdx}',
@@ -39,7 +41,7 @@ module.exports = {
       keyframes: {
         moveLeft: {
           '0%': { transform: 'translateX(0)' },
-          '100%': { transform: 'translateX(-100%)' },
+          '100%': { transform: 'translateX(-33.333%)' },
         },
         moveRight: {
           '0%': { transform: 'translateX(-100%)' },
@@ -47,14 +49,14 @@ module.exports = {
         },
       },
       animation: {
-        'move-left': 'moveLeft 30s linear infinite',
-        'move-right': 'moveRight 35s linear infinite',
+        'move-left': 'moveLeft 25s linear infinite',
+        'move-right': 'moveRight 30s linear infinite',
       },
       backgroundImage: {
-        'name-card-1': "url('/images/NameCard_1.png')",
-        'name-card-2': "url('/images/NameCard_2.jpg')",
-        'name-card-3': "url('/images/NameCard_3.svg')",
-        banner: "url('/images/Banner_2.svg')",
+        'name-card-1': `url('${basePath}/images/NameCard_1.png')`,
+        'name-card-2': `url('${basePath}/images/NameCard_2.jpg')`,
+        'name-card-3': `url('${basePath}/images/NameCard_3.svg')`,
+        banner: `url('${basePath}/images/Banner_2.svg')`,
       },
     },
     fontSize: {
@@ -89,3 +91,5 @@ module.exports = {
   },
   plugins: [],
 }
+
+export default config

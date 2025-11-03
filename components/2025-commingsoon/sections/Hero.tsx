@@ -3,7 +3,9 @@ import Image from 'next/image'
 import CountdownItem from '../shared/Countdown/CountdownItem'
 import CountdownSeparator from '../shared/Countdown/CountdownSeparator'
 import ScrambleText from '../shared/Typography/ScrambleText'
+import { getPath } from '@/utils/path'
 
+// test
 const Hero = () => {
   const [timeLeft, setTimeLeft] = useState({
     days: '99',
@@ -61,9 +63,11 @@ const Hero = () => {
       id="banner"
       className="relative w-full min-h-[80vh] tablet:min-h-[calc(100vh_-_4rem)] flex tablet:flex-center overflow-hidden bg-white py-12 tablet:py-20"
       style={{
-        backgroundImage: `url('/images/2025/background/${
-          isMobile ? 'commingsoon-mobile-bg.png' : 'commingsoon-bg.png'
-        }')`,
+        backgroundImage: `url('${getPath(
+          `/images/2025/background/${
+            isMobile ? 'commingsoon-mobile-bg.png' : 'commingsoon-bg.png'
+          }`
+        )}')`,
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         backgroundRepeat: 'no-repeat',
@@ -73,7 +77,7 @@ const Hero = () => {
         {/* 모바일용 콘텐츠 */}
         <div className="flex flex-col text-center tablet:hidden py-16">
           <h1 className="font-bold text-[3.5rem] leading-normal">
-            <span className="text-[#8814F4]">TEO</span> Conf
+            <span className="text-purple-600">TEO</span> Conf
           </h1>
           <h1 className="font-bold text-[3.5rem] leading-normal -mt-[20px]">
             2025
@@ -81,7 +85,7 @@ const Hero = () => {
           <p className="font-semibold text-black text-[1.5rem] leading-tight pb-4">
             모두에게 열려있는 컨퍼런스
           </p>
-          <p className="font-medium text-[#6B7280] text-[1.25rem] leading-tight">
+          <p className="font-medium text-gray-500 text-[1.25rem] leading-tight">
             12.6 ~ 12.7 성수 엘리스Lab
           </p>
         </div>
@@ -89,17 +93,17 @@ const Hero = () => {
         {/* 태블릿 이상 상단 콘텐츠 */}
         <div className="flex-center flex-col gap-2 tablet:gap-2 text-center hidden tablet:flex">
           {/* COMING.SOON 배너 */}
-          <div className="bg-[#1F2937] p-2 rounded-lg font-mono text-[#38ED85] text-[0.8rem] tablet:text-[1rem] desktop:text-[1.75rem]">
+          <div className="bg-gray-800 p-2 rounded-lg font-mono text-[#38ED85] text-[0.8rem] tablet:text-[1rem] desktop:text-[1.75rem]">
             <ScrambleText text="<COMING.SOON/>" />
           </div>
 
           {/* TEOConf 2025 제목 */}
           <h1 className="font-bold text-[2rem] tablet:text-[3rem] desktop:text-[3.75rem] leading-tight">
-            <span className="text-[#DDBBFD]">&#123;</span>
+            <span className="text-purple-200">&#123;</span>
             <span className="px-2">
-              <span className="text-[#8814F4]">TEO</span>Conf 2025
+              <span className="text-purple-600">TEO</span>Conf 2025
             </span>
-            <span className="text-[#DDBBFD]">&#125;</span>
+            <span className="text-purple-200">&#125;</span>
           </h1>
 
           {/* 모두에게 열려있는 컨퍼런스 */}
@@ -108,7 +112,7 @@ const Hero = () => {
           </p>
 
           {/* 날짜 및 장소 */}
-          <p className="font-medium text-[#6B7280] text-[1.25rem] leading-tight">
+          <p className="font-medium text-gray-500 text-[1.25rem] leading-tight">
             12월 6일(토) ~ 7일(일) | 서울 성수 엘리스Lab
           </p>
         </div>
@@ -118,7 +122,7 @@ const Hero = () => {
           {/* 캐릭터 그룹 */}
           <div className="absolute inset-0 flex-center -z-10">
             <Image
-              src="/images/2025/assets/Group 87.svg"
+              src={getPath('/images/2025/assets/Group 87.svg')}
               alt="characters group"
               width={1275}
               height={409}
@@ -148,13 +152,16 @@ const Hero = () => {
               {/* 참가 신청 버튼 */}
               <div className="w-full px-12 tablet:px-16">
                 <button
-                  className="w-full text-[20px] bg-[#A855F7] hover:bg-[#9333EA] text-white px-6 py-2 tablet:px-8 tablet:py-2.5 rounded-lg text-sm tablet:text-base font-medium transition-colors duration-200 h-[64px]"
+                  // 2025.11.02 제이슨 - 기존 참가 신청 버튼 disabled 처리
+                  // className="w-full text-[20px] bg-purple-500 hover:bg-[#9333EA] text-white px-6 py-2 tablet:px-8 tablet:py-2.5 rounded-lg text-sm tablet:text-base font-medium transition-colors duration-200 h-[64px]"
+                  disabled
+                  className="w-full text-[20px] bg-[#969497] text-white px-6 py-2 tablet:px-8 tablet:py-5.5 rounded-lg text-sm tablet:text-base font-medium transition-colors duration-200 h-[64px] disabled:cursor-not-allowed"
                   onClick={() => {
                     // 참가 신청 링크로 이동할 수 있도록 설정 필요
                     console.log('참가 신청 클릭')
                   }}
                 >
-                  참가 신청
+                  신청이 곧 시작됩니다
                 </button>
               </div>
             </div>
@@ -164,13 +171,16 @@ const Hero = () => {
         {/* 모바일용 참가 신청 버튼 */}
         <div className="w-full max-w-[800px] px-12 tablet:hidden">
           <button
-            className="w-full text-[20px] bg-[#A855F7] hover:bg-[#9333EA] text-white px-6 py-2 rounded-lg text-sm font-medium transition-colors duration-200 h-[64px]"
+            // 2025.11.02 제이슨 - 기존 참가 신청 버튼 disabled 처리
+            // className="w-full text-[20px] bg-purple-500 hover:bg-purple-600 text-white px-6 py-2 rounded-lg text-sm font-medium transition-colors duration-200 h-[64px]"
+            disabled
+            className="w-full text-[20px] bg-[#969497] text-white px-6 py-2 rounded-lg text-sm font-medium transition-colors duration-200 h-[64px] disabled:cursor-not-allowed"
             onClick={() => {
               // 참가 신청 링크로 이동할 수 있도록 설정 필요
               console.log('참가 신청 클릭')
             }}
           >
-            참가 신청
+            신청이 곧 시작됩니다
           </button>
         </div>
       </div>

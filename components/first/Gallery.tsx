@@ -10,6 +10,7 @@ import 'swiper/css/pagination'
 import 'swiper/css'
 
 import NavButton from '@/components/first/gallery/NavButton'
+import { getPath } from '@/utils/path'
 
 const Gallery = () => {
   const totalSlide = 31
@@ -62,7 +63,7 @@ const Gallery = () => {
             >
               <Image
                 id={`gallery image ${index}`}
-                src={`/images/sketch/${index}.png`}
+                src={getPath(`/images/sketch/${index}.png`)}
                 width={330}
                 height={268}
                 className={
@@ -106,7 +107,7 @@ const Gallery = () => {
               onClick={() => setIsClickedImage(false)}
             />
             <Image
-              src={`/images/sketch/${currentSlide}.png`}
+              src={getPath(`/images/sketch/${currentSlide}.png`)}
               width={440}
               height={354}
               alt="현장 스케치 이미지"

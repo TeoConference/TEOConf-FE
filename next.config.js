@@ -1,7 +1,12 @@
 /** @type {import('next').NextConfig} */
 
+// const isDev = process.env.NODE_ENV === 'development'
+// const basePath = isDev ? '' : '/TEOConf-FE'
+// const assetPrefix = isDev ? '' : '/TEOConf-FE/'
+
 const nextConfig = {
   reactStrictMode: true,
+  output: 'export',
   images: {
     remotePatterns: [
       {
@@ -29,7 +34,9 @@ const nextConfig = {
         pathname: '/dna/**',
       },
     ],
+    unoptimized: true,
   },
+  basePath: '',
+  assetPrefix: '',
 }
-
 module.exports = nextConfig
