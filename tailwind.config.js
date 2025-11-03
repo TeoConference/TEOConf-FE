@@ -1,4 +1,8 @@
 /** @type {import('tailwindcss').Config} */
+
+const isDev = process.env.NODE_ENV === 'development'
+const basePath = isDev ? '' : '/TEOConf-FE'
+
 module.exports = {
   important: true,
   content: [
@@ -51,10 +55,10 @@ module.exports = {
         'move-right': 'moveRight 30s linear infinite',
       },
       backgroundImage: {
-        'name-card-1': "url('/images/NameCard_1.png')",
-        'name-card-2': "url('/images/NameCard_2.jpg')",
-        'name-card-3': "url('/images/NameCard_3.svg')",
-        banner: "url('/images/Banner_2.svg')",
+        'name-card-1': `url('${basePath}/images/NameCard_1.png')`,
+        'name-card-2': `url('${basePath}/images/NameCard_2.jpg')`,
+        'name-card-3': `url('${basePath}/images/NameCard_3.svg')`,
+        banner: `url('${basePath}/images/Banner_2.svg')`,
       },
     },
     fontSize: {
