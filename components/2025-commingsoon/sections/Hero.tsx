@@ -161,7 +161,7 @@ const Hero = () => {
                     console.log('참가 신청 클릭')
                   }}
                 >
-                  오픈 예정
+                  신청이 곧 시작됩니다
                 </button>
               </div>
             </div>
@@ -180,7 +180,7 @@ const Hero = () => {
               console.log('참가 신청 클릭')
             }}
           >
-            오픈 예정
+            신청이 곧 시작됩니다
           </button>
         </div>
       </div>
