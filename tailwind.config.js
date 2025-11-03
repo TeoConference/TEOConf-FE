@@ -39,7 +39,7 @@ module.exports = {
       keyframes: {
         moveLeft: {
           '0%': { transform: 'translateX(0)' },
-          '100%': { transform: 'translateX(-100%)' },
+          '100%': { transform: 'translateX(-33.333%)' },
         },
         moveRight: {
           '0%': { transform: 'translateX(-100%)' },
@@ -47,8 +47,8 @@ module.exports = {
         },
       },
       animation: {
-        'move-left': 'moveLeft 30s linear infinite',
-        'move-right': 'moveRight 35s linear infinite',
+        'move-left': 'moveLeft 25s linear infinite',
+        'move-right': 'moveRight 30s linear infinite',
       },
       backgroundImage: {
         'name-card-1': "url('/images/NameCard_1.png')",
