@@ -1,9 +1,7 @@
-/** @type {import('tailwindcss').Config} */
+import type { Config } from 'tailwindcss'
+import { basePath } from './utils/path'
 
-const isDev = process.env.NODE_ENV === 'development'
-const basePath = isDev ? '' : '/TEOConf-FE'
-
-module.exports = {
+const config: Config = {
   important: true,
   content: [
     './pages/**/*.{js,ts,jsx,tsx,mdx}',
@@ -93,3 +91,5 @@ module.exports = {
   },
   plugins: [],
 }
+
+export default config
