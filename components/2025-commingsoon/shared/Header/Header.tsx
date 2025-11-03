@@ -6,6 +6,7 @@ import CloseIcon from '@mui/icons-material/Close'
 
 import Logo from '@/public/images/Logo_2.svg'
 import Sidebar from './Sidebar'
+import ArchiveMenu from './ArchiveMenu'
 import { scrollToSection } from '@/utils/scroll'
 
 export const Header = () => {
@@ -47,6 +48,7 @@ export const Header = () => {
           >
             후원사
           </button>
+          <ArchiveMenu />
         </div>
         {isOpen ? (
           <CloseIcon

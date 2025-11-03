@@ -1,5 +1,6 @@
 import React from 'react'
 import { scrollToSection } from '@/utils/scroll'
+import SidebarAccordionItem from './SidebarAccordionItem'
 
 interface SidebarProps {
   isOpen: boolean
@@ -9,6 +10,12 @@ interface SidebarProps {
 const SIDEBAR_ITEMS = [
   { name: '모아보기', sectionId: 'overview' },
   { name: '후원사', sectionId: 'sponsor' },
+]
+
+const ARCHIVE_ITEMS = [
+  { name: '테오콘 1기', path: '/first' },
+  { name: '테오콘 2기', path: '/second' },
+  { name: '테오콘 2024', path: '/third' },
 ]
 
 const Sidebar = ({ isOpen, setIsOpen }: SidebarProps) => {
@@ -38,6 +45,13 @@ const Sidebar = ({ isOpen, setIsOpen }: SidebarProps) => {
             </button>
           </div>
         ))}
+        <div className="w-[90%]">
+          <SidebarAccordionItem
+            title="역대 행사"
+            items={ARCHIVE_ITEMS}
+            onNavigate={() => setIsOpen(false)}
+          />
+        </div>
       </div>
     </div>
   )
