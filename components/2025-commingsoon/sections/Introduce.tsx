@@ -22,7 +22,10 @@ const Introduce = () => {
           <p className="text-purple-500 text-[2rem] tablet:text-[2.25rem] desktop:text-[3rem] font-medium">
             솔직한 당신의 경험이
             <br className="tablet:hidden" />
-            <span className="text-purple-600"> 누군가의 영감이 되는</span>
+            <span className="text-purple-600 font-extrabold">
+              {' '}
+              누군가의 영감이 되는
+            </span>
             <br />
             <span>네트워킹 공간에 초대합니다!</span>
           </p>
