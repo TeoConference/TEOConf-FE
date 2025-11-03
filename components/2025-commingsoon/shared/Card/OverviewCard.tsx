@@ -1,3 +1,4 @@
+import { getPath } from '@/utils/path'
 import Image from 'next/image'
 
 interface OverviewCardProps {
@@ -15,14 +16,8 @@ const OverviewCard = ({
   link,
   nickname,
 }: OverviewCardProps) => {
-  const basePath = process.env.NODE_ENV === 'production' ? '/TEOConf-FE' : ''
-  const defaultThumbnail = `${basePath}/images/2025/overview/card_default_img.png`
+  const defaultThumbnail = getPath('/images/2025/overview/card_default_img.png')
   const imageSrc = thumbnail || defaultThumbnail
-  // 디스크립션이 100자 이상이면 100자로   자르고 ... 추가
-  // const truncatedDescription =
-  //   description.length > 100
-  //     ? `${description.substring(0, 100)}...`
-  //     : description
 
   // PC: 360:460 비율 유지 (360/460 ≈ 0.783)
   // 모바일 320px → 높이 409px (320/0.783 ≈ 409)
