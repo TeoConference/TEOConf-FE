@@ -65,7 +65,7 @@ const PrivacyModal = (props: PrivacyModalProps) => {
           [연락처]
           <br /> 회사명: 테오콘
           <br />
-          이메일: help.teocon@gmail.com
+          이메일: team.teoconf@gmail.com
         </div>
         <button
           className="bg-[#1A1A1A] rounded-[100px] w-40 h-14 mt-7"
