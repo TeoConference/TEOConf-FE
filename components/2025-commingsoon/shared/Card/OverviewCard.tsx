@@ -29,7 +29,7 @@ const OverviewCard = ({
       href={link}
       target="_blank"
       rel="noopener noreferrer"
-      className="flex flex-col rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow duration-200 bg-gray-800 cursor-pointer tablet:h-[460px]"
+      className="flex flex-col rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-shadow duration-200 bg-gray-800 cursor-pointer tablet:h-[460px]"
     >
       {/* 썸네일 이미지 */}
       <div className="relative flex-none w-full h-[228px] tablet:h-[280px]">
@@ -38,11 +38,11 @@ const OverviewCard = ({
 
       {/* 타이틀 및 디스크립션 */}
       <div className="p-4 tablet:h-[180px] tablet:py-6 tablet:px-8 flex flex-col gap-2 overflow-hidden">
-        <h3 className="text-white text-[1.125rem] tablet:text-[1.25rem] font-semibold leading-tight line-clamp-2 tablet:line-clamp-1 min-w-0">
+        <h3 className="text-white text-[1.125rem] tablet:text-[1.5rem] font-bold leading-tight line-clamp-2 tablet:line-clamp-1 min-w-0">
           {title}
         </h3>
         {nickname && (
-          <p className="text-white text-[0.875rem] tablet:text-[1rem] font-medium line-clamp-1 min-w-0">
+          <p className="text-white text-[0.875rem] tablet:text-[1rem] font-normal line-clamp-1 min-w-0">
             {nickname}
           </p>
         )}
