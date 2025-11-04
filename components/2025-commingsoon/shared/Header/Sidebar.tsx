@@ -11,6 +11,15 @@ interface SidebarProps {
 const Sidebar = ({ isOpen, setIsOpen }: SidebarProps) => {
   if (!isOpen) return null
 
+  const handleItemClick = (item: (typeof SIDEBAR_ITEMS)[0]) => {
+    if (item.link) {
+      window.open(item.link, '_blank')
+    } else if (item.sectionId) {
+      scrollToSection(item.sectionId)
+    }
+    setIsOpen(false)
+  }
+
   return (
     <div
       className="fixed inset-0 top-[64px] tablet:top-14 bg-purple-800 text-white z-40 overflow-y-auto desktop:hidden"
@@ -26,10 +35,7 @@ const Sidebar = ({ isOpen, setIsOpen }: SidebarProps) => {
             <button
               type="button"
               className="w-full flex items-center text-white text-[18px] hover:opacity-80 transition-opacity"
-              onClick={() => {
-                scrollToSection(item.sectionId)
-                setIsOpen(false)
-              }}
+              onClick={() => handleItemClick(item)}
             >
               {item.name}
             </button>
