@@ -15,10 +15,10 @@ export const sessions = [
   {
     date1: '12.06. 토요일',
     date2: '12-06 Sat',
-    date3: '12-06',
+    date3: '12-06 토요일',
     speakers: [
       {
-        title: '3주간의 디자인 시템 배 삽질기',
+        title: '3주간의 디자인 시스템 배 삽질기',
         name: '한상욱',
         image: Ant,
         keywords: ['초~중급', '디자인 시스템 배포', '실무경험'],
@@ -71,7 +71,7 @@ export const sessions = [
   {
     date1: '12.07. 일요일',
     date2: '12-07 Sun',
-    date3: '12-07',
+    date3: '12-07 일요일',
     speakers: [
       {
         title: '아직 2년차인데 팀장이 되어버렸다!',
