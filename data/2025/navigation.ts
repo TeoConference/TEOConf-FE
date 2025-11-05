@@ -5,7 +5,8 @@ export interface ArchiveItem {
 
 export interface SidebarItem {
   name: string
-  sectionId: string
+  sectionId?: string
+  link?: string
 }
 
 export const ARCHIVE_ITEMS: ArchiveItem[] = [
@@ -17,4 +18,8 @@ export const ARCHIVE_ITEMS: ArchiveItem[] = [
 export const SIDEBAR_ITEMS: SidebarItem[] = [
   { name: '모아보기', sectionId: 'overview' },
   { name: '후원사', sectionId: 'sponsor' },
+  {
+    name: 'FAQ',
+    link: 'https://basalt-burn-cee.notion.site/TEOConf-2025-FAQ-2a168692489880d785b1ebd46ec83391',
+  },
 ]

@@ -17,6 +17,13 @@ export const Header = () => {
     setIsOpen((prev) => !prev)
   }
 
+  const handleFAQClick = () => {
+    window.open(
+      'https://basalt-burn-cee.notion.site/TEOConf-2025-FAQ-2a168692489880d785b1ebd46ec83391',
+      '_blank'
+    )
+  }
+
   return (
     <header
       className="w-full h-[64px] tablet:h-14 flex-center sticky top-0 z-50 p-4"
@@ -47,6 +54,13 @@ export const Header = () => {
             className="text-white hover:opacity-80 transition-opacity text-[16px]"
           >
             후원사
+          </button>
+          <button
+            type="button"
+            onClick={handleFAQClick}
+            className="text-white hover:opacity-80 transition-opacity text-[16px]"
+          >
+            FAQ
           </button>
           <ArchiveMenu />
         </div>
