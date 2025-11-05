@@ -3,6 +3,7 @@ import Image from 'next/image'
 import { useRouter } from 'next/router'
 import MenuIcon from '@mui/icons-material/Menu'
 import CloseIcon from '@mui/icons-material/Close'
+import HelpOutline from '@mui/icons-material/HelpOutline'
 
 import Logo from '@/public/images/2025/assets/logo/logo.svg'
 import Sidebar from './Sidebar'
@@ -58,9 +59,10 @@ export const Header = () => {
           <button
             type="button"
             onClick={handleFAQClick}
-            className="text-white hover:opacity-80 transition-opacity text-[16px]"
+            className="text-white hover:opacity-80 transition-opacity text-[16px] flex items-center gap-1"
           >
             FAQ
+            <HelpOutline sx={{ fontSize: '20px' }} />
           </button>
           <ArchiveMenu />
         </div>

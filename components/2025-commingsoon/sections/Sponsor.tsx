@@ -29,7 +29,7 @@ const Sponsor = () => {
       />
 
       {/* 보라색 계열 오버레이 */}
-      <div className="absolute inset-0 bg-purple-100/90" />
+      <div className="absolute inset-0 bg-purple-100/90 tablet:bg-purple-100/90 desktop:bg-purple-100/40" />
 
       {/* 콘텐츠 */}
       <div className="relative z-10 w-full h-full min-h-[500px] tablet:min-h-[600px] desktop:min-h-[700px] flex items-center justify-center px-4 tablet:px-8">

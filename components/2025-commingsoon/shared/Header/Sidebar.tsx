@@ -2,6 +2,7 @@ import React from 'react'
 import { scrollToSection } from '@/utils/scroll'
 import { ARCHIVE_ITEMS, SIDEBAR_ITEMS } from '@/data/2025/navigation'
 import SidebarAccordionItem from './SidebarAccordionItem'
+import HelpOutline from '@mui/icons-material/HelpOutline'
 
 interface SidebarProps {
   isOpen: boolean
@@ -34,10 +35,11 @@ const Sidebar = ({ isOpen, setIsOpen }: SidebarProps) => {
           <div key={idx} className="w-[90%] py-5 border-b border-white/20 flex">
             <button
               type="button"
-              className="w-full flex items-center text-white text-[18px] hover:opacity-80 transition-opacity"
+              className="w-full flex items-center gap-1 text-white text-[18px] hover:opacity-80 transition-opacity"
               onClick={() => handleItemClick(item)}
             >
               {item.name}
+              {item.name === 'FAQ' && <HelpOutline sx={{ fontSize: '22px' }} />}
             </button>
           </div>
         ))}
