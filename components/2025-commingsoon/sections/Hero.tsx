@@ -61,7 +61,7 @@ const Hero = () => {
   return (
     <section
       id="banner"
-      className="relative w-full min-h-[80vh] tablet:min-h-[calc(100vh_-_4rem)] flex tablet:flex-center overflow-hidden bg-white py-12 tablet:py-20"
+      className="relative w-full flex tablet:flex-center overflow-hidden bg-white py-12 tablet:py-20"
       style={{
         backgroundImage: `url('${getPath(
           `/images/2025/background/${
