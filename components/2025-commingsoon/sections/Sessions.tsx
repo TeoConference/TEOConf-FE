@@ -16,8 +16,8 @@ const Sessions = () => (
 
         <strong className="text-gray-800 text-[1.5rem] tablet:text-[2rem] font-normal text-center max-w-4xl">
           올해는 어떤{' '}
-          <strong className="text-purple-500 font-bold">이야기</strong>들이
-          <br className="table:hidden" />
+          <strong className="text-purple-500 font-bold">이야기</strong>들이{' '}
+          <br className="tablet:hidden" />
           펼쳐질까요?
         </strong>
       </div>
