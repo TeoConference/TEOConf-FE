@@ -60,30 +60,33 @@ const Sessions = () => (
                     <span className="tablet:text-sub-h1 text-sub-h2 tablet:flex tablet:justify-start items-start text-white">
                       {speaker.title}
                     </span>
+                    <span className="block tablet:hidden text-sm text-gray-200 font-semibold mt-2">
+                      {speaker.name}
+                    </span>
                   </div>
                   <div className="flex justify-between items-end mt-4 desktop:items-end">
                     <div className="flex flex-col justify-between desktop:flex-row desktop:gap-4 desktop:items-center">
-                      <div className="flex gap-2">
+                      <div className="hidden tablet:flex gap-2">
                         {speaker.keywords.slice(0, 3).map((keyword, i) => (
                           <span
                             key={`${i}-${keyword}`}
                             className="bg-gray-200 text-gray-900 py-1 px-2 rounded-2xl text-xs tablet:text-sm font-medium"
                           >
-                            {`# ${keyword}`}
+                            {keyword}
                           </span>
                         ))}
                       </div>
                     </div>
                   </div>
                 </div>
-                <div className="flex flex-col items-center gap-2">
+                <div className="flex flex-col items-center gap-2 flex-shrink-0">
                   <Image
                     alt="speaker image"
                     src={speaker.image}
                     className="w-[70px] aspect-square rounded-lg"
                     style={{ objectFit: 'cover', objectPosition: 'center' }}
                   />
-                  <span className="text-lg text-gray-200 font-semibold">
+                  <span className="hidden tablet:block text-lg text-gray-200 font-semibold">
                     {speaker.name}
                   </span>
                 </div>
