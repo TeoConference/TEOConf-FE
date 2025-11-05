@@ -5,7 +5,7 @@ import Image from 'next/image'
 const Sessions = () => (
   <section
     id="sessions"
-    className="relative w-full overflow-hidden py-16 tablet:py-24 bg-gray-100"
+    className="relative w-full overflow-hidden py-16 px-6 tablet:py-24 tablet:px-8 desktop:px-12 bg-gray-100"
   >
     {/* 제목 */}
     <div className="flex flex-col gap-4 p-2 tablet:p-0 mb-8 tablet:mb-12 ">
@@ -17,6 +17,7 @@ const Sessions = () => (
         <strong className="text-gray-800 text-[1.5rem] tablet:text-[2rem] font-normal text-center max-w-4xl">
           올해는 어떤{' '}
           <strong className="text-purple-500 font-bold">이야기</strong>들이
+          <br className="table:hidden" />
           펼쳐질까요?
         </strong>
       </div>
@@ -25,7 +26,7 @@ const Sessions = () => (
     {sessions.map((session) => (
       <div
         key={session.date3}
-        className="flex flex-col gap-8 w-full flex-center tablet:w-[768px] desktop:w-[1024px] m-auto"
+        className="flex flex-col gap-8 w-full flex-center tablet:max-w-[768px] desktop:max-w-[1024px] m-auto"
       >
         <p className="text-[1.5rem] tablet:text-[2rem] text-center font-extrabold mt-8">
           {session.date3}
