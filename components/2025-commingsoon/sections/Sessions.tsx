@@ -83,7 +83,7 @@ const Sessions = () => (
                   <Image
                     alt="speaker image"
                     src={speaker.image}
-                    className="w-[70px] aspect-square rounded-lg"
+                    className="w-[70px] aspect-square rounded-lg border-[1px] border-gray-300"
                     style={{ objectFit: 'cover', objectPosition: 'center' }}
                   />
                   <span className="hidden tablet:block text-lg text-gray-200 font-semibold">
