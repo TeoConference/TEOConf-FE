@@ -9,6 +9,7 @@ import Logo from '@/public/images/2025/assets/logo/logo.svg'
 import Sidebar from './Sidebar'
 import ArchiveMenu from './ArchiveMenu'
 import { scrollToSection } from '@/utils/scroll'
+import { NAV_ITEMS as navItems } from '@/data/2025/navigation'
 
 export const Header = () => {
   const router = useRouter()
@@ -42,20 +43,16 @@ export const Header = () => {
           />
         </div>
         <div className="space-x-10 items-center justify-start hidden desktop:inline-flex text-white">
-          <button
-            type="button"
-            onClick={() => scrollToSection('overview')}
-            className="text-white hover:opacity-80 transition-opacity text-[16px]"
-          >
-            모아보기
-          </button>
-          <button
-            type="button"
-            onClick={() => scrollToSection('sponsor')}
-            className="text-white hover:opacity-80 transition-opacity text-[16px]"
-          >
-            후원사
-          </button>
+          {navItems.map((item, i) => (
+            <button
+              key={`nav-${i}-${item.sectionId}`}
+              type="button"
+              onClick={() => scrollToSection(item.sectionId)}
+              className="text-white hover:opacity-80 transition-opacity text-[16px]"
+            >
+              {item.name}
+            </button>
+          ))}
           <button
             type="button"
             onClick={handleFAQClick}
