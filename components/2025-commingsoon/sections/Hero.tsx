@@ -152,16 +152,14 @@ const Hero = () => {
               {/* 참가 신청 버튼 */}
               <div className="w-full px-12 tablet:px-16 flex-center">
                 <button
-                  // 2025.11.02 제이슨 - 기존 참가 신청 버튼 disabled 처리
-                  // className="w-[476px] desktop:w-full text-[2rem] desktop:text-[1.25rem] bg-purple-500 hover:bg-[#9333EA] text-white px-6 py-2 tablet:px-8 tablet:py-2.5 rounded-2xl tablet:text-base font-bold transition-colors duration-200 h-[69px]"
-                  disabled
-                  className="w-[476px] desktop:w-full text-[2rem] desktop:text-[1.25rem] bg-[#969497] text-white px-6 py-2 tablet:px-8 tablet:py-5.5 rounded-2xl text-sm tablet:text-base font-bold transition-colors duration-200 h-[86px] desktop:h-[64px] disabled:cursor-not-allowed"
+                  className="w-[476px] desktop:w-full text-[2rem] desktop:text-[1.25rem] bg-purple-500 hover:bg-[#9333EA] text-white px-6 py-2 tablet:px-8 tablet:py-2.5 rounded-2xl tablet:text-base font-bold transition-colors duration-200 h-[69px]"
+                  // disabled
+                  // className="w-[476px] desktop:w-full text-[2rem] desktop:text-[1.25rem] bg-[#969497] text-white px-6 py-2 tablet:px-8 tablet:py-5.5 rounded-2xl text-sm tablet:text-base font-bold transition-colors duration-200 h-[86px] desktop:h-[64px] disabled:cursor-not-allowed"
                   onClick={() => {
-                    // 참가 신청 링크로 이동할 수 있도록 설정 필요
-                    console.log('참가 신청 클릭')
+                    window.open('https://forms.gle/q2ThbtPYesLS49PB9', '_blank')
                   }}
                 >
-                  신청이 곧 시작됩니다
+                  참가 신청
                 </button>
               </div>
             </div>
@@ -171,16 +169,14 @@ const Hero = () => {
         {/* 모바일용 참가 신청 버튼 */}
         <div className="w-full max-w-[330px] mx-auto tablet:hidden">
           <button
-            // 2025.11.02 제이슨 - 기존 참가 신청 버튼 disabled 처리
-            // className="w-full text-[1.5rem] bg-purple-500 hover:bg-purple-600 text-white px-6 py-2 rounded-2xl font-bold transition-colors duration-200 h-[69px]"
-            disabled
-            className="w-full text-[1.5rem] bg-[#969497] text-white px-6 py-2 rounded-2xl font-bold transition-colors duration-200 h-[69px] disabled:cursor-not-allowed"
+            className="w-full text-[1.5rem] bg-purple-500 hover:bg-purple-600 text-white px-6 py-2 rounded-2xl font-bold transition-colors duration-200 h-[69px]"
+            // disabled
+            // className="w-full text-[1.5rem] bg-[#969497] text-white px-6 py-2 rounded-2xl font-bold transition-colors duration-200 h-[69px] disabled:cursor-not-allowed"
             onClick={() => {
-              // 참가 신청 링크로 이동할 수 있도록 설정 필요
-              console.log('참가 신청 클릭')
+              window.open('https://forms.gle/q2ThbtPYesLS49PB9', '_blank')
             }}
           >
-            신청이 곧 시작됩니다
+            참가 신청
           </button>
         </div>
       </div>
