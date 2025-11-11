@@ -27,6 +27,30 @@ const Sessions = () => {
     }
   }
 
+  // seq 기준으로 각 행에 TRACK A, B, C 배치 (태블릿/데스크톱용)
+  const groupBySeq = (speakers: typeof sessions[0]['speakers']) => {
+    const grouped: Record<number, typeof speakers> = {}
+
+    speakers.forEach((speaker) => {
+      if (!grouped[speaker.seq]) {
+        grouped[speaker.seq] = []
+      }
+      grouped[speaker.seq].push(speaker)
+    })
+
+    // seq 순서대로 정렬하고, 각 행 내에서 TRACK A, B, C 순으로 정렬
+    return Object.keys(grouped)
+      .sort((a, b) => Number(a) - Number(b))
+      .map((seq) => {
+        const trackOrder = ['TRACK A', 'TRACK B', 'TRACK C']
+        return grouped[Number(seq)].sort(
+          (a, b) => trackOrder.indexOf(a.track) - trackOrder.indexOf(b.track)
+        )
+      })
+  }
+
+  const sessionRows = groupBySeq(sessions[activeTab].speakers)
+
   return (
     <section
       id="sessions"
@@ -73,25 +97,27 @@ const Sessions = () => {
           </button>
         </div>
       </div>
-      {/* Sessions */}
-      <div className="grid grid-cols-1 tablet:grid-cols-2 desktop:grid-cols-3 gap-6 px-4 tablet:px-8 desktop:px-12 mt-6">
+      {/* Sessions - 모바일 */}
+      <div className="flex flex-col px-4 mt-6 tablet:hidden">
         {sessions[activeTab].speakers.map((speaker, index) => (
           <article
             key={index}
             className={clsx(
-              'w-full max-w-[20.625rem] mx-auto p-6 rounded-xl flex flex-col gap-4',
+              'w-full p-6 rounded-xl flex flex-col gap-4 m-2',
               getCardBgColor(activeTab, speaker.track)
             )}
           >
-            <p
-              className="text-sm font-bold"
-              style={{ color: getTrackColor(speaker.track) }}
-            >
-              # {speaker.track}
-            </p>
-            <h3 className="text-xl font-bold text-purple-600 break-keep">
-              {speaker.title}
-            </h3>
+            <div className="flex-1 flex flex-col gap-5">
+              <p
+                className="text-sm font-bold"
+                style={{ color: getTrackColor(speaker.track) }}
+              >
+                # {speaker.track}
+              </p>
+              <h3 className="text-xl font-bold text-purple-600 break-keep">
+                {speaker.title}
+              </h3>
+            </div>
             <div className="flex gap-12">
               <div className="flex-1 text-purple-600">
                 <p className="text-base font-bold">{speaker.name}</p>
@@ -104,6 +130,47 @@ const Sessions = () => {
               />
             </div>
           </article>
+        ))}
+      </div>
+
+      {/* Sessions - 태블릿/데스크톱 */}
+      <div className="hidden tablet:flex flex-col px-4 mt-6 gap-4">
+        {sessionRows.map((row, rowIndex) => (
+          <div key={rowIndex} className="flex gap-4 justify-center">
+            {row.map((speaker, colIndex) => (
+              <article
+                key={colIndex}
+                className={clsx(
+                  'w-[447px] h-[320px] p-9 rounded-xl flex flex-col gap-6',
+                  getCardBgColor(activeTab, speaker.track)
+                )}
+              >
+                <div className="flex-1 flex flex-col gap-5">
+                  <p
+                    className="text-base font-bold"
+                    style={{ color: getTrackColor(speaker.track) }}
+                  >
+                    # {speaker.track}
+                  </p>
+                  <h3 className="text-2xl font-bold text-purple-600 break-keep">
+                    {speaker.title}
+                  </h3>
+                  <p className="text-base text-purple-600">{speaker.desc}</p>
+                </div>
+                <div className="flex gap-12">
+                  <div className="flex-1 text-purple-600">
+                    <p className="text-xl font-bold">{speaker.name}</p>
+                    <span className="text-base">{speaker.role}</span>
+                  </div>
+                  <Image
+                    className="w-12 h-12 rounded-full object-cover bg-white"
+                    src={speaker.image}
+                    alt={speaker.name}
+                  />
+                </div>
+              </article>
+            ))}
+          </div>
         ))}
       </div>
     </section>
