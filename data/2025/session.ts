@@ -27,7 +27,7 @@ export const sessions: SessionData[] = [
         seq: 1,
       },
       {
-        title: 'FSD로 도메인 이해하기',
+        title: 'FSD로 온보딩하고 도메인 고수되기',
         desc: '새로운 회사로 이직하면서 FSD를 습득하고 얻은 좋은 코드를 작성하는 방법을 공유합니다.',
         name: '모승',
         image: MS,
