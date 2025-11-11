@@ -170,7 +170,7 @@ const Hero = () => {
             // disabled
             className="w-full text-[1.5rem] bg-[#969497] text-white px-6 py-2 rounded-2xl font-bold transition-colors duration-200 h-[69px] disabled:cursor-not-allowed"
           >
-            참가 신청
+            신청이 곧 시작됩니다.
           </button>
         </div>
       </div>
