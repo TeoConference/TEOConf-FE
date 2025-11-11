@@ -44,8 +44,8 @@ const SessionCard = ({
         </p>
         <h3
           className={clsx(
-            'font-bold text-purple-600 break-keep',
-            isMobile ? 'text-xl' : 'text-2xl'
+            'font-bold text-purple-600 break-keep line-clamp-2',
+            isMobile ? 'text-xl h-[3.5rem]' : 'text-2xl h-[4rem]'
           )}
         >
           {speaker.title}
