@@ -178,7 +178,7 @@ export const sessions = [
         seq: 2,
       },
       {
-        title: '우리 팀은 코드 리뷰를 병 과정으로 두지 않기로 했다',
+        title: '우리 팀은 코드 리뷰를 병목 과정으로 두지 않기로 했다',
         desc: '코드 리뷰가 생산성의 병목이 되는 과정과 리뷰의 품질을 올리기위한 팀의 노력을 공유합니다.',
         name: 'Jeremy',
         image: Jeremy,
