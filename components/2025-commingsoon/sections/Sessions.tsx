@@ -6,6 +6,27 @@ import { useState } from 'react'
 const Sessions = () => {
   const [activeTab, setActiveTab] = useState(0)
 
+  const getTrackColor = (track: string) => {
+    switch (track) {
+      case 'TRACK A':
+        return '#FF383C'
+      case 'TRACK B':
+        return '#007FEE'
+      case 'TRACK C':
+        return '#00B72E'
+      default:
+        return '#FF383C'
+    }
+  }
+
+  const getCardBgColor = (tab: number, track: string) => {
+    if (tab === 0) {
+      return track === 'TRACK B' ? 'bg-purple-100' : 'bg-purple-50'
+    } else {
+      return track === 'TRACK B' ? 'bg-purple-50' : 'bg-purple-100'
+    }
+  }
+
   return (
     <section
       id="sessions"
@@ -59,10 +80,13 @@ const Sessions = () => {
             key={index}
             className={clsx(
               'w-full max-w-[20.625rem] mx-auto p-6 rounded-xl flex flex-col gap-4',
-              activeTab === 0 ? 'bg-purple-50' : 'bg-purple-100'
+              getCardBgColor(activeTab, speaker.track)
             )}
           >
-            <p className="text-sm font-bold text-[#FF383C]">
+            <p
+              className="text-sm font-bold"
+              style={{ color: getTrackColor(speaker.track) }}
+            >
               # {speaker.track}
             </p>
             <h3 className="text-xl font-bold text-purple-600 break-keep">
