@@ -51,11 +51,11 @@ const SessionCard = ({
           {speaker.title}
         </h3>
         {!isMobile && (
-          <p className="text-base text-purple-600">{speaker.desc}</p>
+          <p className="text-base text-purple-600 break-keep">{speaker.desc}</p>
         )}
       </div>
       <div className="flex gap-12">
-        <div className="flex-1 text-purple-600">
+        <div className="flex-1 text-purple-600 flex flex-col justify-center">
           <p className={clsx('font-bold', isMobile ? 'text-base' : 'text-xl')}>
             {speaker.name}
           </p>
