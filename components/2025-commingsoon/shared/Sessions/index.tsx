@@ -1,0 +1,68 @@
+import { sessions } from '@/data/2025/session'
+import { useState } from 'react'
+import SessionCard from './SessionCard'
+import TabSwitch from './TabSwitch'
+import { getCardBgColor, groupBySeq } from './utils'
+
+const Sessions = () => {
+  const [activeTab, setActiveTab] = useState(0)
+
+  const sessionRows = groupBySeq(sessions[activeTab].speakers)
+
+  return (
+    <section
+      id="sessions"
+      className="relative w-full overflow-hidden py-[6.25rem] tablet:py-24 bg-purple-800"
+    >
+      {/* Title */}
+      <div className="flex flex-col gap-4 px-10 tablet:px-8 desktop:px-12 mb-10 tablet:mb-12 ">
+        <div className="w-full flex-center flex-col">
+          <h2 className="w-full text-white text-[2rem] tablet:text-[3.5rem] desktop:text-[3rem] font-bold text-center max-w-4xl ">
+            테오콘{' '}
+            <strong className="text-purple-400 font-bold">세션 소개</strong>
+          </h2>
+        </div>
+      </div>
+
+      {/* Tab Switch */}
+      <TabSwitch activeTab={activeTab} onTabChange={setActiveTab} />
+
+      {/* Sessions - 모바일 */}
+      <div className="flex flex-col px-[15px] mt-6 tablet:hidden gap-4">
+        {sessions[activeTab].speakers.map((speaker, index) => (
+          <SessionCard
+            key={index}
+            speaker={speaker}
+            bgColor={getCardBgColor(activeTab, speaker.track)}
+            variant="mobile"
+          />
+        ))}
+      </div>
+
+      {/* Sessions - 태블릿/데스크톱 */}
+      <div className="hidden tablet:block mt-6">
+        <div className="overflow-x-auto min-[1420px]:overflow-x-visible">
+          <div className="flex flex-col gap-4 min-w-[1400px] px-[45px] min-[1420px]:min-w-0">
+            {sessionRows.map((row, rowIndex) => (
+              <div
+                key={rowIndex}
+                className="flex gap-4 min-[1420px]:justify-center"
+              >
+                {row.map((speaker, colIndex) => (
+                  <SessionCard
+                    key={colIndex}
+                    speaker={speaker}
+                    bgColor={getCardBgColor(activeTab, speaker.track)}
+                    variant="desktop"
+                  />
+                ))}
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </section>
+  )
+}
+
+export default Sessions

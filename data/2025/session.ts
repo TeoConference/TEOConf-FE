@@ -10,8 +10,9 @@ import Passport from '@/public/images/2025/speakersImg/passport.png'
 import Bini from '@/public/images/2025/speakersImg/Bini.png'
 import Jeremy from '@/public/images/2025/speakersImg/Jeremy.png'
 import OJM from '@/public/images/2025/speakersImg/OJM.png'
+import { SessionData } from '@/components/2025-commingsoon/shared/Sessions/types'
 
-export const sessions = [
+export const sessions: SessionData[] = [
   {
     date: '12월 6일',
     speakers: [
