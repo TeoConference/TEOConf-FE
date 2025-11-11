@@ -18,7 +18,7 @@ export const sessions: SessionData[] = [
     speakers: [
       {
         title: '당신이 1년 전에 회고 했어야 하는 이유',
-        desc: '근 2년동안 개발을 처음 배워서, 개발자로서 성장하며 회고한 이야기를 들려드리고자 합니다.',
+        desc: '프론트를 처음 배운 순간부터 지금까지, 회고를 바탕으로 좌절을 극복하고 꿈을 이룬 이야기를 들려드리고자 합니다.',
         name: 'Zen',
         image: Zen,
         keywords: ['회고', '성장', '경험담', '성장기'],
@@ -27,7 +27,7 @@ export const sessions: SessionData[] = [
         seq: 1,
       },
       {
-        title: 'FSD로 온보딩하고 도메인 고수되기',
+        title: 'FSD로 도메인 이해하기',
         desc: '새로운 회사로 이직하면서 FSD를 습득하고 얻은 좋은 코드를 작성하는 방법을 공유합니다.',
         name: '모승',
         image: MS,
@@ -69,7 +69,7 @@ export const sessions: SessionData[] = [
       },
       {
         title: '10만명 사용자 게임, 2주 만에 아이디어부터 배포까지',
-        desc: '사이드 프로젝트의 A부터 Z까지의 과정을 공유합니다.',
+        desc: '아이디어 도출 과정, 디자인, 개발, 배포 이후까지의 과정을 따라가며 경험을 공유합니다.',
         name: 'minu',
         image: Minu,
         keywords: ['사이드 프로젝트', '경험', '회고'],
@@ -114,7 +114,7 @@ export const sessions: SessionData[] = [
     speakers: [
       {
         title: 'Breaking Changes와 함께 자라기',
-        desc: '2년동안 경험했던 기술 도입과 버전 관리 경험에 대한 장단점을 이야기합니다.',
+        desc: '2년간 경험한 기술 도입과 버전 관리의 장단점을 공유합니다.',
         name: '준',
         image: defaultImg,
         keywords: ['기술 스텍', '기술 부채', '최신 기술', '버전 관리'],
@@ -154,7 +154,7 @@ export const sessions: SessionData[] = [
       },
       {
         title: '유명한 기술을 쓰는게 정답인가?',
-        desc: 'Kafka 대신 MQTT 제안 경험으로 AI 시대에 흔들리지 않는 개발자가 되는 방법',
+        desc: 'Kafka 대신 MQTT를 제안했던 경험으로, AI 시대에 흔들리지 않는 개발자가 되는 방법을 이야기합니다.',
         name: '비니',
         image: Bini,
         keywords: ['커리어/성장', '트랜드보다본질', '개발가치관'],
@@ -174,7 +174,7 @@ export const sessions: SessionData[] = [
       },
       {
         title: '우리 팀은 코드 리뷰를 병목 과정으로 두지 않기로 했다',
-        desc: '코드 리뷰가 생산성의 병목이 되는 과정과 리뷰의 품질을 올리기 위한 팀의 노력을 공유합니다.',
+        desc: '코드 리뷰가 생산성의 병목이 되는 과정과 리뷰의 품질을 올리기 위한 팀의 노력과 그 성과에 대해 이야기합니다.',
         name: 'Jeremy',
         image: Jeremy,
         keywords: ['개발문화', '코드리뷰', '성장'],
@@ -193,8 +193,8 @@ export const sessions: SessionData[] = [
         seq: 1,
       },
       {
-        title: 'Rust로 프로그래밍 언어와 플랫폼 장벽넘기',
-        desc: '점자라는 생소한 도메인을 소프트웨어 공학으로 개선한 방법 공유합니다.',
+        title: 'Rust로 사회적인 가치를 만들고 플랫폼 장벽 넘기',
+        desc: '점자라는 생소한 도메인을 오픈소스로 개선하고자 한 시도와 플랫폼의 한계를 넘고자 한 시도를 공유합니다.',
         name: '오정민',
         image: OJM,
         keywords: ['Rust', '사회적 기술', '크로스 언어 지원', 'WASM'],
@@ -204,7 +204,7 @@ export const sessions: SessionData[] = [
       },
       {
         title: '10만명 사용자 게임, 2주 만에 아이디어부터 배포까지',
-        desc: '사이드 프로젝트의 A부터 Z까지의 과정을 공유합니다.',
+        desc: '아이디어 도출 과정, 디자인, 개발, 배포 이후까지의 과정을 따라가며 경험을 공유합니다.',
         name: 'minu',
         image: Minu,
         keywords: ['사이드 프로젝트', '경험', '회고'],
