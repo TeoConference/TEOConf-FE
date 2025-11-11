@@ -58,7 +58,7 @@ export const sessions: SessionData[] = [
       },
 
       {
-        title: '권한 관리, 아직도 그렇게 하시나요?',
+        title: '권한 관리, 아직도 그렇게 하세요?',
         desc: '그래프로 풀어본 복잡한 권한 관리 이야기',
         name: '여권',
         image: Passport,
