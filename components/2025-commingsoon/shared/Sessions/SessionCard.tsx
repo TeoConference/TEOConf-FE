@@ -32,7 +32,9 @@ const SessionCard = ({
       className={clsx(
         'rounded-xl flex flex-col',
         bgColor,
-        isMobile ? 'w-full p-6 gap-4' : 'w-[447px] h-[320px] p-9 gap-6 flex-shrink-0'
+        isMobile
+          ? 'w-full p-6 gap-4'
+          : 'w-[447px] h-[320px] p-9 gap-6 flex-shrink-0'
       )}
     >
       <div className="flex-1 flex flex-col gap-5">
@@ -75,7 +77,6 @@ const SessionCard = ({
           priority={isActiveTab}
           loading={isActiveTab ? 'eager' : 'lazy'}
           onError={() => setImageError(true)}
-          placeholder="blur"
         />
       </div>
     </article>

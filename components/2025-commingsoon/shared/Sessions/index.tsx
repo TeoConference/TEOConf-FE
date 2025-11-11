@@ -70,12 +70,10 @@ const Sessions = () => {
       {/* Sessions - 태블릿/데스크톱 */}
       <div className="hidden tablet:block mt-6">
         <div className="overflow-x-auto min-[1420px]:overflow-x-visible">
-          <div className="flex flex-col gap-4 min-w-[1400px] px-[45px] min-[1420px]:min-w-0">
+          <div className="flex flex-col gap-4 min-w-[1400px] min-[1420px]:min-w-0">
             {sessionRows.map((row, rowIndex) => (
-              <div
-                key={rowIndex}
-                className="flex gap-4 min-[1420px]:justify-center"
-              >
+              <div key={rowIndex} className="flex gap-4 min-[1420px]:justify-center">
+                <div className="w-[45px] flex-shrink-0" />
                 {row.map((speaker, colIndex) => (
                   <SessionCard
                     key={`${activeTab}-${rowIndex}-${colIndex}`}
@@ -86,6 +84,7 @@ const Sessions = () => {
                     isLoading={isLoadingImages}
                   />
                 ))}
+                <div className="w-[45px] flex-shrink-0" />
               </div>
             ))}
           </div>
