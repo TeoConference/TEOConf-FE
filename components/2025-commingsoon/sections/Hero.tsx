@@ -152,14 +152,11 @@ const Hero = () => {
               {/* 참가 신청 버튼 */}
               <div className="w-full px-12 tablet:px-16 flex-center">
                 <button
-                  className="w-[476px] desktop:w-full text-[2rem] desktop:text-[1.25rem] bg-purple-500 hover:bg-[#9333EA] text-white px-6 py-2 tablet:px-8 tablet:py-2.5 rounded-2xl tablet:text-base font-bold transition-colors duration-200 h-[69px]"
                   // disabled
-                  // className="w-[476px] desktop:w-full text-[2rem] desktop:text-[1.25rem] bg-[#969497] text-white px-6 py-2 tablet:px-8 tablet:py-5.5 rounded-2xl text-sm tablet:text-base font-bold transition-colors duration-200 h-[86px] desktop:h-[64px] disabled:cursor-not-allowed"
-                  onClick={() => {
-                    window.open('https://forms.gle/q2ThbtPYesLS49PB9', '_blank')
-                  }}
+                  className="w-[476px] desktop:w-full text-[2rem] desktop:text-[1.25rem] bg-[#969497] text-white px-6 py-2 tablet:px-8 tablet:py-5.5 rounded-2xl text-sm tablet:text-base font-bold transition-colors duration-200 h-[86px] desktop:h-[64px] disabled:cursor-not-allowed"
+                  // className="w-[476px] desktop:w-full text-[2rem] desktop:text-[1.25rem] bg-purple-500 hover:bg-[#9333EA] text-white px-6 py-2 tablet:px-8 tablet:py-2.5 rounded-2xl tablet:text-base font-bold transition-colors duration-200 h-[69px]"
                 >
-                  참가 신청
+                  신청이 곧 시작됩니다.
                 </button>
               </div>
             </div>
