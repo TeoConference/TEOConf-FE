@@ -166,12 +166,9 @@ const Hero = () => {
         {/* 모바일용 참가 신청 버튼 */}
         <div className="w-full max-w-[330px] mx-auto tablet:hidden">
           <button
-            className="w-full text-[1.5rem] bg-purple-500 hover:bg-purple-600 text-white px-6 py-2 rounded-2xl font-bold transition-colors duration-200 h-[69px]"
+            // className="w-full text-[1.5rem] bg-purple-500 hover:bg-purple-600 text-white px-6 py-2 rounded-2xl font-bold transition-colors duration-200 h-[69px]"
             // disabled
-            // className="w-full text-[1.5rem] bg-[#969497] text-white px-6 py-2 rounded-2xl font-bold transition-colors duration-200 h-[69px] disabled:cursor-not-allowed"
-            onClick={() => {
-              window.open('https://forms.gle/q2ThbtPYesLS49PB9', '_blank')
-            }}
+            className="w-full text-[1.5rem] bg-[#969497] text-white px-6 py-2 rounded-2xl font-bold transition-colors duration-200 h-[69px] disabled:cursor-not-allowed"
           >
             참가 신청
           </button>
