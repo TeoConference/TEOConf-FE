@@ -38,7 +38,7 @@ export const sessions: SessionData[] = [
       },
       {
         title: 'React 19가 풀고자 한 문제들',
-        desc: 'React 19.0부터 최신 19.2까지, 새로 추가된 기능들이 어떤 문제를 풀기 위해 등장했는지를...',
+        desc: 'React 19.0부터 최신 19.2까지, 새로 추가된 기능들이 어떤 문제를 풀기 위해 등장했는지를 이야기합니다.',
         name: '박정환',
         image: PJH,
         keywords: ['FE', 'React', 'UX'],
@@ -48,7 +48,7 @@ export const sessions: SessionData[] = [
       },
       {
         title: '첫 인턴에 Spring 백엔드 개발이요?? 난 프론트인데?',
-        desc: '당근에서 프론트엔드 인턴으로서 백엔드 개발을 경험하며 타 직군의 관점이 프론트엔드 개발에...',
+        desc: '당근에서 프론트엔드 인턴으로써 백엔드 개발을 경험하며 타 직군의 관점이 어떤 통찰을 주는지 발표할 예정입니다.',
         name: '링커',
         image: Linker,
         keywords: ['개발', '인턴', '경험', '성장'],
@@ -78,7 +78,7 @@ export const sessions: SessionData[] = [
         seq: 3,
       },
       {
-        title: '혼자서도 잘해요? 주니어 개발자의 TanStack Query 디버깅',
+        title: '혼자서도 잘해요? 주니어 개발자의 TanStack Query 디버깅 여정',
         desc: 'TanStack Query의 캐시 갱신 관련 UI 버그를 해결한 기술적 여정과 깨달음을 발표합니다.',
         name: '재빙',
         image: JaeBing,
