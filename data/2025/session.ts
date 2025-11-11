@@ -32,7 +32,7 @@ export const sessions: SessionData[] = [
         name: '모승',
         image: MS,
         keywords: ['개발', 'FSD', '아키텍처'],
-        role: '리멤버엔컴퍼니 프론트엔드',
+        role: '리멤버앤컴퍼니 프론트엔드',
         track: 'TRACK A',
         seq: 2,
       },
@@ -174,7 +174,7 @@ export const sessions: SessionData[] = [
       },
       {
         title: '우리 팀은 코드 리뷰를 병목 과정으로 두지 않기로 했다',
-        desc: '코드 리뷰가 생산성의 병목이 되는 과정과 리뷰의 품질을 올리기위한 팀의 노력을 공유합니다.',
+        desc: '코드 리뷰가 생산성의 병목이 되는 과정과 리뷰의 품질을 올리기 위한 팀의 노력을 공유합니다.',
         name: 'Jeremy',
         image: Jeremy,
         keywords: ['개발문화', '코드리뷰', '성장'],
@@ -194,7 +194,7 @@ export const sessions: SessionData[] = [
       },
       {
         title: 'Rust로 프로그래밍 언어와 플랫폼 장벽넘기',
-        desc: '점자라는 생소한 도메인을 소프트웨어 공학으로 개선한 방법 공유',
+        desc: '점자라는 생소한 도메인을 소프트웨어 공학으로 개선한 방법 공유합니다.',
         name: '오정민',
         image: OJM,
         keywords: ['Rust', '사회적 기술', '크로스 언어 지원', 'WASM'],
