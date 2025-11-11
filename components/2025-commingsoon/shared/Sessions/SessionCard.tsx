@@ -1,20 +1,31 @@
 import Image from 'next/image'
 import clsx from 'clsx'
+import { useState } from 'react'
 import { Speaker } from './types'
 import { getTrackColor } from './utils'
+import defaultSpeakerImage from '@/public/images/2025/speakersImg/default-speaker.png'
 
 interface SessionCardProps {
   speaker: Speaker
   bgColor: string
   variant?: 'mobile' | 'desktop'
+  isActiveTab?: boolean // 현재 활성 탭의 카드인지 여부
+  isLoading?: boolean // 탭 전환 중 로딩 상태
 }
 
 const SessionCard = ({
   speaker,
   bgColor,
   variant = 'mobile',
+  isActiveTab = true,
+  isLoading = false,
 }: SessionCardProps) => {
   const isMobile = variant === 'mobile'
+  const [imageError, setImageError] = useState(false)
+
+  // 탭 전환 중이거나 에러 발생 시 fallback 이미지 표시
+  const shouldShowFallback = isLoading || imageError
+  const imageSrc = shouldShowFallback ? defaultSpeakerImage : speaker.image
 
   return (
     <article
@@ -57,8 +68,13 @@ const SessionCard = ({
             'rounded-full object-cover bg-white',
             isMobile ? 'w-12 h-12' : 'w-16 h-16'
           )}
-          src={speaker.image}
+          src={imageSrc}
           alt={speaker.name}
+          width={isMobile ? 48 : 64}
+          height={isMobile ? 48 : 64}
+          priority={isActiveTab}
+          loading={isActiveTab ? 'eager' : 'lazy'}
+          onError={() => setImageError(true)}
         />
       </div>
     </article>

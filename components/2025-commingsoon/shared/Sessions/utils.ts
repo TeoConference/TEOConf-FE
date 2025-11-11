@@ -39,3 +39,36 @@ export const groupBySeq = (speakers: Speaker[]): Speaker[][] => {
     )
   })
 }
+
+/**
+ * 단일 이미지 프리로드 함수
+ */
+const preloadSingleImage = (src: string): Promise<void> => {
+  return new Promise((resolve, reject) => {
+    const img = new Image()
+    img.onload = () => resolve()
+    img.onerror = () => reject(new Error(`Failed to load image: ${src}`))
+    img.src = src
+  })
+}
+
+/**
+ * 이미지 프리로드 함수
+ * 다음 탭의 이미지를 미리 로드하여 캐시에 저장
+ * @returns Promise that resolves when all images are loaded
+ */
+export const preloadImages = async (speakers: Speaker[]): Promise<void> => {
+  if (typeof window === 'undefined') return
+
+  const imagePromises = speakers.map((speaker) => {
+    const src = typeof speaker.image === 'string' ? speaker.image : speaker.image.src
+    return preloadSingleImage(src)
+  })
+
+  try {
+    await Promise.all(imagePromises)
+  } catch (error) {
+    // 개별 이미지 로드 실패는 무시하고 계속 진행
+    console.warn('Some images failed to preload:', error)
+  }
+}
