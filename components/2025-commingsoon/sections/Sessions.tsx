@@ -98,12 +98,12 @@ const Sessions = () => {
         </div>
       </div>
       {/* Sessions - 모바일 */}
-      <div className="flex flex-col px-4 mt-6 tablet:hidden">
+      <div className="flex flex-col px-[15px] mt-6 tablet:hidden gap-4">
         {sessions[activeTab].speakers.map((speaker, index) => (
           <article
             key={index}
             className={clsx(
-              'w-full p-6 rounded-xl flex flex-col gap-4 m-2',
+              'w-full p-6 rounded-xl flex flex-col gap-4',
               getCardBgColor(activeTab, speaker.track)
             )}
           >
@@ -134,44 +134,48 @@ const Sessions = () => {
       </div>
 
       {/* Sessions - 태블릿/데스크톱 */}
-      <div className="hidden tablet:flex flex-col px-4 mt-6 gap-4">
-        {sessionRows.map((row, rowIndex) => (
-          <div key={rowIndex} className="flex gap-4 justify-center">
-            {row.map((speaker, colIndex) => (
-              <article
-                key={colIndex}
-                className={clsx(
-                  'w-[447px] h-[320px] p-9 rounded-xl flex flex-col gap-6',
-                  getCardBgColor(activeTab, speaker.track)
-                )}
-              >
-                <div className="flex-1 flex flex-col gap-5">
-                  <p
-                    className="text-base font-bold"
-                    style={{ color: getTrackColor(speaker.track) }}
+      <div className="hidden tablet:block mt-6">
+        <div className="overflow-x-auto min-[1420px]:overflow-x-visible">
+          <div className="flex flex-col gap-4 min-w-[1400px] pl-[45px] min-[1420px]:min-w-0 min-[1420px]:pl-0">
+            {sessionRows.map((row, rowIndex) => (
+              <div key={rowIndex} className="flex gap-4 min-[1420px]:justify-center">
+                {row.map((speaker, colIndex) => (
+                  <article
+                    key={colIndex}
+                    className={clsx(
+                      'w-[447px] h-[320px] p-9 rounded-xl flex flex-col gap-6',
+                      getCardBgColor(activeTab, speaker.track)
+                    )}
                   >
-                    # {speaker.track}
-                  </p>
-                  <h3 className="text-2xl font-bold text-purple-600 break-keep">
-                    {speaker.title}
-                  </h3>
-                  <p className="text-base text-purple-600">{speaker.desc}</p>
-                </div>
-                <div className="flex gap-12">
-                  <div className="flex-1 text-purple-600">
-                    <p className="text-xl font-bold">{speaker.name}</p>
-                    <span className="text-base">{speaker.role}</span>
-                  </div>
-                  <Image
-                    className="w-12 h-12 rounded-full object-cover bg-white"
-                    src={speaker.image}
-                    alt={speaker.name}
-                  />
-                </div>
-              </article>
+                    <div className="flex-1 flex flex-col gap-5">
+                      <p
+                        className="text-base font-bold"
+                        style={{ color: getTrackColor(speaker.track) }}
+                      >
+                        # {speaker.track}
+                      </p>
+                      <h3 className="text-2xl font-bold text-purple-600 break-keep">
+                        {speaker.title}
+                      </h3>
+                      <p className="text-base text-purple-600">{speaker.desc}</p>
+                    </div>
+                    <div className="flex gap-12">
+                      <div className="flex-1 text-purple-600">
+                        <p className="text-xl font-bold">{speaker.name}</p>
+                        <span className="text-base">{speaker.role}</span>
+                      </div>
+                      <Image
+                        className="w-12 h-12 rounded-full object-cover bg-white"
+                        src={speaker.image}
+                        alt={speaker.name}
+                      />
+                    </div>
+                  </article>
+                ))}
+              </div>
             ))}
           </div>
-        ))}
+        </div>
       </div>
     </section>
   )
