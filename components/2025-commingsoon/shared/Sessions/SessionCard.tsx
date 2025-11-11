@@ -75,6 +75,7 @@ const SessionCard = ({
           priority={isActiveTab}
           loading={isActiveTab ? 'eager' : 'lazy'}
           onError={() => setImageError(true)}
+          placeholder="blur"
         />
       </div>
     </article>
