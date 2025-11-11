@@ -1,22 +1,19 @@
-import defaultImg from '@/public/images/2025/speakersImg/Default.png'
-import Ant from '@/public/images/2025/speakersImg/Ant.jpeg'
-import JaeBing from '@/public/images/2025/speakersImg/jaebing.jpeg'
-import Linker from '@/public/images/2025/speakersImg/linker.jpeg'
-import PJH from '@/public/images/2025/speakersImg/pjh.jpg'
-import Zen from '@/public/images/2025/speakersImg/Zen.jpeg'
-import Minu from '@/public/images/2025/speakersImg/minu.jpeg'
-import MS from '@/public/images/2025/speakersImg/ms.jpg'
+import defaultImg from '@/public/images/2025/speakersImg/default-speaker.png'
+import Ant from '@/public/images/2025/speakersImg/Ant.png'
+import JaeBing from '@/public/images/2025/speakersImg/jaebing.png'
+import Linker from '@/public/images/2025/speakersImg/linker.png'
+import PJH from '@/public/images/2025/speakersImg/pjh.png'
+import Zen from '@/public/images/2025/speakersImg/Zen.png'
+import Minu from '@/public/images/2025/speakersImg/minu.png'
+import MS from '@/public/images/2025/speakersImg/ms.png'
 import Passport from '@/public/images/2025/speakersImg/passport.png'
 import Bini from '@/public/images/2025/speakersImg/Bini.png'
 import Jeremy from '@/public/images/2025/speakersImg/Jeremy.png'
-import OJM from '@/public/images/2025/speakersImg/OJM.jpg'
+import OJM from '@/public/images/2025/speakersImg/OJM.png'
 
 export const sessions = [
   {
-    date1: '12.06. 토요일',
-    date2: '12-06 Sat',
-    date3: '12-06 토요일',
-    date4: '12월 6일',
+    date: '12월 6일',
     speakers: [
       {
         title: '당신이 1년 전에 회고 했어야 하는 이유',
@@ -112,10 +109,7 @@ export const sessions = [
     ],
   },
   {
-    date1: '12.07. 일요일',
-    date2: '12-07 Sun',
-    date3: '12-07 일요일',
-    date4: '12월 7일',
+    date: '12월 7일',
     speakers: [
       {
         title: 'Breaking Changes와 함께 자라기',
