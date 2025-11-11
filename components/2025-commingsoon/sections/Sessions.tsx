@@ -27,8 +27,7 @@ const Sessions = () => {
     }
   }
 
-  // seq 기준으로 각 행에 TRACK A, B, C 배치 (태블릿/데스크톱용)
-  const groupBySeq = (speakers: typeof sessions[0]['speakers']) => {
+  const groupBySeq = (speakers: (typeof sessions)[0]['speakers']) => {
     const grouped: Record<number, typeof speakers> = {}
 
     speakers.forEach((speaker) => {
@@ -38,7 +37,6 @@ const Sessions = () => {
       grouped[speaker.seq].push(speaker)
     })
 
-    // seq 순서대로 정렬하고, 각 행 내에서 TRACK A, B, C 순으로 정렬
     return Object.keys(grouped)
       .sort((a, b) => Number(a) - Number(b))
       .map((seq) => {
@@ -138,7 +136,10 @@ const Sessions = () => {
         <div className="overflow-x-auto min-[1420px]:overflow-x-visible">
           <div className="flex flex-col gap-4 min-w-[1400px] pl-[45px] min-[1420px]:min-w-0 min-[1420px]:pl-0">
             {sessionRows.map((row, rowIndex) => (
-              <div key={rowIndex} className="flex gap-4 min-[1420px]:justify-center">
+              <div
+                key={rowIndex}
+                className="flex gap-4 min-[1420px]:justify-center"
+              >
                 {row.map((speaker, colIndex) => (
                   <article
                     key={colIndex}
@@ -157,7 +158,9 @@ const Sessions = () => {
                       <h3 className="text-2xl font-bold text-purple-600 break-keep">
                         {speaker.title}
                       </h3>
-                      <p className="text-base text-purple-600">{speaker.desc}</p>
+                      <p className="text-base text-purple-600">
+                        {speaker.desc}
+                      </p>
                     </div>
                     <div className="flex gap-12">
                       <div className="flex-1 text-purple-600">
