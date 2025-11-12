@@ -8,8 +8,8 @@ import X from '@/public/images/X.svg'
 const SNS = () => (
   <section className="w-full bg-purple-600 py-24 tablet:py-32 desktop:py-40 px-4">
     <div className="flex flex-col items-center justify-center max-w-[700px] mx-auto">
-      <p className="text-white text-[1.5rem] tablet:text-[2rem] desktop:text-[2.5rem] font-semibold text-center">
-        테오콘 소식을 더 빨리 알고 싶다면?
+      <p className="text-white text-[1.625rem] tablet:text-[2rem] desktop:text-[2.25rem] font-bold text-center">
+        테오콘 소식을 <br className="tablet:hidden" />더 빨리 알고 싶다면?
       </p>
       <div className="flex mt-6 tablet:mt-10 gap-4">
         <a

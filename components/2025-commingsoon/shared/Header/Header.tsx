@@ -3,11 +3,13 @@ import Image from 'next/image'
 import { useRouter } from 'next/router'
 import MenuIcon from '@mui/icons-material/Menu'
 import CloseIcon from '@mui/icons-material/Close'
+import HelpOutline from '@mui/icons-material/HelpOutline'
 
 import Logo from '@/public/images/2025/assets/logo/logo.svg'
 import Sidebar from './Sidebar'
 import ArchiveMenu from './ArchiveMenu'
 import { scrollToSection } from '@/utils/scroll'
+import { NAV_ITEMS as navItems } from '@/data/2025/navigation'
 
 export const Header = () => {
   const router = useRouter()
@@ -15,6 +17,13 @@ export const Header = () => {
 
   const toggleSide = () => {
     setIsOpen((prev) => !prev)
+  }
+
+  const handleFAQClick = () => {
+    window.open(
+      'https://basalt-burn-cee.notion.site/TEOConf-2025-FAQ-2a168692489880d785b1ebd46ec83391',
+      '_blank'
+    )
   }
 
   return (
@@ -34,19 +43,23 @@ export const Header = () => {
           />
         </div>
         <div className="space-x-10 items-center justify-start hidden desktop:inline-flex text-white">
+          {navItems.map((item, i) => (
+            <button
+              key={`nav-${i}-${item.sectionId}`}
+              type="button"
+              onClick={() => scrollToSection(item.sectionId)}
+              className="text-white hover:opacity-80 transition-opacity text-[16px]"
+            >
+              {item.name}
+            </button>
+          ))}
           <button
             type="button"
-            onClick={() => scrollToSection('overview')}
-            className="text-white hover:opacity-80 transition-opacity text-[16px]"
+            onClick={handleFAQClick}
+            className="text-white hover:opacity-80 transition-opacity text-[16px] flex items-center gap-1"
           >
-            모아보기
-          </button>
-          <button
-            type="button"
-            onClick={() => scrollToSection('sponsor')}
-            className="text-white hover:opacity-80 transition-opacity text-[16px]"
-          >
-            후원사
+            FAQ
+            <HelpOutline sx={{ fontSize: '20px' }} />
           </button>
           <ArchiveMenu />
         </div>

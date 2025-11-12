@@ -13,9 +13,9 @@ const CountdownItem: React.FC<CountdownItemProps> = ({
   value,
   label,
   textColor = 'text-white',
-  textSize = 'text-[3rem] tablet:text-[5rem]',
+  textSize = 'text-[3rem] tablet:text-[4rem] desktop:text-[5rem]',
   labelColor = 'text-[#D1D5D8]',
-  labelSize = 'text-[1.25rem]',
+  labelSize = 'tablet:text-[1rem] desktop:text-[1.25rem]',
 }) => {
   const textHeight = textSize.includes('2rem')
     ? 'h-[2rem] leading-[2rem]'
