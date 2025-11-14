@@ -155,7 +155,8 @@ const Hero = () => {
                   disabled
                   className="w-full text-[20px] bg-[#969497] text-white px-6 py-2 tablet:px-8 tablet:py-5.5 rounded-lg text-sm tablet:text-base font-medium transition-colors duration-200 h-[64px] disabled:cursor-not-allowed"
                 >
-                  신청이 마감되었습니다.
+                  {/* 신청이 마감되었습니다. */}
+                  신청 마감(참가자 발표: 11월 17일)
                 </button>
               </div>
             </div>
@@ -168,7 +169,7 @@ const Hero = () => {
             disabled
             className="w-full text-[20px] bg-[#969497] text-white px-6 py-2 tablet:px-8 tablet:py-5.5 rounded-lg text-sm tablet:text-base font-medium transition-colors duration-200 h-[64px] disabled:cursor-not-allowed"
           >
-            신청이 마감되었습니다.
+            신청 마감(참가자 발표: 11월 17일)
           </button>
         </div>
       </div>
