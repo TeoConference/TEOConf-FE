@@ -72,6 +72,7 @@ export const timetableData: TimeTableItem[] = [
   {
     time: '17:20-17:40',
     title: '테오의 고민 상담소',
+    type: 'opening',
   },
   {
     time: '17:40-17:50',

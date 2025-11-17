@@ -51,7 +51,7 @@ const Timetable = () => {
     switch (type) {
       case 'opening':
       case 'closing':
-        return 'text-purple-700 font-bold'
+        return 'text-purple-700'
       case 'break':
         return 'text-gray-600'
       case 'session':
@@ -83,7 +83,7 @@ const Timetable = () => {
 
         <div className="w-full max-w-4xl">
           <div className="relative">
-            <div className="absolute left-[60px] tablet:left-[80px] top-0 bottom-0 w-[2px] bg-purple-200" />
+            <div className="absolute left-[66px] tablet:left-[80px] top-0 bottom-0 w-[2px] bg-purple-200" />
 
             <div className="space-y-3 tablet:space-y-4">
               {timetableData.map((item, index) => {
@@ -92,23 +92,23 @@ const Timetable = () => {
                   <div
                     key={index}
                     ref={(el) => (itemRefs.current[index] = el)}
-                    className={`relative flex items-start gap-3 transition-all duration-700 ease-out ${
+                    className={`relative flex items-start gap-2 tablet:gap-3 transition-all duration-700 ease-out ${
                       isVisible
                         ? 'opacity-100 translate-y-0'
                         : 'opacity-0 translate-y-8'
                     }`}
                   >
                     <div
-                      className={`flex-shrink-0 w-[52px] tablet:w-[72px] text-right ${getTimeStyles(
+                      className={`flex-shrink-0 w-[54px] tablet:w-[72px] text-right mt-1 ${getTimeStyles(
                         item.type
                       )}`}
                     >
-                      <span className="text-xs tablet:text-sm font-medium">
+                      <span className="text-[10px] tablet:text-sm font-medium whitespace-nowrap break-keep">
                         {item.time}
                       </span>
                     </div>
 
-                    <div className="relative flex-shrink-0 mt-2">
+                    <div className="relative flex-shrink-0 mt-[6px] tablet:mt-2">
                       <div
                         className={`w-3 h-3 tablet:w-4 tablet:h-4 rounded-full border-2 ${
                           item.type === 'session'
@@ -121,11 +121,11 @@ const Timetable = () => {
                     </div>
 
                     <div
-                      className={`flex-1 p-2 tablet:p-3 rounded-lg border-2 ${getItemStyles(
+                      className={`flex-1 px-2 py-1.5 tablet:p-3 rounded-lg border-2 ${getItemStyles(
                         item.type
                       )}`}
                     >
-                      <h3 className="text-sm tablet:text-base font-bold text-gray-800">
+                      <h3 className="text-xs tablet:text-base font-bold text-gray-800">
                         {item.title}
                       </h3>
                     </div>
