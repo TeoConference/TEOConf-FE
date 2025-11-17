@@ -7,6 +7,7 @@ import Sponsor from '@/components/2025-commingsoon/sections/Sponsor'
 import SNS from '@/components/2025-commingsoon/sections/SNS'
 import Footer from '@/components/2025-commingsoon/sections/Footer'
 import Sessions from '@/components/2025-commingsoon/shared/Sessions'
+import Map from '@/components/2025-commingsoon/sections/Map'
 
 export default function Home() {
   return (
@@ -17,6 +18,7 @@ export default function Home() {
       <Introduce />
       <Sessions />
       <Overview />
+      <Map />
       <Sponsor />
       <SNS />
       <Footer />
