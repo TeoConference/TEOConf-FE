@@ -71,7 +71,7 @@ const Timetable = () => {
           <h2 className="w-full text-gray-800 text-[2rem] tablet:text-[3.5rem] desktop:text-[3rem] font-bold text-center max-w-4xl">
             테오콘 <strong className="text-purple-500">타임테이블</strong>
           </h2>
-          <p className="text-gray-700 text-base tablet:text-lg text-center">
+          <p className="text-gray-700 text-base tablet:text-lg text-center break-keep">
             ※ 테오의 고민상담소 세션은 컨퍼런스 운영 및 공간 배치 특성상 C
             트랙에서 진행되며,
             <br className="tablet:hidden" />
