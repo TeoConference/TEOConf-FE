@@ -31,7 +31,7 @@ const Map = () => {
   }, [isKakaoLoaded])
 
   return (
-    <section id="map" className="py-32 px-8">
+    <section id="location" className="py-32 px-8">
       <Script
         src={`//dapi.kakao.com/v2/maps/sdk.js?appkey=${process.env.NEXT_PUBLIC_KAKAO_MAP_API_KEY}&autoload=false`}
         strategy="afterInteractive"
@@ -42,7 +42,8 @@ const Map = () => {
           12월 6일, 7일
         </h3>
         <h2 className="text-[1.5rem] tablet:text-[2rem] desktop:text-[2.5rem] font-bold">
-          TEO Conf 2025,<br className="desktop:hidden" />
+          TEO Conf 2025,
+          <br className="desktop:hidden" />
           <span className="desktop:before:content-[' ']">여기서 만나요!</span>
         </h2>
         <h4 className="text-sm tablet:text-base desktop:text-lg font-bold text-gray-500">
