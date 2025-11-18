@@ -11,7 +11,7 @@ const MapSection = ({ isKakaoLoaded }: MapSectionProps) => {
   useKakaoMap(mapContainer, isKakaoLoaded)
 
   return (
-    <section id="location" className="py-32 px-8">
+    <section id="location" className="py-16 px-8">
       <div className="margin-auto text-center">
         <h3 className="text-[1rem] tablet:text-[1.5rem] desktop:text-[2rem] font-bold text-purple-400">
           12월 6일, 7일
@@ -26,7 +26,7 @@ const MapSection = ({ isKakaoLoaded }: MapSectionProps) => {
         </h4>
         <div
           ref={mapContainer}
-          className="w-full max-w-[62.125rem] aspect-video mt-8 rounded-lg mx-auto"
+          className="w-full max-w-[62.125rem] h-[400px] tablet:aspect-video mt-8 rounded-lg mx-auto"
         ></div>
       </div>
     </section>
