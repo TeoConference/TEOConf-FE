@@ -26,6 +26,18 @@ export const useKakaoMap = (
       marker.setMap(map)
 
       createCustomOverlay(markerPosition, LOCATION, map)
+
+      // 화면 resize 시 마커를 중앙에 유지
+      const handleResize = () => {
+        map.setCenter(markerPosition)
+      }
+
+      window.addEventListener('resize', handleResize)
+
+      // cleanup 함수로 이벤트 리스너 제거
+      return () => {
+        window.removeEventListener('resize', handleResize)
+      }
     })
   }, [isKakaoLoaded, mapContainer])
 }
