@@ -51,7 +51,7 @@ const Map = () => {
         </h4>
         <div
           ref={mapContainer}
-          className="w-full tablet:max-w-[960px] desktop:max-w-[1350px] h-[400px] mt-8 rounded-lg mx-auto"
+          className="w-full max-w-[62.125rem] aspect-video mt-8 rounded-lg mx-auto"
         ></div>
       </div>
     </section>
