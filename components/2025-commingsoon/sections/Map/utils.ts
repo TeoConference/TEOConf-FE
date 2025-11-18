@@ -4,9 +4,7 @@ import type { LocationData } from './types'
 export const createCustomMarker = (position: any) => {
   const { kakao } = window
 
-  // 모바일에서는 원래 크기 사용
-  const isMobile = window.innerWidth < 768
-  const scale = isMobile ? 0.6 : 1 // 모바일에서 60% 크기
+  const scale = 0.6
 
   const imageSize = new kakao.maps.Size(
     MARKER_IMAGE_CONFIG.size.width * scale,
@@ -38,7 +36,7 @@ export const createCustomOverlay = (
   map: any
 ) => {
   const content = `
-    <div class="relative bottom-[70px] tablet:bottom-[115px] bg-white rounded-md shadow-lg px-2 py-1.5 tablet:px-4 tablet:py-2 border border-gray-300 flex flex-col items-center">
+    <div class="relative bottom-[70px] tablet:bottom-[75px] bg-white rounded-md shadow-lg px-2 py-1.5 tablet:px-4 tablet:py-2 border border-gray-300 flex flex-col items-center">
       <a href="https://map.kakao.com/link/map/${location.placeId}" target="_blank" rel="noopener noreferrer" class="text-gray-800 no-underline hover:underline font-bold text-sm tablet:text-lg">
         엘리스랩 성수
       </a>

@@ -22,13 +22,24 @@ export const useKakaoMap = (
 
       const markerPosition = new kakao.maps.LatLng(LOCATION.lat, LOCATION.lng)
 
-      const marker = createCustomMarker(markerPosition)
+      let marker = createCustomMarker(markerPosition)
       marker.setMap(map)
 
-      createCustomOverlay(markerPosition, LOCATION, map)
+      let overlay = createCustomOverlay(markerPosition, LOCATION, map)
 
-      // 화면 resize 시 마커를 중앙에 유지
+      // 화면 resize 시 마커와 오버레이를 다시 생성
       const handleResize = () => {
+        // 기존 마커와 오버레이 제거
+        marker.setMap(null)
+        overlay.setMap(null)
+
+        // 새로운 마커와 오버레이 생성
+        marker = createCustomMarker(markerPosition)
+        marker.setMap(map)
+
+        overlay = createCustomOverlay(markerPosition, LOCATION, map)
+
+        // 중앙 재설정
         map.setCenter(markerPosition)
       }
 
