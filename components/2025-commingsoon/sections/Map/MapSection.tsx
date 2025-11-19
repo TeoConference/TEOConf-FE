@@ -24,9 +24,22 @@ const MapSection = ({ isKakaoLoaded }: MapSectionProps) => {
         <h4 className="text-sm tablet:text-base desktop:text-lg font-bold text-gray-500">
           서울 성동구 아차산로 17길 48 성수낙낙 C동 2층
         </h4>
+
+        {!isKakaoLoaded && (
+          <div className="w-full max-w-[62.125rem] h-[400px] tablet:aspect-video mt-8 rounded-lg mx-auto bg-gray-200 animate-pulse relative">
+            <div className="absolute inset-0 flex items-center justify-center">
+              <p className="text-gray-500 text-sm font-medium">
+                지도를 불러오는 중...
+              </p>
+            </div>
+          </div>
+        )}
+
         <div
           ref={mapContainer}
-          className="w-full max-w-[62.125rem] h-[400px] tablet:aspect-video mt-8 rounded-lg mx-auto"
+          className={`w-full max-w-[62.125rem] h-[400px] tablet:aspect-video mt-8 rounded-lg mx-auto ${
+            !isKakaoLoaded ? 'hidden' : ''
+          }`}
         ></div>
       </div>
     </section>
