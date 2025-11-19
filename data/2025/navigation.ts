@@ -16,6 +16,7 @@ export const ARCHIVE_ITEMS: ArchiveItem[] = [
 export const NAV_ITEMS: NavItem[] = [
   { type: 'nav', name: '세션', sectionId: 'sessions' },
   { type: 'nav', name: '모아보기', sectionId: 'overview' },
+  { type: 'nav', name: '장소', sectionId: 'location' },
   { type: 'nav', name: '후원사', sectionId: 'sponsor' },
 ]
 
