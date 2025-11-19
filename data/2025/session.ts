@@ -10,7 +10,7 @@ import Passport from '@/public/images/2025/speakersImg/passport.png'
 import Bini from '@/public/images/2025/speakersImg/Bini.png'
 import Jeremy from '@/public/images/2025/speakersImg/Jeremy.png'
 import OJM from '@/public/images/2025/speakersImg/OJM.png'
-import { SessionData } from '@/components/2025-commingsoon/shared/Sessions/types'
+import { SessionData } from '@/components/2025-commingsoon/sections/Sessions/types'
 
 export const sessions: SessionData[] = [
   {

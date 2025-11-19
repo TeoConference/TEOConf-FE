@@ -1,0 +1,49 @@
+import { useEffect, RefObject } from 'react'
+import { LOCATION } from '@/data/2025/map'
+import { MAP_CONFIG } from './constants'
+import { createCustomMarker, createCustomOverlay } from './utils'
+
+export const useKakaoMap = (
+  mapContainer: RefObject<HTMLDivElement>,
+  isKakaoLoaded: boolean
+) => {
+  useEffect(() => {
+    if (!isKakaoLoaded || !mapContainer.current) return
+
+    window.kakao.maps.load(() => {
+      const { kakao } = window
+
+      const center = new kakao.maps.LatLng(LOCATION.lat, LOCATION.lng)
+
+      const map = new kakao.maps.Map(mapContainer.current!, {
+        center,
+        level: MAP_CONFIG.level,
+      })
+
+      const markerPosition = new kakao.maps.LatLng(LOCATION.lat, LOCATION.lng)
+
+      let marker = createCustomMarker(markerPosition)
+      marker.setMap(map)
+
+      let overlay = createCustomOverlay(markerPosition, LOCATION, map)
+
+      const handleResize = () => {
+        marker.setMap(null)
+        overlay.setMap(null)
+
+        marker = createCustomMarker(markerPosition)
+        marker.setMap(map)
+
+        overlay = createCustomOverlay(markerPosition, LOCATION, map)
+
+        map.setCenter(markerPosition)
+      }
+
+      window.addEventListener('resize', handleResize)
+
+      return () => {
+        window.removeEventListener('resize', handleResize)
+      }
+    })
+  }, [isKakaoLoaded, mapContainer])
+}

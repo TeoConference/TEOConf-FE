@@ -152,12 +152,11 @@ const Hero = () => {
               {/* 참가 신청 버튼 */}
               <div className="w-full px-12 tablet:px-16 flex-center">
                 <button
-                  onClick={() => {
-                    window.open('https://forms.gle/q2ThbtPYesLS49PB9', '_blank')
-                  }}
-                  className="w-[476px] desktop:w-full text-[2rem] desktop:text-[1.25rem] bg-purple-500 hover:bg-[#9333EA] text-white px-6 py-2 tablet:px-8 tablet:py-2.5 rounded-2xl tablet:text-base font-bold transition-colors duration-200 h-[69px]"
+                  disabled
+                  className="w-full text-[20px] bg-[#969497] text-white px-6 py-2 tablet:px-8 tablet:py-5.5 rounded-lg text-sm tablet:text-base font-medium transition-colors duration-200 h-[64px] disabled:cursor-not-allowed"
                 >
-                  참가 신청
+                  {/* 신청이 마감되었습니다. */}
+                  신청 마감(참가자 발표: 11월 17일)
                 </button>
               </div>
             </div>
@@ -167,12 +166,10 @@ const Hero = () => {
         {/* 모바일용 참가 신청 버튼 */}
         <div className="w-full max-w-[330px] mx-auto tablet:hidden">
           <button
-            onClick={() => {
-              window.open('https://forms.gle/q2ThbtPYesLS49PB9', '_blank')
-            }}
-            className="w-full text-[1.5rem] bg-purple-500 hover:bg-purple-600 text-white px-6 py-2 rounded-2xl font-bold transition-colors duration-200 h-[69px]"
+            disabled
+            className="w-full text-[20px] bg-[#969497] text-white px-6 py-2 tablet:px-8 tablet:py-5.5 rounded-lg text-sm tablet:text-base font-medium transition-colors duration-200 h-[64px] disabled:cursor-not-allowed"
           >
-            참가 신청
+            신청 마감(참가자 발표: 11월 17일)
           </button>
         </div>
       </div>

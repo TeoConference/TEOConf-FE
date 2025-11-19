@@ -57,7 +57,7 @@ const SessionCard = ({
         )}
       </div>
       <div className="flex gap-12">
-        <div className="flex-1 text-purple-600 flex flex-col justify-center">
+        <div className="flex-1 text-purple-600 flex flex-col justify-center gap-1">
           <p className={clsx('font-bold', isMobile ? 'text-base' : 'text-xl')}>
             {speaker.name}
           </p>
