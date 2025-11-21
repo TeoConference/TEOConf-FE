@@ -22,17 +22,17 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: 'lts/*'  # 최신 LTS 버전 자동 사용
-          cache: 'npm'
+          cache: 'yarn'
 
       - name: Install dependencies
-        run: npm ci
+        run: yarn install --frozen-lockfile
 
       - name: Build
         env:
           NEXT_PUBLIC_KAKAO_MAP_API_KEY: ${{ secrets.NEXT_PUBLIC_KAKAO_MAP_API_KEY }}
         run: |
-          npm run build-static
-          npm run postbuild-static
+          yarn build-static
+          yarn postbuild-static
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
