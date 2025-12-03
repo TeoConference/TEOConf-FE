@@ -57,4 +57,17 @@ TEOConf-FE
 
 ### 카카오지도 API
 
-### Github 토큰
+- **용도**: 오시는 길 페이지의 지도 표시
+- **관리 방식**: GitHub Secrets and variables로 안전하게 관리
+  - 위치: Repository Settings > Secrets and variables > Actions > Repository secrets
+- **Secret 이름**: `NEXT_PUBLIC_KAKAO_MAP_API_KEY`
+- **로컬 개발**: `.env` 파일에 API Key 설정 필요
+  - 파일이 필요한 경우 `hyer1205@gmail.com`으로 문의
+  - kakao developers 에 멤버 추가가 필요한 경우 `hyer1205@gmail.com`으로 문의
+
+### GitHub 토큰
+
+- **용도**: GitHub Pages 자동 배포
+- **설정 방법**: 설정 불필요 (GitHub Actions가 자동 제공)
+- **토큰 이름**: `GITHUB_TOKEN`
+- **권한**: 워크플로우 실행 시 자동 생성 및 만료
