@@ -1,5 +1,23 @@
 <img width="900" height="600" alt="TEOConf_2025" src="https://github.com/user-attachments/assets/7117d973-b625-4ef7-9959-77ceef6b190e" />
 
+## 실행 방법
+
+### 1. 저장소 클론
+```bash
+git clone https://github.com/your-username/TEOConf-FE.git
+cd TEOConf-FE
+```
+
+### 2. 의존성 설치
+```bash
+yarn install
+```
+
+### 3. 개발 서버 실행
+```bash
+yarn dev
+```
+
 ## 폴더 구조
 
 TEOConf는 매년 개최되는 컨퍼런스로, 연도별로 독립적인 페이지를 관리합니다.
