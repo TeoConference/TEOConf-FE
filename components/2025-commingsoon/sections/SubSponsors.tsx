@@ -12,7 +12,7 @@ const SubSponsors = () => {
           후원사
         </h2>
 
-        <div className="flex flex-col desktop:flex-row items-center justify-center gap-6 tablet:gap-10">
+        <div className="flex flex-col desktop:flex-row items-center justify-center gap-10 desktop:gap-20">
           {SUB_SPONSORS.map((sponsor) => (
             <div
               key={sponsor.id}
@@ -27,7 +27,7 @@ const SubSponsors = () => {
                 alt={sponsor.alt}
                 width={SPONSOR_LOGO_SIZE.WIDTH}
                 height={SPONSOR_LOGO_SIZE.HEIGHT}
-                className="object-contain"
+                className="w-full h-full object-contain"
               />
             </div>
           ))}

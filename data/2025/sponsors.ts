@@ -8,7 +8,7 @@ export const SUB_SPONSORS = [
   },
   {
     id: 'liner-ai-2',
-    src: '/images/2025/assets/logo/easyspub2.png',
+    src: '/images/2025/assets/logo/liner1.png',
     alt: '라이너AI',
   },
 ]
