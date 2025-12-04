@@ -5,7 +5,7 @@ const SubSponsors = () => {
   return (
     <section
       id="sub-sponsors"
-      className="w-full py-12 tablet:py-16 desktop:py-20 bg-gray-50"
+      className="w-full py-14 tablet:py-20 desktop:py-24 bg-gray-50"
     >
       <div className="relative z-10 w-full h-full flex flex-col items-center justify-center px-4 tablet:px-8 gap-10">
         <h2 className="w-full text-gray-800 text-[2rem] tablet:text-[3.5rem] desktop:text-[3rem] font-bold text-center max-w-4xl">
