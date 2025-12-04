@@ -9,6 +9,7 @@ import Footer from '@/components/2025-commingsoon/sections/Footer'
 import Sessions from '@/components/2025-commingsoon/sections/Sessions'
 import Map from '@/components/2025-commingsoon/sections/Map'
 import Timetable from '@/components/2025-commingsoon/sections/Timetable'
+import SubSponsors from '@/components/2025-commingsoon/sections/SubSponsors'
 
 export default function Home() {
   return (
@@ -22,6 +23,7 @@ export default function Home() {
       <Overview />
       <Map />
       <Sponsor />
+      <SubSponsors />
       <SNS />
       <Footer />
     </div>
