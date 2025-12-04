@@ -1,8 +1,5 @@
 import Image from 'next/image'
-import {
-  SPONSOR_LOGO_SIZE,
-  SUB_SPONSORS,
-} from '../constants/sponsors'
+import { SPONSOR_LOGO_SIZE, SUB_SPONSORS } from '@/data/2025/sponsors'
 
 const SubSponsors = () => {
   return (
