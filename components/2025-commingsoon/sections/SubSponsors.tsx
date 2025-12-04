@@ -2,7 +2,7 @@ import Image from 'next/image'
 
 const SUB_SPONSORS = [
   { src: '/images/2025/assets/logo/easyspub1.png', alt: '이지스퍼블리싱' },
-  { src: '/images/2025/assets/logo/easyspub2.png', alt: '이지스퍼블리싱' },
+  { src: '/images/2025/assets/logo/easyspub2.png', alt: '라이너AI' },
 ]
 
 const SubSponsors = () => {
