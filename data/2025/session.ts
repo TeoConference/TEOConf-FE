@@ -118,7 +118,7 @@ export const sessions: SessionData[] = [
         name: '준',
         image: defaultImg,
         keywords: ['기술 스텍', '기술 부채', '최신 기술', '버전 관리'],
-        role: '-',
+        role: '위버케어',
         track: 'TRACK A',
         seq: 1,
       },
