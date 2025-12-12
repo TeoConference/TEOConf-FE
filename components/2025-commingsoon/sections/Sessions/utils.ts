@@ -22,8 +22,8 @@ export const getDownloadButtonColor = (
 
   if (hasMaterials) {
     return isPurpleBg
-      ? 'bg-purple-400 text-slate-50 hover:bg-purple-500'
-      : 'bg-white text-purple-600 border border-purple-600 hover:bg-purple-50'
+      ? 'bg-purple-600 text-slate-100 hover:bg-purple-500 hover:text-slate-50'
+      : 'bg-purple-500 text-slate-50 hover:bg-purple-600 hover:text-slate-100'
   }
 
   return isPurpleBg
