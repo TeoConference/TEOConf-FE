@@ -4,13 +4,16 @@ import { useState } from 'react'
 import { Speaker } from './types'
 import { getTrackColor } from './utils'
 import defaultSpeakerImage from '@/public/images/2025/speakersImg/default-speaker.png'
+import DownloadRoundedIcon from '@mui/icons-material/DownloadRounded'
 
 interface SessionCardProps {
   speaker: Speaker
   bgColor: string
   variant?: 'mobile' | 'desktop'
-  isActiveTab?: boolean // 현재 활성 탭의 카드인지 여부
-  isLoading?: boolean // 탭 전환 중 로딩 상태
+  isActiveTab?: boolean
+  isLoading?: boolean
+  hasMaterials?: boolean
+  buttonColor?: string
 }
 
 const SessionCard = ({
@@ -19,11 +22,12 @@ const SessionCard = ({
   variant = 'mobile',
   isActiveTab = true,
   isLoading = false,
+  hasMaterials = false,
+  buttonColor = '',
 }: SessionCardProps) => {
   const isMobile = variant === 'mobile'
   const [imageError, setImageError] = useState(false)
 
-  // 탭 전환 중이거나 에러 발생 시 fallback 이미지 표시
   const shouldShowFallback = isLoading || imageError
   const imageSrc = shouldShowFallback ? defaultSpeakerImage : speaker.image
 
@@ -38,12 +42,41 @@ const SessionCard = ({
       )}
     >
       <div className="flex-1 flex flex-col gap-5">
-        <p
-          className={clsx('font-bold', isMobile ? 'text-sm' : 'text-base')}
-          style={{ color: getTrackColor(speaker.track) }}
-        >
-          # {speaker.track}
-        </p>
+        <div className="flex justify-between items-center">
+          <p
+            className={clsx('font-bold', isMobile ? 'text-sm' : 'text-base')}
+            style={{ color: getTrackColor(speaker.track) }}
+          >
+            # {speaker.track}
+          </p>
+          {hasMaterials ? (
+            <a
+              href="#" // Placeholder for actual download link
+              target="_blank"
+              rel="noreferrer"
+              className={clsx(
+                'flex items-center gap-1 rounded-full font-semibold transition-colors',
+                buttonColor,
+                isMobile ? 'px-2 py-1 text-xs' : 'px-3 py-1 text-sm'
+              )}
+            >
+              <DownloadRoundedIcon
+                sx={{ fontSize: isMobile ? 14 : 16 }} // Responsive icon size
+              />{' '}
+              발표자료
+            </a>
+          ) : (
+            <span
+              className={clsx(
+                'flex items-center rounded-full',
+                buttonColor,
+                isMobile ? 'px-2 py-1 text-xs' : 'px-3 py-1 text-sm'
+              )}
+            >
+              자료 미제공
+            </span>
+          )}
+        </div>
         <h3
           className={clsx(
             'font-bold text-purple-600 break-keep line-clamp-2',
