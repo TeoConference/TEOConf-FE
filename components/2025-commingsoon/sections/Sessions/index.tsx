@@ -64,7 +64,7 @@ const Sessions = () => {
             buttonColor={getDownloadButtonColor(
               activeTab,
               speaker.track,
-              true // hasMaterials (임시: true)
+              !!speaker.resourceUrl
             )}
             variant="mobile"
             isActiveTab={true}
@@ -92,7 +92,7 @@ const Sessions = () => {
                     buttonColor={getDownloadButtonColor(
                       activeTab,
                       speaker.track,
-                      false // hasMaterials (임시: false)
+                      !!speaker.resourceUrl
                     )}
                     variant="desktop"
                     isActiveTab={true}
