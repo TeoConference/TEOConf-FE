@@ -25,6 +25,8 @@ export const sessions: SessionData[] = [
         role: '프론트엔드 및 AI 서비스 개발',
         track: 'TRACK A',
         seq: 1,
+        resourceUrl:
+          'https://drive.google.com/drive/folders/1xQE6AncqF-f-eYjcw6or9CZHzFpur0eE?usp=drive_link',
       },
       {
         title: 'FSD로 온보딩하고 도메인 고수되기',
@@ -35,6 +37,8 @@ export const sessions: SessionData[] = [
         role: '리멤버앤컴퍼니 프론트엔드',
         track: 'TRACK A',
         seq: 2,
+        resourceUrl:
+          'https://drive.google.com/drive/folders/14oc9IcG8w-S-8axHe1p0e_KtWs2T2OKE?usp=drive_link',
       },
       {
         title: 'React 19가 풀고자 한 문제들',
@@ -45,6 +49,8 @@ export const sessions: SessionData[] = [
         role: 'LG U+ 프론트엔드',
         track: 'TRACK A',
         seq: 3,
+        resourceUrl:
+          'https://drive.google.com/drive/folders/1BAqlfI8m5RkKPJvJGKEgZzY4LsNGeuVZ?usp=drive_link',
       },
       {
         title: '첫 인턴에 Spring 백엔드 개발이요?? 난 프론트인데?',
@@ -55,6 +61,8 @@ export const sessions: SessionData[] = [
         role: '프론트엔드',
         track: 'TRACK B',
         seq: 1,
+        resourceUrl:
+          'https://drive.google.com/drive/folders/1UNV7pq8CUafuge0ceu2h_VYgFxH48J37?usp=drive_link',
       },
 
       {
@@ -76,6 +84,8 @@ export const sessions: SessionData[] = [
         role: '프론트엔드',
         track: 'TRACK B',
         seq: 3,
+        resourceUrl:
+          'https://drive.google.com/drive/folders/1y0mb-3EooB1bJB1CFRs5-tWNd24Ly1qV?usp=drive_link',
       },
       {
         title: '혼자서도 잘해요? 주니어 개발자의 TanStack Query 디버깅 여정',
@@ -86,6 +96,8 @@ export const sessions: SessionData[] = [
         role: '프론트엔드',
         track: 'TRACK C',
         seq: 1,
+        resourceUrl:
+          'https://drive.google.com/drive/folders/1AXXHjG4Gr97gVMnpnJlvSGbg2vZ5hs9z?usp=drive_link',
       },
       {
         title: '아직 2년차인데 팀장이 되어버렸다!',
@@ -96,6 +108,8 @@ export const sessions: SessionData[] = [
         role: '-',
         track: 'TRACK C',
         seq: 2,
+        resourceUrl:
+          'https://drive.google.com/drive/folders/1tbv-7fLUDtSEBf48MSlkuiv9aqPmPpNx?usp=drive_link',
       },
       {
         title: '3주간의 디자인 시스템 배포 삽질기',
@@ -106,6 +120,8 @@ export const sessions: SessionData[] = [
         role: '뮤즈라이브 프론트엔드',
         track: 'TRACK C',
         seq: 3,
+        resourceUrl:
+          'https://drive.google.com/drive/folders/1sFV-bhtlAfWow1pzV1E_NtIm_HJmLJo8?usp=drive_link',
       },
     ],
   },
@@ -118,9 +134,11 @@ export const sessions: SessionData[] = [
         name: '준',
         image: defaultImg,
         keywords: ['기술 스텍', '기술 부채', '최신 기술', '버전 관리'],
-        role: '-',
+        role: '위버케어 프론트엔드',
         track: 'TRACK A',
         seq: 1,
+        resourceUrl:
+          'https://drive.google.com/drive/folders/1WbdTuC1tTgqkCKNJkY4YJlsAobpaXHM7?usp=drive_link',
       },
       {
         title: '쿠키를 공유하고 싶어',
@@ -171,6 +189,8 @@ export const sessions: SessionData[] = [
         role: '-',
         track: 'TRACK B',
         seq: 2,
+        resourceUrl:
+          'https://drive.google.com/drive/folders/1tbv-7fLUDtSEBf48MSlkuiv9aqPmPpNx?usp=drive_link',
       },
       {
         title: '우리 팀은 코드 리뷰를 병목 과정으로 두지 않기로 했다',
@@ -181,6 +201,8 @@ export const sessions: SessionData[] = [
         role: '위시켓 프론트엔드',
         track: 'TRACK B',
         seq: 3,
+        resourceUrl:
+          'https://drive.google.com/drive/folders/1Sl_uHF-npcf5pSoxZukA9qfFBmmRZ4ix?usp=drive_link',
       },
       {
         title: '권한 관리, 아직도 그렇게 하세요?',
@@ -211,6 +233,8 @@ export const sessions: SessionData[] = [
         role: '프론트엔드',
         track: 'TRACK C',
         seq: 3,
+        resourceUrl:
+          'https://drive.google.com/drive/folders/1y0mb-3EooB1bJB1CFRs5-tWNd24Ly1qV?usp=drive_link',
       },
     ],
   },

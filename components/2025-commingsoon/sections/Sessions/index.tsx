@@ -2,7 +2,12 @@ import { sessions } from '@/data/2025/session'
 import { useState, useEffect } from 'react'
 import SessionCard from './SessionCard'
 import TabSwitch from './TabSwitch'
-import { getCardBgColor, groupBySeq, preloadImages } from './utils'
+import {
+  getCardBgColor,
+  getDownloadButtonColor,
+  groupBySeq,
+  preloadImages,
+} from './utils'
 
 const Sessions = () => {
   const [activeTab, setActiveTab] = useState(0)
@@ -10,20 +15,16 @@ const Sessions = () => {
 
   const sessionRows = groupBySeq(sessions[activeTab].speakers)
 
-  // 탭 변경 핸들러 - 즉시 로딩 상태 설정
   const handleTabChange = (newTab: number) => {
-    setIsLoadingImages(true) // 즉시 로딩 상태 활성화
+    setIsLoadingImages(true)
     setActiveTab(newTab)
   }
 
-  // 다음 탭 프리로드 및 로딩 상태 해제
   useEffect(() => {
-    // 이미지 로드 후 로딩 상태 해제 (이미지 최적화 후에는 빠르게 로드됨)
     const loadingTimer = setTimeout(() => {
       setIsLoadingImages(false)
     }, 400)
 
-    // 현재 탭의 이미지가 로드된 후 다음 탭 프리로드
     const preloadTimer = setTimeout(() => {
       const nextTabIndex = (activeTab + 1) % sessions.length
       preloadImages(sessions[nextTabIndex].speakers)
@@ -60,9 +61,15 @@ const Sessions = () => {
             key={`${activeTab}-${index}`}
             speaker={speaker}
             bgColor={getCardBgColor(activeTab, speaker.track)}
+            buttonColor={getDownloadButtonColor(
+              activeTab,
+              speaker.track,
+              !!speaker.resourceUrl
+            )}
             variant="mobile"
             isActiveTab={true}
             isLoading={isLoadingImages}
+            hasMaterials={!!speaker.resourceUrl}
           />
         ))}
       </div>
@@ -72,16 +79,25 @@ const Sessions = () => {
         <div className="overflow-x-auto min-[1420px]:overflow-x-visible">
           <div className="flex flex-col gap-4 min-w-[1400px] min-[1420px]:min-w-0">
             {sessionRows.map((row, rowIndex) => (
-              <div key={rowIndex} className="flex gap-4 min-[1420px]:justify-center">
+              <div
+                key={rowIndex}
+                className="flex gap-4 min-[1420px]:justify-center"
+              >
                 <div className="w-[45px] flex-shrink-0" />
                 {row.map((speaker, colIndex) => (
                   <SessionCard
                     key={`${activeTab}-${rowIndex}-${colIndex}`}
                     speaker={speaker}
                     bgColor={getCardBgColor(activeTab, speaker.track)}
+                    buttonColor={getDownloadButtonColor(
+                      activeTab,
+                      speaker.track,
+                      !!speaker.resourceUrl
+                    )}
                     variant="desktop"
                     isActiveTab={true}
                     isLoading={isLoadingImages}
+                    hasMaterials={!!speaker.resourceUrl}
                   />
                 ))}
                 <div className="w-[45px] flex-shrink-0" />

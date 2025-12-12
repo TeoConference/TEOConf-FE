@@ -12,6 +12,25 @@ export const getCardBgColor = (tab: number, track: TrackType): string => {
   return track === 'TRACK B' ? 'bg-purple-50' : 'bg-purple-100'
 }
 
+export const getDownloadButtonColor = (
+  tab: number,
+  track: TrackType,
+  hasMaterials: boolean
+): string => {
+  const isPurpleBg =
+    (tab === 0 && track === 'TRACK B') || (tab === 1 && track !== 'TRACK B')
+
+  if (hasMaterials) {
+    return isPurpleBg
+      ? 'bg-purple-600 text-slate-100 hover:bg-purple-500 hover:text-slate-50'
+      : 'bg-purple-500 text-slate-50 hover:bg-purple-600 hover:text-slate-100'
+  }
+
+  return isPurpleBg
+    ? 'bg-gray-400 text-gray-700 font-semibold opacity-60'
+    : 'bg-gray-300 text-gray-800 font-semibold opacity-50'
+}
+
 export const groupBySeq = (speakers: Speaker[]): Speaker[][] => {
   const groupedBySeq: Record<number, Speaker[]> = {}
 
@@ -61,7 +80,8 @@ export const preloadImages = async (speakers: Speaker[]): Promise<void> => {
   if (typeof window === 'undefined') return
 
   const imagePromises = speakers.map((speaker) => {
-    const src = typeof speaker.image === 'string' ? speaker.image : speaker.image.src
+    const src =
+      typeof speaker.image === 'string' ? speaker.image : speaker.image.src
     return preloadSingleImage(src)
   })
 
