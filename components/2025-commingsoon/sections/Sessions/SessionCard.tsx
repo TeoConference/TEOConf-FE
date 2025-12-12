@@ -51,7 +51,7 @@ const SessionCard = ({
           </p>
           {hasMaterials ? (
             <a
-              href="#" // Placeholder for actual download link
+              href={speaker.resourceUrl}
               target="_blank"
               rel="noreferrer"
               className={clsx(

@@ -69,7 +69,10 @@ const config: Config = {
         body3: ['0.8rem', { lineHeight: '1.3rem', fontWeight: 400 }],
         'mobile-h1': ['2.125rem', { lineHeight: '2.75rem', fontWeight: 600 }],
         'mobile-h2': ['1.125rem', { lineHeight: '1.75rem', fontWeight: 600 }],
-        'mobile-body2': ['0.875rem', { lineHeight: '1.375rem', fontWeight: 400 }],
+        'mobile-body2': [
+          '0.875rem',
+          { lineHeight: '1.375rem', fontWeight: 400 },
+        ],
         'mobile-sub-h2': [
           '0.875rem',
           { lineHeight: '1.375rem', fontWeight: 600 },

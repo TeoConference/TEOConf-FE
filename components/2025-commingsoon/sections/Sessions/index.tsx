@@ -69,7 +69,7 @@ const Sessions = () => {
             variant="mobile"
             isActiveTab={true}
             isLoading={isLoadingImages}
-            hasMaterials={true} // TODO: 발표 자료 유무에 따라 true/false 설정
+            hasMaterials={!!speaker.resourceUrl}
           />
         ))}
       </div>
@@ -97,7 +97,7 @@ const Sessions = () => {
                     variant="desktop"
                     isActiveTab={true}
                     isLoading={isLoadingImages}
-                    hasMaterials={false} // TODO: 발표 자료 유무에 따라 true/false 설정
+                    hasMaterials={!!speaker.resourceUrl}
                   />
                 ))}
                 <div className="w-[45px] flex-shrink-0" />

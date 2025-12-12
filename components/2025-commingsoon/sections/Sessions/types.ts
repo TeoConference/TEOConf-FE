@@ -11,6 +11,7 @@ export interface Speaker {
   role: string
   track: TrackType
   seq: number
+  resourceUrl?: string
 }
 
 export interface SessionData {
